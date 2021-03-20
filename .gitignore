@@ -1,0 +1,43 @@
+.gradle
+/build/
+/lib/
+/bin/
+!gradle/wrapper/gradle-wrapper.jar
+/Library/com.hp.hpcc.libs/bin
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+### vue
+package-lock.json
+/node_modules/
+/static/dist/
+
+### VS CODE ###
+/.history/
+/.vscode/
+/debug.log
+*.js___jb_tmp___
+
+/src/common/locale/locale.babel

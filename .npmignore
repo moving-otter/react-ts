@@ -1,0 +1,14 @@
+jenkins/
+publish/
+src/
+.*
+.babelrc
+.gitignore
+.npm*
+index.html
+*.LICENSE
+*.map
+README.md
+tests/
+*package*
+webpack*
