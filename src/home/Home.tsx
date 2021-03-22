@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.scss';
 import {Welcome, ExProps, ExRedux} from './pages/Pages';
-import {HwFooter, HwHeader, HwMenu, HwSidebar} from './frame/Frame';
+import {HwFooter, HwHeader, HwMenu} from './frame/Frame';
 import {HashRouter, Route} from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -11,9 +11,7 @@ const Home: React.FC = () => {
 
         <HwMenu/>
 
-        <div className="content">
-          <HwSidebar/>
-
+        <div className="router">
           <HashRouter>
             <Route exact path="/" component={Welcome}/>
             <Route path="/exProps" component={ExProps}/>

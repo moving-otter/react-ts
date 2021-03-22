@@ -1,4 +1,21 @@
-
 .hwMenu {
+  margin-top: 15px;
+  background-color: #0f2d5c;
+  padding: 15px;
+  font-size: 18px;
 
+  .content {
+
+    a {
+      color: white;
+      margin: 0 15px;
+    }
+    a:hover {
+      color: #6cb6ff;
+    }
+    .active {
+      color: #96d0ff;
+      text-decoration: underline;
+    }
+  }
 }
