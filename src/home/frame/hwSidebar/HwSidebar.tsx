@@ -1,6 +1,7 @@
 import React from 'react';
 import './HwSidebar.scss';
 import {HashRouter, NavLink} from 'react-router-dom';
+import 'common/styles/HwCommon.scss';
 
 const HwSidebar: React.FC = () => {
   return (
