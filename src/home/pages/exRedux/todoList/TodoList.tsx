@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {actions, RootState, selectTodoList, Todo} from '../features';
+import {actions, RootState, selectTodoList, Todo} from '../RootReducer';
 import React, {useCallback} from 'react';
 
 export const TodoList: React.FC = () => {

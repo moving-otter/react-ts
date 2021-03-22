@@ -1,5 +1,5 @@
 import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
-import {actions} from '../features';
+import {actions} from '../RootReducer';
 import {useDispatch} from 'react-redux';
 
 export const TodoEditor: React.FC = () => {

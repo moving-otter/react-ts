@@ -1,6 +1,6 @@
 import React from 'react';
-import './ExProps.scss';
 import Child from './child/Child';
+import './ExProps.scss';
 
 const exProps: React.FC = () => {
 
@@ -8,15 +8,9 @@ const exProps: React.FC = () => {
     <div className="exProps">
       Hello exProps
 
-      <Child
-          name={'황병주'}
-          age={30}
-      />
+      <Child name={'sample-1'} age={30}/>
 
-      <Child
-          name={'유준형'}
-          age={28}
-      />
+      <Child name={'sample-2'} age={28}/>
     </div>
   );
 };
