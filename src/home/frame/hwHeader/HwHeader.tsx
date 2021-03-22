@@ -7,7 +7,7 @@ const HwHeader: React.FC = () => {
       <div className="hwHeader">
         <div className="content">
           <HashRouter>
-            <NavLink exact to="/">React.tsx Project</NavLink>
+            <NavLink exact to="/">React-ts starter project</NavLink>
           </HashRouter>
         </div>
       </div>
