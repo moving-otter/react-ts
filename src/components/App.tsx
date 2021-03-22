@@ -1,13 +1,13 @@
-import React from 'react';
-import {default as TodoEditor} from './TodoEditor';
-import {default as TodoList} from './TodoList';
+import  React from 'react';
+import './App.scss';
+import ExRedux from './exRedux/ExRedux';
+import ExProps from './exProps/ExProps';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-      <div className='container'>
-        <h1 className='title'>Todo List</h1>
-        <TodoEditor/>
-        <TodoList/>
+      <div className="container">
+        <ExRedux/>
+        <ExProps/>
       </div>
   );
 };

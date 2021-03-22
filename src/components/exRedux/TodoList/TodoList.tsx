@@ -1,6 +1,6 @@
-import {useDispatch, useSelector} from "react-redux";
-import {actions, RootState, selectTodoList, Todo} from "../../features";
-import React, {useCallback} from "react";
+import {useDispatch, useSelector} from 'react-redux';
+import {actions, RootState, selectTodoList, Todo} from '../features';
+import React, {useCallback} from 'react';
 
 export const TodoList: React.FC = () => {
   const dispatch = useDispatch();

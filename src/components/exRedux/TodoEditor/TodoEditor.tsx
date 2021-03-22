@@ -1,6 +1,6 @@
-import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from "react";
-import {actions} from "../../features";
-import {useDispatch} from "react-redux";
+import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
+import {actions} from '../features';
+import {useDispatch} from 'react-redux';
 
 export const TodoEditor: React.FC = () => {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export const TodoEditor: React.FC = () => {
             onKeyDown={handleEnter}
             value={inputText}
             className='txt-input'
-            placeholder='write something here...'
+            placeholder='Enter the value'
         />
       </div>
   );

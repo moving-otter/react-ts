@@ -37,21 +37,27 @@ const reducers = {
     list[targetIndex].isDone = !isDone;
   },
 };
+
 const todoSlice = createSlice({
   reducers,
   initialState,
   name: actionPrefix,
 });
+
 export const selectTodoList = createSelector(
     (state: TodoList) => state.list,
     (list: Todo[]) => list,
 );
+
 export const actions = {
   addTodos,
   toggleTodos
 };
+
 export const rootReducer = combineReducers({
   todos: todoSlice.reducer,
 });
-console.log(todoSlice)
+
+console.log(todoSlice);
+
 export type RootState = ReturnType<typeof rootReducer>
