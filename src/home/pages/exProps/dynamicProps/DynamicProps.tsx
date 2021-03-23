@@ -8,7 +8,7 @@ type props = {
 
 // Remove React.FC to apply optional props
 const DynamicProps = ({name, age}: props) => {
-  const [title, setTitle] = useState('Origin Title');
+  const [title, setTitle] = useState<string>('Origin Title');
 
   const handleTitle = () => {
     if (title === 'Origin Title') {
