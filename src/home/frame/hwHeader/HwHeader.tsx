@@ -1,5 +1,5 @@
 import React from 'react';
-import './HwHeader.scss';
+import './HwHeader.scoped.scss';
 import {HashRouter, NavLink} from 'react-router-dom';
 
 const HwHeader: React.FC = () => {

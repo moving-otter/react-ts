@@ -1,5 +1,4 @@
 import React from 'react';
-import './ExRedux.scss';
 import TodoEditor from './todoEditor/TodoEditor';
 import TodoList from './todoList/TodoList';
 import {createStore} from 'redux';

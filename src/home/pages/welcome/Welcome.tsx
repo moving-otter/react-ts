@@ -1,5 +1,5 @@
 import React from 'react';
-import './Welcome.scss';
+import './Welcome.scoped.scss';
 import bonoImg from 'assets/bono.jpg';
 
 const Welcome: React.FC = () => {

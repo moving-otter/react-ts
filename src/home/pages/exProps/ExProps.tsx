@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExProps.scss';
+import './ExProps.scoped.scss';
 import DynamicProps from './dynamicProps/DynamicProps';
 import RequiredProps from './requiredProps/RequiredProps';
 

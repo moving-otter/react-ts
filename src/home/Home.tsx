@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.scss';
+import './Home.scoped.scss';
 import {HashRouter, Route} from 'react-router-dom';
 import {HwFooter, HwHeader, HwMenu} from './frame/Frame';
 import {

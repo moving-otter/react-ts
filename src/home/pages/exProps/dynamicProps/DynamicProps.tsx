@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './DynamicProps.scss';
+import './DynamicProps.scoped.scss';
 
 type props = {
   name: string;

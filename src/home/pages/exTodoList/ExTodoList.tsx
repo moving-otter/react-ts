@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExTodoList.scss';
+import './ExTodoList.scoped.scss';
 
 const ExTodoList: React.FC = () => {
   return (

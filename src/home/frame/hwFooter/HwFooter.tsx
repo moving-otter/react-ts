@@ -1,5 +1,5 @@
 import React from 'react';
-import './HwFooter.scss';
+import './HwFooter.scoped.scss';
 
 const HwFooter: React.FC = () => {
   return (

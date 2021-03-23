@@ -1,5 +1,5 @@
 import React from 'react';
-import './HwMenu.scss';
+import './HwMenu.scoped.scss';
 import {HashRouter, NavLink} from 'react-router-dom';
 
 const HwMenu: React.FC = () => {

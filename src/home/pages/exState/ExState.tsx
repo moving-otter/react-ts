@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './ExState.scss';
+import './ExState.scoped.scss';
 
 const ExState: React.FC = () => {
   const [count, setCount] = useState(0);
