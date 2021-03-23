@@ -1,13 +1,13 @@
 
 .home {
   padding: 10px 30px 0 30px;
+  width: 1150px;
 
   .router {
     margin-top: 15px;
     padding: 20px;
-    height: 700px;
-
-    //background-color: #444c56;
+    min-height: 605px;
     background-color: whitesmoke;
+    font-size: 20px;
   }
 }

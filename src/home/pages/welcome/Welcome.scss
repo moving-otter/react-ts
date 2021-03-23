@@ -1,4 +1,33 @@
+$height: 645px;
 
 .welcome {
+  margin: -20px;
+  position: relative;
+  height: $height;
 
+  img {
+    position: absolute;
+    width: 100%;
+    height: $height;
+    opacity: 0.3;
+  }
+
+  .content {
+    padding: 40px 40px 40px 60px;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 24px;
+
+      i {
+        font-size: 100px;
+      }
+    }
+
+    .desc {
+      margin-top: 50px;
+      font-size: 28px;
+      padding-left: 30px;
+    }
+  }
 }

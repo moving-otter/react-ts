@@ -23,7 +23,7 @@ const DynamicProps = ({name, age}: props) => {
       <div>{title}</div>
       <div>{name}</div>
       <div>{age}</div>
-      <button onClick={handleTitle}>Change Title</button>
+      <button onClick={handleTitle}>Change</button>
     </div>
   );
 };

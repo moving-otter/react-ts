@@ -17,19 +17,13 @@ const ExState: React.FC = () => {
         <b>Counter</b>
 
         <div className="content">
-          <button onClick={() => updateCount('-')}>
-            Minus
-          </button>
+          <button onClick={() => updateCount('-')}>Minus</button>
 
-          {count}
+          <b>{count}</b>
 
-          <button onClick={() => updateCount('+')}>
-            Plus
-          </button>
+          <button onClick={() => updateCount('+')}>Plus</button>
 
-          <button onClick={resetCount}>
-            Reset
-          </button>
+          <button onClick={resetCount}>Reset</button>
         </div>
       </div>
   )

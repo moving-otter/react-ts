@@ -19,8 +19,9 @@ const exProps: React.FC = () => {
 
       <b>Dynamic props</b>
 
-      <DynamicProps name={'sample-1'}/>
-      <DynamicProps name={'sample-2'} age={28}/>
+      <DynamicProps name={'A'}/>
+      <DynamicProps name={'B'} age={28}/>
+      <DynamicProps name={'C'} age={30}/>
     </div>
   );
 };
