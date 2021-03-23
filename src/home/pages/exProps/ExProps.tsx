@@ -7,7 +7,7 @@ const exProps: React.FC = () => {
 
   return (
     <div className="exProps">
-      <b>Required props</b>
+      <div className="hwTitle">Required props</div>
 
       <RequiredProps propsOne={'props one'} propsTwo={'props two'}/>
       {/*
@@ -17,7 +17,7 @@ const exProps: React.FC = () => {
 
       <hr/>
 
-      <b>Dynamic props</b>
+      <div className="hwTitle">Dynamic props</div>
 
       <DynamicProps name={'A'}/>
       <DynamicProps name={'B'} age={28}/>

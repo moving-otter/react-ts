@@ -14,7 +14,7 @@ const ExState: React.FC = () => {
 
   return (
       <div className="exState">
-        <b>Counter</b>
+        <div className="hwTitle">Counter</div>
 
         <div className="content">
           <button onClick={() => updateCount('-')}>Minus</button>
