@@ -58,6 +58,4 @@ export const rootReducer = combineReducers({
   todos: todoSlice.reducer,
 });
 
-console.log(todoSlice);
-
 export type RootState = ReturnType<typeof rootReducer>

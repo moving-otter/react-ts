@@ -1,6 +1,11 @@
 .dynamicProps {
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  width: 600px;
   padding: 15px 15px 0 15px;
+
+  div {
+    width: 100%;
+    text-align: center;
+  }
 }

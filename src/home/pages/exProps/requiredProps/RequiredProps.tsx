@@ -1,7 +1,7 @@
 import React from 'react';
 import './RequiredProps.scss';
 
-interface props {
+type props = {
   propsOne: string;
   propsTwo: string;
 }

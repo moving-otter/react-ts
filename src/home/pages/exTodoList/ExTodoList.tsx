@@ -4,7 +4,7 @@ import ItemList from './ItemList/ItemList';
 
 type ItemObj = { key: number, text: string };
 
-const ExTodoList = () => {
+const ExTodoList: React.FC = () => {
   const [inputText, setInputText] = useState<string>('');
   const [itemObjList, setItemObjList] = useState<ItemObj[]>([]);
 
@@ -12,7 +12,7 @@ const ExTodoList = () => {
     setInputText(e.target.value);
   }, []);
 
-  const addItem = () => {
+  const addItem = useCallback(() => {
     if (inputText.length === 0) {
       return ;
     }
@@ -23,7 +23,7 @@ const ExTodoList = () => {
     itemObjList.push(newItemObj);
     setItemObjList(itemObjList);
     setInputText('');
-  };
+  }, [inputText, itemObjList]);
 
   const deleteItem = (_key) => {
     setItemObjList(itemObjList.filter(e => e.key !== _key));
@@ -33,7 +33,7 @@ const ExTodoList = () => {
     if (e.keyCode === 13) {
       addItem();
     }
-  }, [inputText]);
+  }, [addItem]);
 
   return (
       <div className="exTodoList">
@@ -53,7 +53,7 @@ const ExTodoList = () => {
 
         <ItemList
             entries={itemObjList}
-            propsFunction={deleteItem}
+            deleteItemFunc={deleteItem}
         />
       </div>
   );

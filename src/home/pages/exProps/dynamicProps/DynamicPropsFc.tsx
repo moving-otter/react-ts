@@ -7,7 +7,7 @@ type props = {
 };
 
 // Remove React.FC to apply optional props
-const DynamicProps = ({name, age}: props) => {
+const DynamicPropsFc = ({name, age}: props) => {
   const [title, setTitle] = useState<string>('Origin Title');
 
   const handleTitle = () => {
@@ -20,7 +20,7 @@ const DynamicProps = ({name, age}: props) => {
 
   return (
     <div className="dynamicProps">
-      <div>{title}</div>
+      <div>{`${title} - fc`}</div>
       <div>{name}</div>
       <div>{age}</div>
       <button onClick={handleTitle}>Change</button>
@@ -28,9 +28,9 @@ const DynamicProps = ({name, age}: props) => {
   );
 };
 
-DynamicProps.defaultProps = {
+DynamicPropsFc.defaultProps = {
   age: 10
 };
 
-export default DynamicProps;
+export default DynamicPropsFc;
 

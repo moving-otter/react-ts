@@ -1,6 +1,7 @@
 import React from 'react';
 import './ExProps.scoped.scss';
-import DynamicProps from './dynamicProps/DynamicProps';
+import DynamicPropsFc from './dynamicProps/DynamicPropsFc';
+import DynamicPropsClass from './dynamicProps/DynamicPropsClass';
 import RequiredProps from './requiredProps/RequiredProps';
 
 const exProps: React.FC = () => {
@@ -19,9 +20,15 @@ const exProps: React.FC = () => {
 
       <div className="hwTitle">Dynamic props</div>
 
-      <DynamicProps name={'A'}/>
-      <DynamicProps name={'B'} age={28}/>
-      <DynamicProps name={'C'} age={30}/>
+      <DynamicPropsFc name={'A'}/>
+      <DynamicPropsFc name={'B'} age={28}/>
+      <DynamicPropsFc name={'C'} age={30}/>
+
+      <hr/>
+
+      <DynamicPropsClass name={'D'} age={34}/>
+      <DynamicPropsClass name={'D'}/>
+      <DynamicPropsClass name={'E'}/>
     </div>
   );
 };

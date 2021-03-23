@@ -4,12 +4,13 @@ $height: 645px;
   margin: -20px;
   position: relative;
   height: $height;
+  font-weight: bold;
 
   img {
     position: absolute;
     width: 100%;
     height: $height;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   .content {
@@ -25,9 +26,16 @@ $height: 645px;
     }
 
     .desc {
-      margin-top: 50px;
+      margin-top: 80px;
       font-size: 28px;
       padding-left: 30px;
+    }
+
+    ul {
+
+      li {
+        margin-top: 20px;
+      }
     }
   }
 }
