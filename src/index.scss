@@ -28,7 +28,19 @@ a {
   user-select: none;
 }
 
+hr {
+  margin: 30px 0;
+}
+
 // global class
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .hwTitle {
   font-weight: bold;
   font-size: 26px;

@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import './ExBasicSyntax.scoped.scss';
+import LoopStatement from './syntax/LoopStatement';
+import ConditionalStatement from './syntax/ConditionalStatement';
+import StyleClassBinding from './syntax/StyleClassBinding';
 
 class ExBasicSyntax extends Component {
 
   render() {
     return (
         <div className="exBasicSyntax">
-          <div className="hwTitle">
-            React Basic Syntax
-          </div>
+          <LoopStatement/>
+          <hr/>
 
-          <div className="content">
-            Content Area
-          </div>
+          <ConditionalStatement/>
+          <hr/>
+
+          <StyleClassBinding/>
         </div>
     );
   };

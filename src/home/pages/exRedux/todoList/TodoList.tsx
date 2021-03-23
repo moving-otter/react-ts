@@ -5,7 +5,7 @@ import React, {useCallback} from 'react';
 export const TodoList: React.FC = () => {
   const dispatch = useDispatch();
   const todoList = useSelector<RootState, Todo[]>(state => selectTodoList(state.todos));
-  const handleChkbox = useCallback((item: Todo) => {
+  const handleCheckbox = useCallback((item: Todo) => {
     dispatch(actions.toggleTodos(item));
   }, [dispatch]);
 
@@ -19,7 +19,7 @@ export const TodoList: React.FC = () => {
                 <input
                     type="checkbox"
                     checked={item.isDone}
-                    onChange={handleChkbox.bind({}, item)}
+                    onChange={handleCheckbox.bind({}, item)}
                     className='chk-input'
                 />
                 <span className={item.isDone ? 'txt-complete' : ''}>
