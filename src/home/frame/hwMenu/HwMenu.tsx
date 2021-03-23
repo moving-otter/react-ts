@@ -8,6 +8,7 @@ const HwMenu: React.FC = () => {
         <div className="hwMenu">
           <div className="content">
             <NavLink exact to="/">Welcome</NavLink>
+            <NavLink to="/exState">State</NavLink>
             <NavLink to="/exProps">Props</NavLink>
             <NavLink to="/exRedux">Redux</NavLink>
           </div>
