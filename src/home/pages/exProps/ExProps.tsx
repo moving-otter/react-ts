@@ -1,16 +1,26 @@
 import React from 'react';
-import Child from './child/Child';
 import './ExProps.scss';
+import DynamicProps from './dynamicProps/DynamicProps';
+import RequiredProps from './requiredProps/RequiredProps';
 
 const exProps: React.FC = () => {
 
   return (
     <div className="exProps">
-      Hello exProps
+      <b>Required props</b>
 
-      <Child name={'sample-1'} age={30}/>
+      <RequiredProps propsOne={'props one'} propsTwo={'props two'}/>
+      {/*
+        <RequiredProps propsOne={'props one'}/>
+        It occurs error because propsTwo is missing.
+      */}
 
-      <Child name={'sample-2'} age={28}/>
+      <hr/>
+
+      <b>Dynamic props</b>
+
+      <DynamicProps name={'sample-1'}/>
+      <DynamicProps name={'sample-2'} age={28}/>
     </div>
   );
 };

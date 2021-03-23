@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import './Child.scss';
+import './DynamicProps.scss';
 
-type ChildProps = {
+type props = {
   name: string;
   age: number;
 };
 
-const Child: React.FC<ChildProps> = ({ name, age }) => {
+// Remove React.FC to apply optional props
+const DynamicProps = ({name, age}: props) => {
   const [title, setTitle] = useState('Origin Title');
 
   const handleTitle = () => {
@@ -18,7 +19,7 @@ const Child: React.FC<ChildProps> = ({ name, age }) => {
   };
 
   return (
-    <div className="child">
+    <div className="dynamicProps">
       <div>{title}</div>
       <div>{name}</div>
       <div>{age}</div>
@@ -27,5 +28,9 @@ const Child: React.FC<ChildProps> = ({ name, age }) => {
   );
 };
 
-export default Child;
+DynamicProps.defaultProps = {
+  age: 10
+};
+
+export default DynamicProps;
 
