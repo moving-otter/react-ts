@@ -5,6 +5,7 @@ import ExTodoList from './exTodoList/ExTodoList';
 import ExRedux from './exRedux/ExRedux';
 import ExLifeCycle from './exLifeCycle/ExLifeCycle';
 import ExBasicSyntax from './exBasicSyntax/ExBasicSyntax';
+import ExCart from './exCart/ExCart'
 
 export {
   Welcome,
@@ -14,4 +15,5 @@ export {
   ExRedux,
   ExLifeCycle,
   ExBasicSyntax,
+  ExCart
 };
