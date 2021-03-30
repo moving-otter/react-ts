@@ -1,33 +1,30 @@
-import {useDispatch, useSelector} from 'react-redux';
-import {actions, RootState, selectTodoList, Todo} from '../RootReducer';
-import React, {useCallback} from 'react';
+import React from 'react';
+import './TodoList.scoped.scss';
+import {deleteTodo} from "../store/action";
+import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
 
 export const TodoList: React.FC = () => {
   const dispatch = useDispatch();
-  const todoList = useSelector<RootState, Todo[]>(state => selectTodoList(state.todos));
-  const handleCheckbox = useCallback((item: Todo) => {
-    dispatch(actions.toggleTodos(item));
-  }, [dispatch]);
+  const reducer = useSelector((state: RootStateOrAny) => state.TodoReducer);
 
-  console.log(todoList);
+  let list;
+
+  if (reducer.length > 0) {
+    list = reducer.map((e) =>
+        <div key={e.key} className="item">
+          <li>{e.text}</li>
+          <button onClick={() => dispatch(deleteTodo({key: e.key}))}>
+            x
+          </button>
+        </div>
+    )
+  } else {
+    list = '';
+  }
 
   return (
-      <ul>
-        {todoList.map((item: Todo) => (
-            <li key={item.id}>
-              <label>
-                <input
-                    type="checkbox"
-                    checked={item.isDone}
-                    onChange={handleCheckbox.bind({}, item)}
-                    className='chk-input'
-                />
-                <span className={item.isDone ? 'txt-complete' : ''}>
-                  {item.text}
-                </span>
-              </label>
-            </li>
-        ))}
+      <ul className="todoList">
+        {list}
       </ul>
   );
 };

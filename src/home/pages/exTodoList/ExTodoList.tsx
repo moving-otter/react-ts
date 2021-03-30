@@ -1,57 +1,40 @@
-import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
-import './ExTodoList.scoped.scss';
-import ItemList from './ItemList/ItemList';
-
-type ItemObj = { key: number, text: string };
+import React, {useState} from 'react';
+import TodoList from './todoList/TodoList';
+import TodoEditor from './todoEditor/TodoEditor';
+import {Todo} from './TodoType';
 
 const ExTodoList: React.FC = () => {
-  const [inputText, setInputText] = useState<string>('');
-  const [itemObjList, setItemObjList] = useState<ItemObj[]>([]);
+  const [itemObjList, setItemObjList] = useState<Todo[]>([]);
 
-  const updateInputText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value);
-  }, []);
-
-  const addItem = useCallback(() => {
-    if (inputText.length === 0) {
+  const addItem = (text) => {
+    if (text.length === 0) {
       return ;
     }
-    const newItemObj: ItemObj = {
+    const newTodo: Todo = {
       key: Date.now(),
-      text: inputText
+      text: text
     };
-    itemObjList.push(newItemObj);
-    setItemObjList(itemObjList);
-    setInputText('');
-  }, [inputText, itemObjList]);
-
-  const deleteItem = (_key) => {
-    setItemObjList(itemObjList.filter(e => e.key !== _key));
+    setItemObjList([newTodo, ...itemObjList]);
   };
 
-  const handleEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.keyCode === 13) {
-      addItem();
-    }
-  }, [addItem]);
+  const deleteItem = (key) => {
+    setItemObjList(itemObjList.filter(e => e.key !== key));
+  };
+
+  const resetList = () => {
+    setItemObjList([]);
+  };
 
   return (
       <div className="exTodoList">
         <div className="hwTitle">TodoList</div>
 
-        <div className="header">
-          <input
-              type="text"
-              placeholder="Enter task"
-              onChange={updateInputText}
-              onKeyDown={handleEnter}
-              value={inputText}
-          />
-          <button onClick={addItem}>add</button>
-          <button onClick={() => setItemObjList([])}>reset</button>
-        </div>
+        <TodoEditor
+            addItemFunc={addItem}
+            resetListFunc={resetList}
+        />
 
-        <ItemList
+        <TodoList
             entries={itemObjList}
             deleteItemFunc={deleteItem}
         />

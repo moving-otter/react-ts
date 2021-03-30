@@ -6,7 +6,8 @@ import ExRedux from './exRedux/ExRedux';
 import ExReduxTodo from './exReduxTodo/ExReduxTodo';
 import ExLifeCycle from './exLifeCycle/ExLifeCycle';
 import ExBasicSyntax from './exBasicSyntax/ExBasicSyntax';
-import ExCart from './exCart/ExCart'
+import ExCart from './exCart/ExCart';
+import ExVerneer from './exVeneer/ExVerneer';
 
 export {
   Welcome,
@@ -17,5 +18,6 @@ export {
   ExRedux,
   ExLifeCycle,
   ExBasicSyntax,
-  ExCart
+  ExCart,
+  ExVerneer,
 };

@@ -1,5 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
-import {actions} from '../RootReducer';
+import './TodoEditor.scoped.scss';
+import {addTodo, resetTodo} from '../store/action';
 import {useDispatch} from 'react-redux';
 
 export const TodoEditor: React.FC = () => {
@@ -11,24 +12,32 @@ export const TodoEditor: React.FC = () => {
   }, []);
   const handleEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (inputText && e.keyCode === 13) {
-      dispatch(actions.addTodos({
-        text: inputText,
-        isDone: false
-      }));
+      dispatch(addTodo({text: inputText}));
       setInputText('');
     }
-  }, [dispatch, inputText]);
+  }, [inputText, dispatch]);
 
   return (
-      <div>
+      <div className="todoEditor">
         <input
             type='text'
+            placeholder='Enter task'
             onChange={handleText}
             onKeyDown={handleEnter}
             value={inputText}
-            className='txt-input'
-            placeholder='Enter the value'
         />
+        <button
+            onClick={() => {
+              dispatch(addTodo({text: inputText}));
+              setInputText('');
+            }}
+        >
+          add
+        </button>
+
+        <button onClick={() => dispatch(resetTodo({}))}>
+          reset
+        </button>
       </div>
   );
 };

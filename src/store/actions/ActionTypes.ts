@@ -1,2 +1,2 @@
-export const ADD_ITEMS = 'cartReducer/addItems';
-export const DELETE_ITEMS = 'cartReducer/deleteItems';
+export const ADD_ITEMS = 'todoReducer/addItems';
+export const DELETE_ITEMS = 'todoReducer/deleteItems';

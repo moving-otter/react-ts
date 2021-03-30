@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.scoped.scss';
 import {HashRouter, Route} from 'react-router-dom';
-import {HwFooter, HwHeader, HwMenu} from './frame/Frame';
+import {HwHeader, HwMenu} from './frame/Frame';
 import {
   Welcome,
   ExState,
@@ -12,6 +12,7 @@ import {
   ExCart,
   ExLifeCycle,
   ExBasicSyntax,
+  ExVerneer,
 } from './pages/Pages';
 
 const Home: React.FC = () => {
@@ -28,14 +29,13 @@ const Home: React.FC = () => {
             <Route path="/exProps" component={ExProps}/>
             <Route path="/exBasicSyntax" component={ExBasicSyntax}/>
             <Route path="/exLifeCycle" component={ExLifeCycle}/>
+            <Route path="/exVeneer" component={ExVerneer}/>
             <Route path="/exReduxTodo" component={ExReduxTodo}/>
             <Route path="/exTodoList" component={ExTodoList}/>
             <Route path="/exRedux" component={ExRedux}/>
             <Route path="/exCart" component={ExCart}/>
           </HashRouter>
         </div>
-
-        <HwFooter/>
       </div>
   );
 };

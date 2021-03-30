@@ -161,6 +161,8 @@
     "presets": [
       "react-app"
     ],
-    "plugins": ["babel-plugin-react-scoped-css"]
+    "plugins": [
+      "babel-plugin-react-scoped-css"
+    ]
   }
 }

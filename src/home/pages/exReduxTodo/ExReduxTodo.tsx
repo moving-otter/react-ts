@@ -1,17 +1,21 @@
 import React from 'react';
-import TodoEditor from './todoEditor/TodoEditor';
 import TodoList from './todoList/TodoList';
-import {createStore} from 'redux';
-import {rootReducer} from './RootReducer';
+import TodoEditor from './todoEditor/TodoEditor';
+import TodoReducer from './store/reducer';
 import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 
-const store = createStore(rootReducer);
+const store = createStore(TodoReducer);
 
 const ExReduxTodo = () => {
+
   return (
       <Provider store={store}>
         <div className="exReduxTodo">
+          <div className="hwTitle">TodoList - Redux</div>
+
           <TodoEditor/>
+
           <TodoList/>
         </div>
       </Provider>
