@@ -7,6 +7,7 @@ import {
   ExState,
   ExProps,
   ExTodoList,
+  ExReduxTodo,
   ExRedux,
   ExCart,
   ExLifeCycle,
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
             <Route path="/exProps" component={ExProps}/>
             <Route path="/exBasicSyntax" component={ExBasicSyntax}/>
             <Route path="/exLifeCycle" component={ExLifeCycle}/>
+            <Route path="/exReduxTodo" component={ExReduxTodo}/>
             <Route path="/exTodoList" component={ExTodoList}/>
             <Route path="/exRedux" component={ExRedux}/>
             <Route path="/exCart" component={ExCart}/>

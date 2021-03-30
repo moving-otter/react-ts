@@ -16,6 +16,7 @@ const HwMenu: React.FC = () => {
             <NavLink to="/exBasicSyntax">Basic Syntax</NavLink>
             <NavLink to="/exLifeCycle">Life Cycle</NavLink>
             <NavLink to="/exTodoList">TodoList</NavLink>
+            <NavLink to="/exReduxTodo">Redux Todo</NavLink>
             <NavLink to="/exRedux">Redux</NavLink>
             <NavLink to="/exCart">CartList - {reducer.length}</NavLink>
           </div>
