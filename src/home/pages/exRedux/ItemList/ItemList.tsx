@@ -17,7 +17,7 @@ const ItemList: React.FC<props> = ({itemList, addFunc}) => {
               <img className="img" src={item.url}/>
               <div className="name">{item.name}</div>
               <div className="price">{item.price}</div>
-              <button className="addCartButton" onClick={() => addFunc(item)}>Add to CartList
+              <button className="addCartButton" onClick={() => addFunc(item)}>장바구니 담기
               </button>
             </div>
         )}

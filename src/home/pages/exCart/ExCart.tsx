@@ -3,6 +3,10 @@ import ItemList from "./ItemList/ItemList";
 import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
 import {deleteCart} from "../../../store/actions";
 
+const wrapperStyle = {
+  display: 'inline-grid'
+};
+
 const ExCart = () => {
   const dispatch = useDispatch();
   const reducer = useSelector((state: RootStateOrAny) => state.cartReducer);
@@ -14,7 +18,9 @@ const ExCart = () => {
   return (
       <div className="exCart">
         <h2 className="title">장바구니</h2>
-        {dom}
+        <div className="wrapper" style={wrapperStyle}>
+          {dom}
+        </div>
       </div>
   );
 };
