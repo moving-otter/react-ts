@@ -7,10 +7,10 @@ import {Provider} from 'react-redux';
 
 const store = createStore(rootReducer);
 
-const ExRedux = () => {
+const ExReduxTodo = () => {
   return (
       <Provider store={store}>
-        <div className="exRedux">
+        <div className="exReduxTodo">
           <TodoEditor/>
           <TodoList/>
         </div>
@@ -18,4 +18,4 @@ const ExRedux = () => {
   );
 };
 
-export default ExRedux;
+export default ExReduxTodo;

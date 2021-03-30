@@ -13,7 +13,7 @@ const HwMenu: React.FC = () => {
             <NavLink to="/exBasicSyntax">Basic Syntax</NavLink>
             <NavLink to="/exLifeCycle">Life Cycle</NavLink>
             <NavLink to="/exTodoList">TodoList</NavLink>
-            <NavLink to="/exRedux">Redux</NavLink>
+            <NavLink to="/exReduxTodo">Redux Todo</NavLink>
           </div>
         </div>
       </HashRouter>
