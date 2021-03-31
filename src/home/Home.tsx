@@ -13,6 +13,7 @@ import {
   ExLifeCycle,
   ExBasicSyntax,
   ExVerneer,
+  ExReduxCounter,
 } from './pages/Pages';
 
 const Home: React.FC = () => {
@@ -34,6 +35,7 @@ const Home: React.FC = () => {
             <Route path="/exTodoList" component={ExTodoList}/>
             <Route path="/exRedux" component={ExRedux}/>
             <Route path="/exCart" component={ExCart}/>
+            <Route path="/exReduxCounter" component={ExReduxCounter}/>
           </HashRouter>
         </div>
       </div>

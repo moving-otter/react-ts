@@ -2,20 +2,28 @@ import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
 import './TodoEditor.scoped.scss';
 import {addTodo, resetTodo} from '../store/action';
 import {useDispatch} from 'react-redux';
+import {Todo} from "../store/type/TodoType";
 
 export const TodoEditor: React.FC = () => {
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
 
+  const addItem = () => {
+    const newTodo: Todo = {
+      key: Date.now(),
+      text: inputText
+    };
+    dispatch(addTodo(newTodo));
+    setInputText('');
+  };
   const handleText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
   }, []);
   const handleEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (inputText && e.keyCode === 13) {
-      dispatch(addTodo({text: inputText}));
-      setInputText('');
+      addItem();
     }
-  }, [inputText, dispatch]);
+  }, [addItem, inputText, dispatch]);
 
   return (
       <div className="todoEditor">
@@ -26,12 +34,7 @@ export const TodoEditor: React.FC = () => {
             onKeyDown={handleEnter}
             value={inputText}
         />
-        <button
-            onClick={() => {
-              dispatch(addTodo({text: inputText}));
-              setInputText('');
-            }}
-        >
+        <button onClick={() => addItem()}>
           add
         </button>
 

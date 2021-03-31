@@ -1,16 +1,9 @@
 export type Todo = {
-  key: number,
-  text: string,
-};
-
-export type addActionType = {
+  key: number;
   text: string;
 };
 
-export type deleteActionType = {
+export type TodoKey = {
   key: number;
 };
 
-export type resetActionType = {
-
-};

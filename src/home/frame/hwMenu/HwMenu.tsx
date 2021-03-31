@@ -20,6 +20,7 @@ const HwMenu: React.FC = () => {
             <NavLink to="/exReduxTodo">Redux Todo</NavLink>
             <NavLink to="/exRedux">Redux</NavLink>
             <NavLink to="/exCart">CartList - {reducer.length}</NavLink>
+            <NavLink to="/exReduxCounter">Redux Counter</NavLink>
           </div>
         </div>
       </HashRouter>

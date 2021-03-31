@@ -8,6 +8,7 @@ import ExLifeCycle from './exLifeCycle/ExLifeCycle';
 import ExBasicSyntax from './exBasicSyntax/ExBasicSyntax';
 import ExCart from './exCart/ExCart';
 import ExVerneer from './exVeneer/ExVerneer';
+import ExReduxCounter from './exReduxCounter/ExReduxCounter';
 
 export {
   Welcome,
@@ -20,4 +21,5 @@ export {
   ExBasicSyntax,
   ExCart,
   ExVerneer,
+  ExReduxCounter,
 };
