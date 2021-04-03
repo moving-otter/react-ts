@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.08ca2dc1.chunk.css",
+    "main.js": "/static/js/main.eeae649e.chunk.js",
+    "main.js.map": "/static/js/main.eeae649e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8a281993.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8a281993.js.map",
+    "static/css/2.62709cf8.chunk.css": "/static/css/2.62709cf8.chunk.css",
+    "static/js/2.1f268342.chunk.js": "/static/js/2.1f268342.chunk.js",
+    "static/js/2.1f268342.chunk.js.map": "/static/js/2.1f268342.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.62709cf8.chunk.css.map": "/static/css/2.62709cf8.chunk.css.map",
+    "static/css/main.08ca2dc1.chunk.css.map": "/static/css/main.08ca2dc1.chunk.css.map",
+    "static/js/2.1f268342.chunk.js.LICENSE.txt": "/static/js/2.1f268342.chunk.js.LICENSE.txt",
+    "static/media/veneer.css": "/static/media/HPSimplified_Rg.0bcc9c64.ttf",
+    "static/media/bono.4a9a99a3.jpg": "/static/media/bono.4a9a99a3.jpg",
+    "static/media/hitchhiker.01d7345e.jpg": "/static/media/hitchhiker.01d7345e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a281993.js",
+    "static/css/2.62709cf8.chunk.css",
+    "static/js/2.1f268342.chunk.js",
+    "static/css/main.08ca2dc1.chunk.css",
+    "static/js/main.eeae649e.chunk.js"
+  ]
+}
