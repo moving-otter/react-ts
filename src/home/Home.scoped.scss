@@ -1,9 +1,35 @@
 .home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(60, 63, 65);
 
-  .router {
-    padding: 30px;
-    min-height: 605px;
-    background-color: #cdd9e5;
-    font-size: 20px;
+  .depth-1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .depth-2 {
+      display: flex;
+      width: 100%;
+      margin: 0 25px;
+      border-left: 1px solid #515658;
+      border-right: 1px solid #515658;
+
+      .depth-3 {
+        width: 100%;
+        height: calc(100% - 140px);
+        background-color: rgb(43, 43, 43);
+      }
+    }
+
+    .right {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 22px;
+      padding-top: 5px;
+      right: 0;
+    }
   }
 }

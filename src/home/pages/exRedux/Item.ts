@@ -1,5 +1,5 @@
-import hitchhiker from "../../../assets/hitchhiker.jpg";
-import redblack from "../../../assets/redblack.jpg";
+import hitchhiker from "@assets/hitchhiker.jpg";
+import redblack from "@assets/redblack.jpg";
 
 export const itemList = [{
   url: hitchhiker,

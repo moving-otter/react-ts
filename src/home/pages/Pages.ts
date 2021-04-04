@@ -7,7 +7,7 @@ import ExReduxTodo from './exReduxTodo/ExReduxTodo';
 import ExLifeCycle from './exLifeCycle/ExLifeCycle';
 import ExBasicSyntax from './exBasicSyntax/ExBasicSyntax';
 import ExCart from './exCart/ExCart';
-import ExVerneer from './exVeneer/ExVerneer';
+import ExVerneer from './exVeneer/ExVeneer';
 import ExReduxCounter from './exReduxCounter/ExReduxCounter';
 
 export {

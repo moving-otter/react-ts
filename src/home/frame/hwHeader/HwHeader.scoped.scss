@@ -1,12 +1,17 @@
 .hwHeader {
-  padding-left: 30px;
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white;
+  width: 100%;
 
-  .content {
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .content:hover {
-    opacity: 0.7;
+  img {
+    width: 18px;
+    height: 17px;
+    margin-left: 3px;
+    margin-right: 5px;
   }
 }

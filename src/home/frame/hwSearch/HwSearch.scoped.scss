@@ -1,0 +1,29 @@
+.hwSearch {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  position: absolute;
+
+  label {
+    position: absolute;
+    padding-left: 35px;
+    padding-right: 15px;
+    transform: rotate(270deg);
+    top: 37px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    height: 23px;
+    background-color: rgb(50, 52, 53);
+
+    img {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 62px;
+      top: 2px;
+    }
+  }
+  label:hover {
+    background-color: rgb(40, 42, 43);
+  }
+}

@@ -8,22 +8,24 @@ export const TodoEditor: React.FC = () => {
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
 
-  const addItem = () => {
+  const addItem = useCallback(() => {
     const newTodo: Todo = {
       key: Date.now(),
       text: inputText
     };
     dispatch(addTodo(newTodo));
     setInputText('');
-  };
+  }, [inputText, dispatch]);
+
   const handleText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
   }, []);
+
   const handleEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (inputText && e.keyCode === 13) {
       addItem();
     }
-  }, [addItem, inputText, dispatch]);
+  }, [addItem, inputText]);
 
   return (
       <div className="todoEditor">

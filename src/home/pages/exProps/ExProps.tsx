@@ -28,6 +28,42 @@ const exProps: React.FC = () => {
 
       <DynamicPropsClass name={'D'} age={34}/>
       <DynamicPropsClass name={'D'}/>
+      <DynamicPropsClass name={'E'}/><hr/>
+
+      <div className="hwTitle">Dynamic props</div>
+
+      <DynamicPropsFc name={'A'}/>
+      <DynamicPropsFc name={'B'} age={28}/>
+      <DynamicPropsFc name={'C'} age={30}/>
+
+      <hr/>
+
+      <DynamicPropsClass name={'D'} age={34}/>
+      <DynamicPropsClass name={'D'}/>
+      <DynamicPropsClass name={'E'}/><hr/>
+
+      <div className="hwTitle">Dynamic props</div>
+
+      <DynamicPropsFc name={'A'}/>
+      <DynamicPropsFc name={'B'} age={28}/>
+      <DynamicPropsFc name={'C'} age={30}/>
+
+      <hr/>
+
+      <DynamicPropsClass name={'D'} age={34}/>
+      <DynamicPropsClass name={'D'}/>
+      <DynamicPropsClass name={'E'}/><hr/>
+
+      <div className="hwTitle">Dynamic props</div>
+
+      <DynamicPropsFc name={'A'}/>
+      <DynamicPropsFc name={'B'} age={28}/>
+      <DynamicPropsFc name={'C'} age={30}/>
+
+      <hr/>
+
+      <DynamicPropsClass name={'D'} age={34}/>
+      <DynamicPropsClass name={'D'}/>
       <DynamicPropsClass name={'E'}/>
     </div>
   );

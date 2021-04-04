@@ -1,6 +1,6 @@
 import React from 'react';
 import './Welcome.scoped.scss';
-import bonoImg from 'assets/bono.jpg';
+import bonoImg from '@assets/bono.jpg';
 
 const Welcome: React.FC = () => {
   return (

@@ -3,8 +3,11 @@ import highchartsInterface from '@veneer/highcharts-interface';
 import {Chart, ChartProvider} from '@veneer/core';
 
 const VeChart: React.FC = () => {
+
   return (
-      <ChartProvider chartInterface={highchartsInterface}>
+      <ChartProvider
+          chartInterface={highchartsInterface}
+      >
         <Chart options={{
           chart: {
             type: 'bar',
