@@ -9,7 +9,7 @@ const HwHeader: React.FC = () => {
         <img src={favicon} alt="logo"/>
 
         <HashRouter>
-          <NavLink exact to="/">React-ts storage</NavLink>
+          <NavLink exact to="/">hw-dev-store</NavLink>
         </HashRouter>
       </div>
   );

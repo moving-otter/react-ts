@@ -2,10 +2,40 @@
   width: 350px;
   height: calc(100% - 50px);
   border-right: 1px solid #515658;
-  //resize: horizontal;
+  resize: horizontal;
   overflow: auto;
 
-  div {
+  .depth-1 {
 
   }
+}
+
+.area {
+  padding: 2px 0;
+}
+.area:focus {
+  background-color: rgb(75, 110, 175);
+}
+
+.depth-1-area {
+  display: flex;
+  padding-left: 5px;
+}
+
+.depth-2-area {
+  display: flex;
+  padding-left: 22px;
+}
+
+.depth-3-area {
+  display: flex;
+  padding-left: 43px;
+}
+
+.pointer {
+  margin-right: 5px;
+}
+
+.opened {
+  transform: rotate(90deg);
 }
