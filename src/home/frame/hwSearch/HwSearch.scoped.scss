@@ -4,26 +4,36 @@
   width: 25px;
   position: absolute;
 
-  label {
+  .project {
+    background-color: #444;
+    top: 39px;
+  }
+
+  div {
     position: absolute;
-    padding-left: 35px;
+    padding-left: 40px;
     padding-right: 15px;
     transform: rotate(270deg);
-    top: 37px;
+    top: 128px;
     font-size: 14px;
-    color: rgb(255, 255, 255);
+    color: rgb(210, 210, 210);
     height: 23px;
-    background-color: rgb(50, 52, 53);
+    background-color: #444;
 
     img {
       position: absolute;
-      width: 18px;
-      height: 18px;
-      right: 62px;
-      top: 2px;
+      width: 17px;
+      height: 17px;
+      right: 65px;
+      top: 4px;
+      transform: rotate(90deg);
+      filter: invert(0.7);
     }
   }
-  label:hover {
-    background-color: rgb(40, 42, 43);
+  div:hover {
+    background-color: rgb(53, 55, 57);
+  }
+  div:active {
+    background-color: rgb(45, 47, 48);
   }
 }
