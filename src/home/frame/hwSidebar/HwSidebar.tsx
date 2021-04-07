@@ -6,6 +6,16 @@ const HwSidebar: React.FC = () => {
   return (
     <div className="hwSidebar">
       <div className="depth-1">
+        <div className="closeArea">
+          <div className="motto">
+            "겨울은 원래 춥다."
+          </div>
+
+          <div className="close">
+            <label></label>
+          </div>
+        </div>
+
         <div className="area" tabIndex={1}>
           <div className="depth-1-area">
             <label className="pointer opened">▶</label>

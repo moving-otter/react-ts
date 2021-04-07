@@ -1,6 +1,7 @@
 .hwFooter {
   position: absolute;
   display: flex;
+  justify-content: flex-end;
   height: 25px;
   color: rgb(187, 187, 187);
   background-color: rgb(60, 63, 65);
@@ -14,6 +15,8 @@
     width: 170px;
 
     img {
+      width: 25px;
+      height: 25px;
       filter: invert(0.7);
     }
 

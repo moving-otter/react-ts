@@ -8,18 +8,18 @@ const HwFooter: React.FC = () => {
 
   return (
       <div className="hwFooter">
-        <div className="author">
-          <img src={developerIcon} alt="developer icon"/>
-
-          <label>Hyun-woo Yoo</label>
-        </div>
-
-        <div className="contact">
+        <div>
           <img src={contactIcon} alt="contact icon"/>
 
           <a target="_blank" href={contactUrl}>
             현우u Youtube
           </a>
+        </div>
+
+        <div>
+          <img src={developerIcon} alt="developer icon"/>
+
+          <label>Hyun-woo Yoo</label>
         </div>
       </div>
   );

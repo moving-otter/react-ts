@@ -7,11 +7,51 @@
 
   .depth-1 {
 
+    .closeArea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 35px;
+      border-bottom: 1px solid #515658;
+      opacity: 0.7;
+
+      .motto {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+
+      .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 24px;
+        font-size: 36px;
+        margin-right: 5px;
+        border: 1px solid transparent;
+
+        label {
+          width: 60%;
+          height: 2px;
+          background-color: rgb(187, 187, 187);
+        }
+      }
+      .close:hover {
+        border-radius: 5px;
+        border: 1px solid rgb(140, 140, 140);
+      }
+    }
+    .closeArea:hover {
+      background-color: rgb(49, 61, 74);
+    }
   }
 }
 
 .area {
   padding: 2px 0;
+}
+.area:hover {
+  background-color: rgb(13, 41, 62);
 }
 .area:focus {
   background-color: rgb(75, 110, 175);
@@ -39,4 +79,5 @@
 
 .opened {
   transform: rotate(90deg);
+  transition: 1s;
 }
