@@ -5,7 +5,7 @@ import favicon from "@assets/favicon.png";
 
 const HwHeader: React.FC = () => {
   return (
-      <div className="hwHeader">
+      <div className="hwHeader hwUserSelectNone">
         <img src={favicon} alt="logo"/>
 
         <HashRouter>

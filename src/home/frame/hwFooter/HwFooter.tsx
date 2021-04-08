@@ -7,7 +7,7 @@ const HwFooter: React.FC = () => {
   const contactUrl = 'https://www.youtube.com/user/youhyunwoo/discussion';
 
   return (
-      <div className="hwFooter">
+      <div className="hwFooter hwUserSelectNone">
         <div>
           <img src={contactIcon} alt="contact icon"/>
 

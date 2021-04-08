@@ -4,11 +4,11 @@ import './HwSidebar.scoped.scss';
 const HwSidebar: React.FC = () => {
 
   return (
-    <div className="hwSidebar">
+    <div className="hwSidebar hwUserSelectNone">
       <div className="depth-1">
         <div className="closeArea">
           <div className="motto">
-            "겨울은 원래 춥다."
+            <i>Simple is best</i>
           </div>
 
           <div className="close">

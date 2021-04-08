@@ -6,7 +6,7 @@ import FolderIcon from '@assets/icon/folder-icon.png';
 const HwSearch: React.FC = () => {
 
   return (
-      <div className="hwSearch">
+      <div className="hwSearch hwUserSelectNone">
         <div className="project">
           Project
 
