@@ -39,4 +39,4 @@ package-lock.json
 /debug.log
 *.js___jb_tmp___
 
-/src/common/locale/locale.babel
+/src/@common/locale/locale.babel

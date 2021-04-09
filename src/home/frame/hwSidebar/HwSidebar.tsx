@@ -1,17 +1,21 @@
 import React from 'react';
 import './HwSidebar.scoped.scss';
+import {useSelector, RootStateOrAny, useDispatch} from 'react-redux';
+import {toggleSidebar} from '@store/ui/UiAction';
 
 const HwSidebar: React.FC = () => {
+  const dispatch = useDispatch();
+  const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
 
   return (
-    <div className="hwSidebar hwUserSelectNone">
+    <div className={`${(uiState.sidebar) ? 'show':'hide'} hwSidebar hwUserSelectNone`}>
       <div className="depth-1">
         <div className="closeArea">
           <div className="motto">
             <i>Simple is best</i>
           </div>
 
-          <div className="close">
+          <div className="close" onClick={() => dispatch(toggleSidebar())}>
             <label></label>
           </div>
         </div>

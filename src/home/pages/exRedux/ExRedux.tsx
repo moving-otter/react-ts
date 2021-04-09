@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemList from "./ItemList/ItemList";
 import {useDispatch} from "react-redux";
-import {addCart} from "store/actions";
+import {addCart} from "@store/cart/CartAction";
 import {itemList} from "./Item";
 
 const frameStyle = {

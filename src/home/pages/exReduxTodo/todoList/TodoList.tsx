@@ -1,16 +1,16 @@
 import React from 'react';
 import './TodoList.scoped.scss';
-import {deleteTodo} from "../store/action";
+import {deleteTodo} from "@store/todo/TodoAction";
 import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
 
 export const TodoList: React.FC = () => {
   const dispatch = useDispatch();
-  const reducer = useSelector((state: RootStateOrAny) => state.TodoReducer);
+  const todoState = useSelector((state: RootStateOrAny) => state.TodoReducer);
 
-  let list;
+  let domList;
 
-  if (reducer.length > 0) {
-    list = reducer.map((e) =>
+  if (todoState.list.length > 0) {
+    domList = todoState.list.map((e) =>
         <div key={e.key} className="item">
           <li>{e.text}</li>
           <button onClick={() => dispatch(deleteTodo({key: e.key}))}>
@@ -19,12 +19,12 @@ export const TodoList: React.FC = () => {
         </div>
     )
   } else {
-    list = '';
+    domList = '';
   }
 
   return (
       <ul className="todoList">
-        {list}
+        {domList}
       </ul>
   );
 };

@@ -11,7 +11,7 @@ const HwFooter: React.FC = () => {
         <div>
           <img src={contactIcon} alt="contact icon"/>
 
-          <a target="_blank" href={contactUrl}>
+          <a target="_blank" href={contactUrl} rel="noreferrer">
             현우u Youtube
           </a>
         </div>

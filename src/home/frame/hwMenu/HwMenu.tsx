@@ -4,7 +4,7 @@ import {HashRouter, NavLink} from 'react-router-dom';
 import {RootStateOrAny, useSelector} from "react-redux";
 
 const HwMenu: React.FC = () => {
-  const reducer = useSelector((state: RootStateOrAny) => state.cartReducer);
+  const reducer = useSelector((state: RootStateOrAny) => state.CartReducer);
 
   return (
       <HashRouter>

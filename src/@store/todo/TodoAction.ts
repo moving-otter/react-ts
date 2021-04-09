@@ -1,5 +1,8 @@
-import {ADD_TODO, DELETE_TODO, RESET_TODO} from "./ActionTypes";
-import {Todo, TodoKey} from '../type/TodoType';
+import {Todo, TodoKey} from './TodoType';
+
+export const ADD_TODO = 'todo/addTodo';
+export const DELETE_TODO = 'todo/deleteTodo';
+export const RESET_TODO = 'todo/resetTodo';
 
 export const addTodo = (_payload: Todo) => {
   return {
@@ -15,9 +18,8 @@ export const deleteTodo = (_payload: TodoKey) => {
   }
 };
 
-export const resetTodo = (_payload) => {
+export const resetTodo = () => {
   return {
     type: RESET_TODO,
-    payload: _payload
   }
 };

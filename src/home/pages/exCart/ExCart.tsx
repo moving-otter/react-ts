@@ -1,7 +1,7 @@
 import React from "react";
 import ItemList from "./ItemList/ItemList";
+import {deleteCart} from "@store/cart/CartAction";
 import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
-import {deleteCart} from "../../../store/actions";
 
 const wrapperStyle = {
   display: 'inline-grid'
@@ -9,7 +9,7 @@ const wrapperStyle = {
 
 const ExCart = () => {
   const dispatch = useDispatch();
-  const reducer = useSelector((state: RootStateOrAny) => state.cartReducer);
+  const reducer = useSelector((state: RootStateOrAny) => state.CartReducer);
 
   const dom = reducer.length >= 1 ? reducer.map((item) => {
     return <ItemList key={item.name} item={item} deleteFunc={(item) => dispatch(deleteCart(item))}/>

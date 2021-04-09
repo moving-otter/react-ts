@@ -12,8 +12,7 @@ const ExState: React.FC = () => {
     hljs.highlightAll();
   }, []);
 
-  const coding = `
-import React, {Component} from 'react';
+  const coding = `import React, {Component} from 'react';
 import './ExState.scoped.scss';
 
 type props = {};
@@ -65,10 +64,7 @@ class StateClass extends Component<props, state> {
   };
 }
 
-export default StateClass;
-  `;
-
-  const jsCode = `const de = 'eieof'`;
+export default StateClass;`;
 
   return (
       <div className="exState">

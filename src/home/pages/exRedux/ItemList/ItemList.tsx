@@ -14,10 +14,11 @@ const ItemList: React.FC<props> = ({itemList, addFunc}) => {
       <ul className="itemList">
         {itemList.map((item) =>
             <div className="item" key={item.name}>
-              <img className="img" src={item.url}/>
+              <img className="img" src={item.url} alt={item.name}/>
               <div className="name">{item.name}</div>
               <div className="price">{item.price}</div>
-              <button className="addCartButton" onClick={() => addFunc(item)}>장바구니 담기
+              <button className="addCartButton" onClick={() => addFunc(item)}>
+                장바구니 담기
               </button>
             </div>
         )}

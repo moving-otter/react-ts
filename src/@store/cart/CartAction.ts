@@ -1,4 +1,5 @@
-import {ADD_ITEMS, DELETE_ITEMS} from "./ActionTypes";
+export const ADD_ITEMS = 'cart/addItems';
+export const DELETE_ITEMS = 'cart/deleteItems';
 
 export const addCart = (item) => {
   return {

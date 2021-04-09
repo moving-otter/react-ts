@@ -1,6 +1,6 @@
-import {ADD_ITEMS, DELETE_ITEMS} from "../actions/ActionTypes";
+import {ADD_ITEMS, DELETE_ITEMS} from "./CartAction";
 
-const cartReducer = (state = [], action) => {
+const CartReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_ITEMS:
       if (state.filter(item => item.name === action.payload.name).length === 0) {
@@ -15,4 +15,4 @@ const cartReducer = (state = [], action) => {
   }
 };
 
-export default cartReducer;
+export default CartReducer;

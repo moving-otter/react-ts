@@ -1,8 +1,8 @@
 import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
 import './TodoEditor.scoped.scss';
-import {addTodo, resetTodo} from '../store/action';
+import {Todo} from "@store/todo/TodoType";
 import {useDispatch} from 'react-redux';
-import {Todo} from "../store/type/TodoType";
+import {addTodo, resetTodo} from '@store/todo/TodoAction';
 
 export const TodoEditor: React.FC = () => {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ export const TodoEditor: React.FC = () => {
           add
         </button>
 
-        <button onClick={() => dispatch(resetTodo({}))}>
+        <button onClick={() => dispatch(resetTodo())}>
           reset
         </button>
       </div>
