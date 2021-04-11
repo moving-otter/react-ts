@@ -1,0 +1,15 @@
+.todoList {
+  padding: 20px;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 10px;
+
+    button {
+      width: 40px;
+      font-size: 20px;
+    }
+  }
+}

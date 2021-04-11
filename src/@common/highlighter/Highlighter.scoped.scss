@@ -6,24 +6,24 @@
     display: flex;
     align-items: center;
     width: 100%;
-    top: 7px;
+    top: 0;
     left: 5px;
     background-color: #3b3b3b;
     margin-left: -35px;
-    padding: 2px 30px;
+    padding: 5px 30px;
 
     img {
-      width: 17px;
-      height: 17px;
+      width: 22px;
+      height: 22px;
       filter: invert(0.7);
-      margin-right: 5px;
+      margin-right: 8px;
     }
   }
 
   .customCode {
     background: none;
-    border-bottom: 1px solid #3b3b4b;
+    border-bottom: 1px solid #3b3b3b;
     padding: 50px 24px 20px 30px;
-    margin: 20px -30px;
+    margin: 30px -30px;
   }
 }

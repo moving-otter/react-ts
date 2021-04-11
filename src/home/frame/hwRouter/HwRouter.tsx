@@ -13,7 +13,7 @@ import {
   ExTodoList,
   ExVerneer,
   Welcome,
-} from 'home/pages/Pages';
+} from 'home/pages/react';
 
 const HwRouter: React.FC = () => {
   return (
