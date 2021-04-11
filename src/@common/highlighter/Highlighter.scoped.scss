@@ -1,0 +1,29 @@
+.highlighter {
+  position: relative;
+
+  .titleArea {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 7px;
+    left: 5px;
+    background-color: #3b3b3b;
+    margin-left: -35px;
+    padding: 2px 30px;
+
+    img {
+      width: 17px;
+      height: 17px;
+      filter: invert(0.7);
+      margin-right: 5px;
+    }
+  }
+
+  .customCode {
+    background: none;
+    border-bottom: 1px solid #3b3b4b;
+    padding: 50px 24px 20px 30px;
+    margin: 20px -30px;
+  }
+}

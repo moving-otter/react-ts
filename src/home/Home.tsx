@@ -10,6 +10,7 @@ import {
 } from './frame/Frame';
 
 const Home: React.FC = () => {
+
   return (
       <div className="home">
         <HwHeader/>

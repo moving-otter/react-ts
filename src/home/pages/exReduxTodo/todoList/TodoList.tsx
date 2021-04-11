@@ -3,7 +3,7 @@ import './TodoList.scoped.scss';
 import {deleteTodo} from "@store/todo/TodoAction";
 import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
 
-export const TodoList: React.FC = () => {
+const TodoList: React.FC = () => {
   const dispatch = useDispatch();
   const todoState = useSelector((state: RootStateOrAny) => state.TodoReducer);
 

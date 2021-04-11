@@ -4,7 +4,7 @@ import {Todo} from "@store/todo/TodoType";
 import {useDispatch} from 'react-redux';
 import {addTodo, resetTodo} from '@store/todo/TodoAction';
 
-export const TodoEditor: React.FC = () => {
+const TodoEditor: React.FC = () => {
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
 

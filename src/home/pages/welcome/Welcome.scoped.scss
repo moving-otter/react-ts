@@ -1,41 +1,4 @@
-$height: 645px;
 
 .welcome {
-  margin: -30px;
-  position: relative;
-  height: $height;
-  font-weight: bold;
 
-  img {
-    position: absolute;
-    width: 100%;
-    opacity: 0.3;
-    height: calc(100vh - 80px);
-  }
-
-  .content {
-    padding: 40px 40px 40px 60px;
-
-    .title {
-      margin-bottom: 20px;
-      font-size: 24px;
-
-      i {
-        font-size: 100px;
-      }
-    }
-
-    .desc {
-      margin-top: 80px;
-      font-size: 28px;
-      padding-left: 30px;
-    }
-
-    ul {
-
-      li {
-        margin-top: 20px;
-      }
-    }
-  }
 }
