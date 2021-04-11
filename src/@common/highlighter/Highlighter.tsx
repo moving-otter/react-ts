@@ -32,7 +32,7 @@ class Highlighter extends Component<props, state> {
             {this.props.children}
           </code>
 
-          <div className="bottomLine"></div>
+          <div className="bottomLine"/>
         </pre>
     );
   }
