@@ -64,6 +64,18 @@ hr {
   margin: 20px 0;
 }
 
+.hwDesc {
+  padding: 15px 0;
+  line-height: 27px;
+
+  ul {
+
+    li {
+      margin-left: 10px;
+    }
+  }
+}
+
 .hwFlex {
   display: flex;
   justify-content: center;

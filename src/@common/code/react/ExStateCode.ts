@@ -1,7 +1,6 @@
 const StateClassCode = {
   desc: 'Functional Component',
   code: `import React, {useState} from 'react';
-import './ExState.scoped.scss';
 
 const ExState: React.FC = () => {
   const [count, setCount] = useState<number>(0);
@@ -38,7 +37,6 @@ export default ExState;
 const StateFcCode = {
   desc: 'Class component',
   code: `import React, {Component} from 'react';
-import './ExState.scoped.scss';
 
 type props = {};
 

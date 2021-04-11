@@ -10,7 +10,7 @@ type props = {
 
 type state = {
 
-}
+};
 
 class Highlighter extends Component<props, state> {
   static defaultProps = {
@@ -31,6 +31,8 @@ class Highlighter extends Component<props, state> {
           <code className="customCode">
             {this.props.children}
           </code>
+
+          <div className="bottomLine"></div>
         </pre>
     );
   }

@@ -1,16 +1,16 @@
 .highlighter {
   position: relative;
+  padding: 20px 0;
 
   .titleArea {
-    position: absolute;
     display: flex;
     align-items: center;
     width: 100%;
     top: 0;
     left: 5px;
     background-color: #3b3b3b;
-    margin-left: -35px;
-    padding: 5px 30px;
+    margin-left: -34px;
+    padding: 5px 32px;
 
     img {
       width: 22px;
@@ -22,8 +22,12 @@
 
   .customCode {
     background: none;
+    padding: 20px 0;
+    line-height: 20px;
+  }
+
+  .bottomLine {
     border-bottom: 1px solid #3b3b3b;
-    padding: 50px 24px 20px 30px;
-    margin: 30px -30px;
+    margin: 0 -29px;
   }
 }
