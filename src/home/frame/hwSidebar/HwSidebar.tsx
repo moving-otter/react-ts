@@ -16,6 +16,7 @@ const HwSidebar: React.FC = () => {
           </div>
 
           <div className="close" onClick={() => dispatch(toggleSidebar())}>
+            {/*close button*/}
             <label></label>
           </div>
         </div>

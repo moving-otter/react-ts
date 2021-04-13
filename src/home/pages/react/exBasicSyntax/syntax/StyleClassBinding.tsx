@@ -25,7 +25,7 @@ class StyleClassBinding extends Component<props, state> {
 
   render() {
     const rootStyle = {
-      height: '100px',
+      minHeight: '150px',
       fontSize: '24px',
     };
     const render = {

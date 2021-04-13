@@ -3,6 +3,12 @@ import './ExProps.scoped.scss';
 import DynamicPropsFc from './dynamicProps/DynamicPropsFc';
 import DynamicPropsClass from './dynamicProps/DynamicPropsClass';
 import RequiredProps from './requiredProps/RequiredProps';
+import {Highlighter} from '@common/highlighter';
+import {
+    RequiredPropsCode,
+    DynamicPropsClassCode,
+    DynamicPropsFcCode
+} from '@common/code/react/ExPropsCode';
 
 const exProps: React.FC = () => {
 
@@ -16,55 +22,23 @@ const exProps: React.FC = () => {
         It occurs error because propsTwo is missing.
       */}
 
-      <hr/>
+      <Highlighter codeInfo={RequiredPropsCode}/>
 
-      <div className="hwTitle">Dynamic props</div>
-
-      <DynamicPropsFc name={'A'}/>
-      <DynamicPropsFc name={'B'} age={28}/>
-      <DynamicPropsFc name={'C'} age={30}/>
-
-      <hr/>
-
-      <DynamicPropsClass name={'D'} age={34}/>
-      <DynamicPropsClass name={'D'}/>
-      <DynamicPropsClass name={'E'}/><hr/>
-
-      <div className="hwTitle">Dynamic props</div>
+      <div className="hwTitle">Dynamic props - Fc</div>
 
       <DynamicPropsFc name={'A'}/>
       <DynamicPropsFc name={'B'} age={28}/>
       <DynamicPropsFc name={'C'} age={30}/>
 
-      <hr/>
+      <Highlighter codeInfo={DynamicPropsFcCode}/>
 
-      <DynamicPropsClass name={'D'} age={34}/>
-      <DynamicPropsClass name={'D'}/>
-      <DynamicPropsClass name={'E'}/><hr/>
-
-      <div className="hwTitle">Dynamic props</div>
-
-      <DynamicPropsFc name={'A'}/>
-      <DynamicPropsFc name={'B'} age={28}/>
-      <DynamicPropsFc name={'C'} age={30}/>
-
-      <hr/>
-
-      <DynamicPropsClass name={'D'} age={34}/>
-      <DynamicPropsClass name={'D'}/>
-      <DynamicPropsClass name={'E'}/><hr/>
-
-      <div className="hwTitle">Dynamic props</div>
-
-      <DynamicPropsFc name={'A'}/>
-      <DynamicPropsFc name={'B'} age={28}/>
-      <DynamicPropsFc name={'C'} age={30}/>
-
-      <hr/>
+      <div className="hwTitle">Dynamic props - Class</div>
 
       <DynamicPropsClass name={'D'} age={34}/>
       <DynamicPropsClass name={'D'}/>
       <DynamicPropsClass name={'E'}/>
+
+      <Highlighter codeInfo={DynamicPropsClassCode}/>
     </div>
   );
 };

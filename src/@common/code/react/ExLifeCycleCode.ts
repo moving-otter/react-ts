@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import './ExLifeCycle.scoped.scss';
-import {Highlighter} from '@common/highlighter';
-import {ExLifeCycleCode} from '@common/code/react/ExLifeCycleCode';
+const ExLifeCycleCode = {
+  desc: 'ExLifeCycle.tsx - check console log',
+  code: `import React, {Component} from 'react';
 
 type props = {};
 
@@ -77,11 +76,15 @@ class ExLifeCycle extends Component<props, state> {
               </ul>
             </div>
           </div>
-
-          <Highlighter codeInfo={ExLifeCycleCode}/>
         </div>
     )
   }
 }
 
 export default ExLifeCycle;
+`
+};
+
+export {
+  ExLifeCycleCode
+};

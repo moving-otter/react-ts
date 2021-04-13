@@ -36,7 +36,7 @@ class DynamicPropsClass extends Component<props, state> {
   render() {
     return (
         <div className="dynamicProps">
-          <div className="hwBlueMarker">{`${this.state.title} - class`}</div>
+          <div className="hwBlueMarker">{this.state.title} - class</div>
           <div>{this.props.name}</div>
           <div>{this.props.age}</div>
           <button onClick={this.handleTitle}>Change</button>

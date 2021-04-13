@@ -10,13 +10,9 @@ const ExState: React.FC = () => {
       <div className="exState">
         <StateFc/>
 
-        <Highlighter desc={StateClassCode.desc}>
-          {StateClassCode.code}
-        </Highlighter>
+        <Highlighter codeInfo={StateClassCode}/>
 
-        <Highlighter desc={StateFcCode.desc}>
-          {StateFcCode.code}
-        </Highlighter>
+        <Highlighter codeInfo={StateFcCode}/>
       </div>
   )
 };

@@ -35,7 +35,9 @@ a:hover {
 }
 
 hr {
-  margin: 30px 0;
+  margin: 20px 0;
+  border-color: darkgray;
+  border-bottom: none;
 }
 
 ::-webkit-scrollbar {

@@ -10,9 +10,7 @@ const Welcome: React.FC = () => {
           Hello hw-dev-store!
         </div>
 
-        <Highlighter desc={WelcomeCode.desc}>
-          {WelcomeCode.code}
-        </Highlighter>
+        <Highlighter codeInfo={WelcomeCode}/>
       </div>
   );
 };

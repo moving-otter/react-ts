@@ -1,5 +1,4 @@
 import React from 'react';
-import './RequiredProps.scss';
 
 type props = {
   propsOne: string;

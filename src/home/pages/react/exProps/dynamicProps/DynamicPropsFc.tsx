@@ -20,7 +20,7 @@ const DynamicPropsFc = ({name, age}: props) => {
 
   return (
     <div className="dynamicProps">
-      <div>{`${title} - fc`}</div>
+      <div>{title} - fc</div>
       <div>{name}</div>
       <div>{age}</div>
       <button onClick={handleTitle}>Change</button>
