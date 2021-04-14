@@ -1,4 +1,5 @@
 const ExLifeCycleCode = {
+  type: 'typescript',
   desc: 'ExLifeCycle.tsx - check console log',
   code: `import React, {Component} from 'react';
 

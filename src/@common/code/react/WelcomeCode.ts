@@ -1,4 +1,5 @@
 const WelcomeCode = {
+  type: 'typescript',
   desc: 'index.tsx : project entry code',
   code: `import React from 'react';
 import ReactDOM from 'react-dom';

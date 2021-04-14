@@ -1,4 +1,5 @@
 const RequiredPropsCode = {
+  type: 'typescript',
   desc: 'Required Props with TypeScript',
   code: `import React from 'react';
 
@@ -20,6 +21,7 @@ export default RequiredProps;
 };
 
 const DynamicPropsClassCode = {
+  type: 'typescript',
   desc: 'DynamicPropsClass.tsx',
   code: `import React, {Component} from 'react';
 
@@ -72,6 +74,7 @@ export default DynamicPropsClass;
 };
 
 const DynamicPropsFcCode = {
+  type: 'typescript',
   desc: 'DynamicPropsFc.tsx',
   code: `import React, {useState} from 'react';
 

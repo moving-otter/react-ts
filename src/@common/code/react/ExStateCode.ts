@@ -1,4 +1,5 @@
 const StateClassCode = {
+  type: 'typescript',
   desc: 'Functional Component',
   code: `import React, {useState} from 'react';
 
@@ -35,6 +36,7 @@ export default ExState;
 };
 
 const StateFcCode = {
+  type: 'typescript',
   desc: 'Class component',
   code: `import React, {Component} from 'react';
 

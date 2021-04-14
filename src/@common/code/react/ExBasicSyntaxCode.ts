@@ -1,4 +1,5 @@
 const LoopStatementCode = {
+  type: 'typescript',
   desc: 'LoopStatement.tsx',
   code: `import React, {Component} from 'react';
 
@@ -56,6 +57,7 @@ export default LoopStatement;
 };
 
 const ConditionalStatementCode = {
+  type: 'typescript',
   desc: 'ConditionalStatement.tsx',
   code: `import React, {Component} from 'react';
 
@@ -110,6 +112,7 @@ export default ConditionalStatement;
 };
 
 const StyleClassBindingCode = {
+  type: 'typescript',
   desc: 'StyleClassBinding.tsx',
   code: `import React, {Component} from 'react';
 

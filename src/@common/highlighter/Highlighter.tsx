@@ -5,6 +5,8 @@ import hljs from 'highlight.js/lib';
 
 type props = {
   codeInfo: {
+    // typescript, css
+    type: string;
     desc: string;
     code: string;
   };
@@ -25,25 +27,16 @@ class Highlighter extends Component<props, state> {
 
   componentDidMount() {
     hljs.highlightAll();
-    // setTimeout(() => {
-    //   this.setState({flag: true});
-    //   hljs.highlightAll();
-    // }, 100);
   }
 
   render() {
-    // const renderClass = (this.state.flag) ? 'show' : 'hide';
-    // const getStyle = {
-    //   color: (this.state.flag) ? '' : '#2b2b2b'
-    // };
-
     return (
         <pre className="highlighter">
           <div className="titleArea hwUserSelectNone">
             {this.props.codeInfo.desc}
           </div>
 
-          <code className="customCode">
+          <code className={`${this.props.codeInfo.type} customCode`}>
             {this.props.codeInfo.code}
           </code>
 
