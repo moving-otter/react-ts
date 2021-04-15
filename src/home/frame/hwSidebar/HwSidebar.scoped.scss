@@ -48,11 +48,7 @@
 }
 
 .area:hover {
-  background-color: rgb(30, 55, 70);
-  //background-color: rgb(75, 110, 175);
-}
-.area:active {
-  //background-color: rgb(75, 110, 175);
+  background-color: rgb(13, 41, 62);
 }
 
 .depth-1-area {
@@ -70,12 +66,8 @@
   color: #bbbbbb;
   border: 0;
 }
-.depth-2-area:active {
-  //color: #aaaaaa;
-}
-
 .depth-2-area.active {
-  background-color: rgb(13, 41, 62);
+  background-color: rgb(30, 55, 70);
 }
 
 .content-2 {
