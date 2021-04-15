@@ -34,7 +34,7 @@ const ExState: React.FC = () => {
           </ul>
         </div>
       </div>
-)
+  )
 };
 
 export default ExState;

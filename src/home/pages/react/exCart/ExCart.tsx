@@ -9,15 +9,25 @@ const wrapperStyle = {
 
 const ExCart = () => {
   const dispatch = useDispatch();
-  const reducer = useSelector((state: RootStateOrAny) => state.CartReducer);
+  const cartState = useSelector((state: RootStateOrAny) => state.CartReducer);
 
-  const dom = reducer.length >= 1 ? reducer.map((item) => {
-    return <ItemList key={item.name} item={item} deleteFunc={(item) => dispatch(deleteCart(item))}/>
-  }) : <div className="emptyCart">장바구니가 비어 있습니다</div>;
+  let dom;
+
+  if (cartState.length >= 1) {
+    dom = cartState.map((item) => {
+      return <ItemList
+          key={item.name}
+          item={item}
+          deleteFunc={(item) => dispatch(deleteCart(item))}
+      />
+    })
+  } else {
+    dom = <div className="emptyCart">장바구니가 비어 있습니다</div>;
+  }
 
   return (
       <div className="exCart">
-        <h2 className="title">장바구니</h2>
+        <h2 className="title">장바구니 - {cartState.length}</h2>
         <div className="wrapper" style={wrapperStyle}>
           {dom}
         </div>

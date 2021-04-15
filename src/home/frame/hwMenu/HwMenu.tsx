@@ -1,10 +1,8 @@
 import React from 'react';
 import './HwMenu.scoped.scss';
 import {HashRouter, NavLink} from 'react-router-dom';
-import {RootStateOrAny, useSelector} from "react-redux";
 
 const HwMenu: React.FC = () => {
-  const reducer = useSelector((state: RootStateOrAny) => state.CartReducer);
 
   return (
       <HashRouter>
@@ -19,8 +17,7 @@ const HwMenu: React.FC = () => {
             <NavLink to="/exTodoList">TodoList</NavLink>
             <NavLink to="/exReduxTodo">Redux Todo</NavLink>
             <NavLink to="/exRedux">Redux</NavLink>
-            <NavLink to="/exCart">CartList - {reducer.length}</NavLink>
-            {/*<NavLink to="/exReduxCounter">Redux Counter</NavLink>*/}
+            <NavLink to="/exCart">Cart List</NavLink>
           </div>
         </div>
       </HashRouter>

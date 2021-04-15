@@ -47,33 +47,43 @@
   }
 }
 
-.area {
-  padding: 2px 0;
-}
 .area:hover {
-  background-color: rgb(13, 41, 62);
+  background-color: rgb(30, 55, 70);
+  //background-color: rgb(75, 110, 175);
 }
-.area:focus {
-  background-color: rgb(75, 110, 175);
+.area:active {
+  //background-color: rgb(75, 110, 175);
 }
 
 .depth-1-area {
   display: flex;
-  padding-left: 5px;
+  align-items: center;
+  padding-left: 10px;
+  height: 30px;
 }
 
 .depth-2-area {
   display: flex;
-  padding-left: 22px;
+  align-items: center;
+  height: 30px;
+  padding-left: 30px;
+  color: #bbbbbb;
+  border: 0;
+}
+.depth-2-area:active {
+  //color: #aaaaaa;
 }
 
-.depth-3-area {
-  display: flex;
-  padding-left: 43px;
+.depth-2-area.active {
+  background-color: rgb(13, 41, 62);
+}
+
+.content-2 {
+  margin-bottom: 15px;
 }
 
 .pointer {
-  margin-right: 5px;
+  margin-right: 7px;
   font-size: 12px;
   margin-top: -2px;
 }
