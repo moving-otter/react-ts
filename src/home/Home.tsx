@@ -29,7 +29,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="right">
-            .
+
           </div>
         </div>
 

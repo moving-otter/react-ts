@@ -2,22 +2,24 @@
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  height: 25px;
+  height: 21px;
   color: rgb(187, 187, 187);
   background-color: rgb(60, 63, 65);
   border-top: 1px solid #515658;
   bottom: 0;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 10px 3px 10px;
+  font-size: 13px;
 
   div {
     display: flex;
-    width: 170px;
+    align-items: center;
+    width: 150px;
 
     img {
-      width: 25px;
-      height: 25px;
-      filter: invert(0.7);
+      width: 20px;
+      height: 20px;
+      filter: invert(0.9);
     }
 
     label {
