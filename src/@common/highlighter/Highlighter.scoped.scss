@@ -9,8 +9,8 @@
     top: 0;
     left: 5px;
     background-color: #3b3b3b;
-    margin-left: -34px;
-    padding: 5px 32px;
+    padding: 5px 30px;
+    margin-left: -30px;
     font-family: auto !important;
 
     img {
@@ -21,14 +21,38 @@
     }
   }
 
-  .customCode {
-    background: none;
-    padding: 20px 0 40px 0;
-    line-height: 20px;
+  .content {
+    display: flex;
+    line-height: 21px;
+
+    .lineNumber {
+      background-color: rgb(49, 51, 53);
+      color: rgb(96, 99, 102);
+      margin-left: -30px;
+      padding: 20px 0 40px 0;
+      margin-right: 30px;
+
+      .num {
+        padding: 0 22px 0 10px;
+      }
+      .num:hover {
+        background-color: #3e3e3e;
+      }
+      .num:focus {
+        color: gray;
+        background-color: darkslategray;
+      }
+    }
+
+    .customCode {
+      background: none;
+      padding: 20px 0 40px 0;
+    }
   }
 
   .bottomLine {
-    border-bottom: 1px solid #3b3b3b;
-    margin: 0 -29px;
+    border-bottom: 5px solid #313335;
+    margin: 0 -28px;
+    margin-top: -5px;
   }
 }

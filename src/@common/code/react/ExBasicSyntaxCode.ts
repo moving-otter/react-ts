@@ -52,8 +52,7 @@ class LoopStatement extends Component<props, state> {
   };
 }
 
-export default LoopStatement;
-`,
+export default LoopStatement;`,
 };
 
 const ConditionalStatementCode = {
@@ -107,8 +106,7 @@ class ConditionalStatement extends Component<props, state> {
   };
 }
 
-export default ConditionalStatement;
-`,
+export default ConditionalStatement;`,
 };
 
 const StyleClassBindingCode = {
@@ -162,8 +160,7 @@ class StyleClassBinding extends Component<props, state> {
   };
 }
 
-export default StyleClassBinding;
-`,
+export default StyleClassBinding;`,
 };
 
 export {

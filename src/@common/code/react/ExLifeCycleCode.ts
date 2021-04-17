@@ -82,8 +82,7 @@ class ExLifeCycle extends Component<props, state> {
   }
 }
 
-export default ExLifeCycle;
-`
+export default ExLifeCycle;`
 };
 
 export {

@@ -14,6 +14,7 @@ type props = {
 
 type state = {
   flag: boolean;
+  numList: Array<number>;
 };
 
 class Highlighter extends Component<props, state> {
@@ -21,12 +22,23 @@ class Highlighter extends Component<props, state> {
     super(props);
 
     this.state = {
-      flag: false
+      flag: false,
+      numList: []
     };
   }
 
   componentDidMount() {
     hljs.highlightAll();
+
+    this.setNumList();
+  }
+
+  setNumList() {
+    const str = this.props.codeInfo.code;
+    const len = str.split(/\r\n|\r|\n/).length;
+    const newNumList = Array.from(Array(len).keys());
+
+    this.setState({numList: newNumList});
   }
 
   render() {
@@ -36,9 +48,19 @@ class Highlighter extends Component<props, state> {
             {this.props.codeInfo.desc}
           </div>
 
-          <code className={`${this.props.codeInfo.type} customCode`}>
+          <div className="content">
+            <div className="lineNumber hwUserSelectNone">
+              {this.state.numList.map(num =>
+                <div className="num" key={num} tabIndex={1}>
+                  {num + 1}
+                </div>
+              )}
+            </div>
+
+            <code className={`${this.props.codeInfo.type} customCode`}>
             {this.props.codeInfo.code}
           </code>
+          </div>
 
           <div className="bottomLine"/>
         </pre>

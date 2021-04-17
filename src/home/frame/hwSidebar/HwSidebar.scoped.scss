@@ -2,7 +2,7 @@
   width: 450px;
   height: calc(100% - 50px);
   border-right: 1px solid #515658;
-  resize: horizontal;
+  //resize: horizontal;
   overflow: auto;
 
   .depth-1 {
@@ -54,15 +54,16 @@
 .depth-1-area {
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  height: 30px;
+  padding-left: 15px;
+  height: 35px;
+  font-size: 16px;
 }
 
 .depth-2-area {
   display: flex;
   align-items: center;
   height: 30px;
-  padding-left: 30px;
+  padding-left: 35px;
   color: #bbbbbb;
   border: 0;
 }

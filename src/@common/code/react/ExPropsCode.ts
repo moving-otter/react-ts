@@ -16,8 +16,7 @@ const RequiredProps: React.FC<props> = ({propsOne, propsTwo}) => {
   )
 };
 
-export default RequiredProps;
-`,
+export default RequiredProps;`,
 };
 
 const DynamicPropsClassCode = {
@@ -69,8 +68,7 @@ class DynamicPropsClass extends Component<props, state> {
   };
 }
 
-export default DynamicPropsClass;
-`
+export default DynamicPropsClass;`
 };
 
 const DynamicPropsFcCode = {

@@ -31,8 +31,7 @@ const ExState: React.FC = () => {
   )
 };
 
-export default ExState;
-`,
+export default ExState;`,
 };
 
 const StateFcCode = {
@@ -89,8 +88,7 @@ class StateClass extends Component<props, state> {
   };
 }
 
-export default StateClass;
-`,
+export default StateClass;`,
 };
 
 export {

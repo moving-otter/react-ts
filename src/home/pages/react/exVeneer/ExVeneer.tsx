@@ -8,6 +8,8 @@ const ExVeneer: React.FC = () => {
 
   return (
       <div className="exVeneer">
+        <div className="hwTitle">Veneer Example</div>
+
         <VeChart/>
         <br/>
 

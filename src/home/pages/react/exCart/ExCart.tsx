@@ -27,7 +27,7 @@ const ExCart = () => {
 
   return (
       <div className="exCart">
-        <h2 className="title">장바구니 - {cartState.length}</h2>
+        <h2 className="hwTitle">장바구니 - {cartState.length}</h2>
         <div className="wrapper" style={wrapperStyle}>
           {dom}
         </div>
