@@ -108,16 +108,10 @@ const HwSidebar: React.FC = () => {
           {itemList.map((item) =>
             <div className="content-1" key={item.parent}>
               <div className="depth-2">
-                <div
-                    className="area"
-                    tabIndex={1}
-                    onClick={() => toggleRenderStatus(item.parent)}
-                >
+                <div className="area" onClick={() => toggleRenderStatus(item.parent)}>
                   <div className="depth-1-area">
                     {/*<label className="pointer opened">▶</label>*/}
-                    <label
-                        className={`${getItemBoolean(item.parent) ? 'opened' : ''} pointer`}
-                    >
+                    <label className={`${getItemBoolean(item.parent) ? 'opened' : ''} pointer`}>
                       ▶
                     </label>
                     <label>{item.parent}</label>
