@@ -1,0 +1,9 @@
+# Change dir component format to Component.tsx
+
+- 이전)
+ [Component] - dir
+   Component.tsx
+   styles.ts
+
+- 이후) Component.tsx
+ > Component 한 파일에서 script, style 같이 존재하는 형식
