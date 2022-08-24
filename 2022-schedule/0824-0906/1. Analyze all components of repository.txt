@@ -1,0 +1,5 @@
+# Analyze all components of repository.txt
+
+- @assets, @common, @store 구조 파악
+
+- commit tag 확인하여 webpack에 적용된 항목 파악
