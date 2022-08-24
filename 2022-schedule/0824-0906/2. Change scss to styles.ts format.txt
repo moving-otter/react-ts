@@ -2,5 +2,7 @@
 
 - "styled-components": "^5.2.0" 설치
 
+- class component => functional component
+
 - 이전) <div className="wrapper">{value}</div>
 - 이후) <Wrapper>{value}</Wrapper>
