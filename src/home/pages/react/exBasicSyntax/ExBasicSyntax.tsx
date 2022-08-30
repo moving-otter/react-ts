@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import LoopStatement from './syntax/LoopStatement';
 import ConditionalStatement from './syntax/ConditionalStatement';
 import StyleClassBinding from './syntax/StyleClassBinding';
@@ -9,9 +9,8 @@ import {
   StyleClassBindingCode
 } from '@common/code/react/ExBasicSyntaxCode';
 
-class ExBasicSyntax extends Component {
+const ExBasicSyntax = () => {
 
-  render() {
     return (
         <div className="exBasicSyntax">
           <LoopStatement/>
@@ -24,7 +23,6 @@ class ExBasicSyntax extends Component {
           <Highlighter codeInfo={StyleClassBindingCode}/>
         </div>
     );
-  };
 }
 
 export default ExBasicSyntax;
