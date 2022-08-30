@@ -2,10 +2,11 @@ import React from "react";
 import ItemList from "./ItemList/ItemList";
 import {deleteCart} from "@store/cart/CartAction";
 import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
+import styled from 'styled-components'
 
-const wrapperStyle = {
-  display: 'inline-grid'
-};
+const Wrapper = styled.div`
+  display: inline-grid
+`;
 
 const ExCart = () => {
   const dispatch = useDispatch();
@@ -28,9 +29,9 @@ const ExCart = () => {
   return (
       <div className="exCart">
         <h2 className="hwTitle">장바구니 - {cartState.length}</h2>
-        <div className="wrapper" style={wrapperStyle}>
+        <Wrapper>
           {dom}
-        </div>
+        </Wrapper>
       </div>
   );
 };
