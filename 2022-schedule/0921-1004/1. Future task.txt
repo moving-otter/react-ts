@@ -3,7 +3,9 @@
 - prettier / eslint 보류
 - package.json 업데이트 필요
 
-
+Feedback)
+- export const Component = () => {...}
+- export const Component:React.FC = () => {...}
 
 
 
