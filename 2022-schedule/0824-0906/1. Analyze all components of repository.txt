@@ -5,3 +5,8 @@
 - commit tag 확인하여 webpack에 적용된 항목 파악
 
 향후에) [Component] dir => Component.tsx 형식으로 변경 예정
+
+0831)
+React.FC와 안썼을 때의 차이점 알아 보기
+- export const Component = () => {...}
+- export const Component:React.FC = () => {...}
