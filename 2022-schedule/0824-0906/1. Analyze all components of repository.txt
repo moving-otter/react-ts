@@ -10,3 +10,7 @@
 React.FC와 안썼을 때의 차이점 알아 보기
 - export const Component = () => {...}
 - export const Component:React.FC = () => {...}
+
+0904)
+>> React.FC를 쓰면 props에 children이 무조건 명시되어서 children을 안 쓰는 곳에도 쓰게 되고
+   defaultProps를 쓰면 오류가 남.

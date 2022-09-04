@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import React from 'react';
 import LoopStatement from './syntax/LoopStatement';
 import ConditionalStatement from './syntax/ConditionalStatement';
@@ -9,10 +10,10 @@ import {
   StyleClassBindingCode
 } from '@common/code/react/ExBasicSyntaxCode';
 
-const ExBasicSyntax = () => {
+export const ExBasicSyntax = () => {
 
     return (
-        <div className="exBasicSyntax">
+        <Wrapper>
           <LoopStatement/>
           <Highlighter codeInfo={LoopStatementCode}/>
 
@@ -21,9 +22,10 @@ const ExBasicSyntax = () => {
 
           <StyleClassBinding/>
           <Highlighter codeInfo={StyleClassBindingCode}/>
-        </div>
+        </Wrapper>
     );
 }
 
-export default ExBasicSyntax;
+const Wrapper = styled.div`
+`;
 
