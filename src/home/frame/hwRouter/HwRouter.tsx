@@ -1,5 +1,5 @@
+import styled from 'styled-components'
 import React from 'react';
-import './HwRouter.scoped.scss';
 import {HashRouter, Route} from 'react-router-dom';
 import {
   ExBasicSyntax,
@@ -15,9 +15,9 @@ import {
   Welcome,
 } from 'home/pages/react';
 
-const HwRouter: React.FC = () => {
+export const HwRouter = () => {
   return (
-      <div className="hwRouter">
+      <Wrapper>
         <HashRouter>
           <Route exact path="/" component={Welcome}/>
           <Route path="/exState" component={ExState}/>
@@ -31,8 +31,13 @@ const HwRouter: React.FC = () => {
           <Route path="/exCart" component={ExCart}/>
           <Route path="/exReduxCounter" component={ExReduxCounter}/>
         </HashRouter>
-      </div>
+      </Wrapper>
   );
 };
 
-export default HwRouter;
+const Wrapper = styled.div`
+  height: 100%;
+  background-color: rgb(43, 43, 43);
+  padding: 0 30px;
+  overflow: auto;
+`;

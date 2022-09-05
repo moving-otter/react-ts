@@ -12,3 +12,7 @@
 - import styled from 'styled-components'; 는 항상 파일 맨 위에 위치
 - export default Component 형식으로 변경
  > defaultProps 경우에만 const Component = () => ... 형식으로 선언
+
+ 0905)
+ - 리팩토링 후 ts 파일들도 그에 맞게 수정해주기.
+ - 추후 Highlighter.tsx 수정 요.
