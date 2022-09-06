@@ -1,5 +1,5 @@
+import styled from 'styled-components'
 import React, {useState} from 'react';
-import './HwSidebar.scoped.scss';
 import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
 import {toggleSidebar} from '@store/ui/UiAction';
 import {HashRouter, NavLink} from 'react-router-dom';
@@ -20,7 +20,7 @@ type render = {
   html: boolean;
 };
 
-const HwSidebar: React.FC = () => {
+export const HwSidebar = () => {
   const dispatch = useDispatch();
   const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
   const [itemList] = useState<Array<Item>>([
@@ -92,51 +92,144 @@ const HwSidebar: React.FC = () => {
   };
 
   return (
-      <div className={`${(uiState.sidebar) ? 'show' : 'hide'} hwSidebar hwUserSelectNone`}>
-        <div className="depth-1">
-          <div className="closeArea">
-            <div className="motto">
+      <Wrapper className={`${(uiState.sidebar) ? 'show' : 'hide'} hwUserSelectNone`}>
+        <DepthFirst>
+          <CloseArea>
+            <Motto>
               <i>Simple is best</i>
-            </div>
+            </Motto>
 
-            <div className="close" onClick={() => dispatch(toggleSidebar())}>
+            <Close onClick={() => dispatch(toggleSidebar())}>
               {/*close button*/}
               <label></label>
-            </div>
-          </div>
+            </Close>
+          </CloseArea>
 
           {itemList.map((item) =>
-            <div className="content-1" key={item.parent}>
-              <div className="depth-2">
-                <div className="area" onClick={() => toggleRenderStatus(item.parent)}>
-                  <div className="depth-1-area">
+            <ContentFirst key={item.parent}>
+              <DepthSecond>
+                <Area onClick={() => toggleRenderStatus(item.parent)}>
+                  <DepthFirstArea>
                     {/*<label className="pointer opened">▶</label>*/}
-                    <label className={`${getItemBoolean(item.parent) ? 'opened' : ''} pointer`}>
+                    <LabelPointer opened={getItemBoolean(item.parent)}>
                       ▶
-                    </label>
+                    </LabelPointer>
                     <label>{item.parent}</label>
-                  </div>
-                </div>
+                  </DepthFirstArea>
+                </Area>
 
-                <div className="content-2" style={
+                <ContentSecond style={
                   {display: getItemBoolean(item.parent) ? 'block' : 'none'}
                 }>
                   {item.childList.map((child) =>
-                    <div className="area" key={child.title}>
+                    <Area key={child.title}>
                       <HashRouter>
-                        <NavLink exact to={child.link} className="depth-2-area">
+                        <DepthSecondArea exact to={child.link}>
                           {child.title}
-                        </NavLink>
+                        </DepthSecondArea>
                       </HashRouter>
-                    </div>
+                    </Area>
                   )}
-                </div>
-              </div>
-            </div>
+                </ContentSecond>
+              </DepthSecond>
+            </ContentFirst>
           )}
-        </div>
-      </div>
+        </DepthFirst>
+      </Wrapper>
   );
 };
 
-export default HwSidebar;
+const Wrapper = styled.div`
+  width: 450px;
+  height: calc(100% - 45px);
+  border-right: 1px solid #515658;
+  resize: horizontal;
+  overflow: auto;
+`;
+
+const DepthFirst = styled.div`
+`;
+
+const CloseArea = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid #515658;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: rgb(49, 61, 74);
+  }
+`;
+
+const Motto = styled.div`
+  font-size: 14px;
+  margin-left: 10px;
+`;
+
+const Close = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 24px;
+  font-size: 36px;
+  margin-right: 5px;
+  border: 1px solid transparent;
+
+  label {
+    width: 60%;
+    height: 2px;
+    background-color: rgb(187, 187, 187);
+  }
+
+  &:hover {
+    border-radius: 5px;
+    border: 1px solid rgb(140, 140, 140);
+  }
+`;
+
+const ContentFirst = styled.div`
+`;
+
+const DepthSecond = styled.div`
+`;
+
+const Area = styled.div`
+  &:hover {
+    background-color: rgb(13, 41, 62);
+  }
+`;
+
+const DepthFirstArea = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  height: 35px;
+  font-size: 16px;
+`;
+
+const ContentSecond = styled.div`
+  margin-bottom: 15px;
+`;
+
+const DepthSecondArea = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 35px;
+  color: #bbbbbb;
+  border: 0;
+
+  &.active {
+    background-color: rgb(30, 55, 70);
+  }
+`;
+
+const LabelPointer = styled.label`
+  margin-right: 7px;
+  font-size: 12px;
+  margin-top: -2px;
+  transform: ${props => (props.opened ? 'rotate(90deg)' : '')};
+`;
