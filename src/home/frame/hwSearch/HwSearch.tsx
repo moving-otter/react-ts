@@ -21,13 +21,13 @@ export const HwSearch = () => {
         >
           Project
 
-          <ImageArea src={FolderIcon} alt="search icon"/>
+          <ImgArea src={FolderIcon} alt="search icon"/>
         </Project>
 
         <Search onClick={() => console.log('search')}>
           Search
 
-          <ImageArea src={SearchIcon} alt="search icon"/>
+          <ImgArea src={SearchIcon} alt="search icon"/>
         </Search>
       </Wrapper>
   );
@@ -67,7 +67,7 @@ const Search = styled(Content)`
   top: 128px;
 `;
 
-const ImageArea = styled.img`
+const ImgArea = styled.img`
   position: absolute;
   width: 17px;
   height: 17px;
