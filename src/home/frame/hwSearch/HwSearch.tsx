@@ -1,11 +1,11 @@
+import styled from 'styled-components'
 import React from 'react';
-import './HwSearch.scoped.scss';
 import SearchIcon from '@assets/icon/search-icon.png';
 import FolderIcon from '@assets/icon/folder-icon.png';
 import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
 import {toggleSidebar} from '@store/ui/UiAction';
 
-const HwSearch: React.FC = () => {
+export const HwSearch = () => {
   const dispatch = useDispatch();
   const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
 
@@ -14,24 +14,65 @@ const HwSearch: React.FC = () => {
   };
 
   return (
-      <div className="hwSearch hwUserSelectNone">
-        <div
-            className="project"
-            onClick={() => dispatch(toggleSidebar())}
-            style={getBackGroundColor}
+      <Wrapper className="hwUserSelectNone">
+        <Project
+          onClick={() => dispatch(toggleSidebar())}
+          style={getBackGroundColor}
         >
           Project
 
-          <img src={FolderIcon} alt="search icon"/>
-        </div>
+          <ImgArea src={FolderIcon} alt="search icon"/>
+        </Project>
 
-        <div onClick={() => console.log('search')}>
+        <Search onClick={() => console.log('search')}>
           Search
 
-          <img src={SearchIcon} alt="search icon"/>
-        </div>
-      </div>
+          <ImgArea src={SearchIcon} alt="search icon"/>
+        </Search>
+      </Wrapper>
   );
 };
 
-export default HwSearch;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  position: absolute;
+`;
+
+const Content = styled.div`
+  position: absolute;
+  padding-left: 40px;
+  padding-right: 15px;
+  transform: rotate(270deg);
+  font-size: 14px;
+  color: rgb(210, 210, 210);
+  height: 23px;
+  background-color: #444;
+
+  &:hover {
+    background-color: rgb(53, 55, 57);
+  }
+
+  &:active {
+    background-color: rgb(45, 47, 48);
+  }
+`;
+
+const Project = styled(Content)`
+  top: 39px;
+`;
+
+const Search = styled(Content)`
+  top: 128px;
+`;
+
+const ImgArea = styled.img`
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 65px;
+  top: 3px;
+  transform: rotate(90deg);
+  filter: invert(0.7);
+`;

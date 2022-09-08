@@ -1,0 +1,3 @@
+# Refactoring redux store
+
+- redux store 구조화
