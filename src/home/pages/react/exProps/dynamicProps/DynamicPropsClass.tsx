@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import React, {Component} from 'react';
+import './DynamicProps.scoped.scss';
 
 type props = {
   name: string;
@@ -35,26 +35,14 @@ class DynamicPropsClass extends Component<props, state> {
 
   render() {
     return (
-        <Wrapper>
-          <TextContent className="hwBlueMarker">{this.state.title} - class</TextContent>
-          <TextContent>{this.props.name}</TextContent>
-          <TextContent>{this.props.age}</TextContent>
+        <div className="dynamicProps">
+          <div className="hwBlueMarker">{this.state.title} - class</div>
+          <div>{this.props.name}</div>
+          <div>{this.props.age}</div>
           <button onClick={this.handleTitle}>Change</button>
-        </Wrapper>
+        </div>
     );
   };
 }
 
 export default DynamicPropsClass;
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 600px;
-  padding: 20px 0;
-`;
-
-const TextContent = styled.div`
-  width: 100%;
-  text-align: center;
-`;

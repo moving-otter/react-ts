@@ -1,0 +1,30 @@
+.item {
+  border: 1px solid gray;
+  height: 100px;
+  display: inline-flex;
+  margin-bottom: 1px;
+
+  .img {
+    width: 73px;
+    height: 100px;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+    min-width: 200px;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .price {
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+
+  .deleteItemButton {
+    margin-left: 20px;
+  }
+}

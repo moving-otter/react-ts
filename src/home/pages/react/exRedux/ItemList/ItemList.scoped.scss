@@ -1,0 +1,32 @@
+.itemList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  .item {
+    width: 200px;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 100px;
+
+    .img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .name {
+      height: 90px;
+      text-align: center;
+    }
+
+    .price {
+      text-align: center;
+    }
+
+    .addCartButton {
+      margin-top: 25px;
+      margin-left: 50px;
+    }
+  }
+}

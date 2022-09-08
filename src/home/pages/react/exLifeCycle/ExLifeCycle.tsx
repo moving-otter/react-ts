@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import React, {Component} from 'react';
+import './ExLifeCycle.scoped.scss';
 import {Highlighter} from '@common/highlighter';
 import {ExLifeCycleCode} from '@common/code/react/ExLifeCycleCode';
 
@@ -55,19 +55,19 @@ class ExLifeCycle extends Component<props, state> {
 
   render() {
     return (
-        <Wrapper>
-          <Title className="hwTitle hwBlueMarker">React Life Cycle - class</Title>
+        <div className="exLifeCycle">
+          <div className="hwTitle hwBlueMarker">React Life Cycle - class</div>
 
-          <Content>
-            <Counter>
+          <div className="content">
+            <div className="counter">
               {this.state.count}
 
               <button onClick={this.plusCount}>Plus</button>
 
               {this.state.msg}
-            </Counter>
+            </div>
 
-            <Desc>
+            <div className="desc">
               컴포넌트 생명주기 순서
               <ul>
                 <li>componentDidMount : 컴포넌트 생성</li>
@@ -75,40 +75,13 @@ class ExLifeCycle extends Component<props, state> {
                 <li>componentDidUpdate</li>
                 <li>componentWillUnmount : 컴포넌트 제거</li>
               </ul>
-            </Desc>
-          </Content>
+            </div>
+          </div>
 
           <Highlighter codeInfo={ExLifeCycleCode}/>
-        </Wrapper>
+        </div>
     )
   }
 }
 
 export default ExLifeCycle;
-
-const Wrapper = styled.div`
-`;
-
-const Title = styled.div`
-`;
-
-const Content = styled.div`
-  padding-left: 20px;
-`;
-
-const Counter = styled.div`
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Desc = styled.div`
-  margin-top: 40px;
-
-  ul {
-    li {
-      margin-top: 20px;
-    }
-  }
-`;

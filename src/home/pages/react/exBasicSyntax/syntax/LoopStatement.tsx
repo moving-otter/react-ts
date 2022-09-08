@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import React, {Component} from 'react';
 
 type props = {};
@@ -36,27 +35,18 @@ class LoopStatement extends Component<props, state> {
 
   render() {
     return (
-        <Wrapper>
-          <Content>
-            <Title className="hwTitle">Loop statement</Title>
+        <div>
+          <div className="content">
+            <div className="hwTitle">Loop statement</div>
             <ul>
               {this.state.list.map(e =>
                   <li key={e.key}>{e.item}</li>
               )}
             </ul>
-          </Content>
-        </Wrapper>
+          </div>
+        </div>
     );
   };
 }
 
 export default LoopStatement;
-
-const Wrapper = styled.div`
-`;
-
-const Content = styled.div`
-`;
-
-const Title = styled.div`
-`;

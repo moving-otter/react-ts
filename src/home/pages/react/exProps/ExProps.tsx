@@ -1,6 +1,6 @@
-import styled from 'styled-components'
 import React from 'react';
-import {DynamicPropsFc} from './dynamicProps/DynamicPropsFc';
+import './ExProps.scoped.scss';
+import DynamicPropsFc from './dynamicProps/DynamicPropsFc';
 import DynamicPropsClass from './dynamicProps/DynamicPropsClass';
 import RequiredProps from './requiredProps/RequiredProps';
 import {Highlighter} from '@common/highlighter';
@@ -10,11 +10,11 @@ import {
     DynamicPropsFcCode
 } from '@common/code/react/ExPropsCode';
 
-export const ExProps = () => {
+const exProps: React.FC = () => {
 
   return (
-    <Wrapper>
-      <Title className="hwTitle">Required props</Title>
+    <div className="exProps">
+      <div className="hwTitle">Required props</div>
 
       <RequiredProps propsOne={'props one'} propsTwo={'props two'}/>
       {/*
@@ -24,7 +24,7 @@ export const ExProps = () => {
 
       <Highlighter codeInfo={RequiredPropsCode}/>
 
-      <Title className="hwTitle">Dynamic props - Fc</Title>
+      <div className="hwTitle">Dynamic props - Fc</div>
 
       <DynamicPropsFc name={'A'}/>
       <DynamicPropsFc name={'B'} age={28}/>
@@ -32,19 +32,15 @@ export const ExProps = () => {
 
       <Highlighter codeInfo={DynamicPropsFcCode}/>
 
-      <Title className="hwTitle">Dynamic props - Class</Title>
+      <div className="hwTitle">Dynamic props - Class</div>
 
       <DynamicPropsClass name={'D'} age={34}/>
       <DynamicPropsClass name={'D'}/>
       <DynamicPropsClass name={'E'}/>
 
       <Highlighter codeInfo={DynamicPropsClassCode}/>
-    </Wrapper>
+    </div>
   );
 };
 
-const Wrapper = styled.div`
-`;
-
-const Title = styled.div`
-`;
+export default exProps;

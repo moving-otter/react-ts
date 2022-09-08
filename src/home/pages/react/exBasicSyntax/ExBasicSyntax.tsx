@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import React from 'react';
+import React, {Component} from 'react';
 import LoopStatement from './syntax/LoopStatement';
 import ConditionalStatement from './syntax/ConditionalStatement';
 import StyleClassBinding from './syntax/StyleClassBinding';
@@ -10,10 +9,11 @@ import {
   StyleClassBindingCode
 } from '@common/code/react/ExBasicSyntaxCode';
 
-export const ExBasicSyntax = () => {
+class ExBasicSyntax extends Component {
 
+  render() {
     return (
-        <Wrapper>
+        <div className="exBasicSyntax">
           <LoopStatement/>
           <Highlighter codeInfo={LoopStatementCode}/>
 
@@ -22,10 +22,10 @@ export const ExBasicSyntax = () => {
 
           <StyleClassBinding/>
           <Highlighter codeInfo={StyleClassBindingCode}/>
-        </Wrapper>
+        </div>
     );
+  };
 }
 
-const Wrapper = styled.div`
-`;
+export default ExBasicSyntax;
 

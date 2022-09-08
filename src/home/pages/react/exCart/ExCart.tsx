@@ -1,10 +1,13 @@
-import styled from 'styled-components'
 import React from "react";
 import ItemList from "./ItemList/ItemList";
 import {deleteCart} from "@store/cart/CartAction";
 import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
 
-export const ExCart = () => {
+const wrapperStyle = {
+  display: 'inline-grid'
+};
+
+const ExCart = () => {
   const dispatch = useDispatch();
   const cartState = useSelector((state: RootStateOrAny) => state.CartReducer);
 
@@ -23,18 +26,13 @@ export const ExCart = () => {
   }
 
   return (
-      <Wrapper>
+      <div className="exCart">
         <h2 className="hwTitle">장바구니 - {cartState.length}</h2>
-        <Content>
+        <div className="wrapper" style={wrapperStyle}>
           {dom}
-        </Content>
-      </Wrapper>
+        </div>
+      </div>
   );
 };
 
-const Wrapper = styled.div`
-`;
-
-const Content = styled.div`
-  display: inline-grid
-`;
+export default ExCart;

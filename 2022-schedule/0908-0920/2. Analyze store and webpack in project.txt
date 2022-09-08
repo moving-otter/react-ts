@@ -1,6 +1,0 @@
-# Analyze store and webpack in project
-
-- @store, webpack 구조&원리 파악
-
-0908)
-- 0911 회의에서 설명 이후에 진행

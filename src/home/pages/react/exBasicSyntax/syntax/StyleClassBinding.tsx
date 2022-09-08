@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import React, {Component} from 'react';
 
 type props = {};
@@ -25,34 +24,26 @@ class StyleClassBinding extends Component<props, state> {
   }
 
   render() {
+    const rootStyle = {
+      minHeight: '150px',
+      fontSize: '24px',
+    };
+    const render = {
+      display: (this.state.flag) ? 'block' : 'none'
+    };
+    const renderClass = (this.state.flag) ? 'show' : 'hide';
+
     return (
-        <Wrapper>
-          <Content>
-            <Title className="hwTitle">Style & Class binding</Title>
+        <div style={rootStyle}>
+          <div className="hwTitle">Style & Class binding</div>
 
-            <button onClick={this.toggleHandler}>Toggle</button>
+          <button onClick={this.toggleHandler}>Toggle</button>
 
-            <RenderArea flag={this.state.flag}>Sample Message Sample Message</RenderArea>
-            {this.state.flag && (<div>Sample Message Sample Message</div>)}
-          </Content>
-        </Wrapper>
+          <div style={render}>Sample Message Sample Message</div>
+          <div className={renderClass}>Sample Message Sample Message</div>
+        </div>
     );
   };
 }
 
 export default StyleClassBinding;
-
-const Wrapper = styled.div`
-  minHeight: 150px;
-  fontSize: 24px;
-`;
-
-const Content = styled.div`
-`;
-
-const Title = styled.div`
-`;
-
-const RenderArea = styled.div`
-  display: ${props => (props.flag ? 'block' : 'none')};
-`;
