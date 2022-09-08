@@ -10,6 +10,8 @@ type props = {
 export const DynamicPropsFc = ({name, age}: props) => {
   const [title, setTitle] = useState<string>('Origin Title');
 
+  console.log('Test PR conflict ');
+  
   const handleTitle = () => {
     if (title === 'Origin Title') {
       setTitle('Title Origin');
