@@ -118,7 +118,7 @@ export const HwSidebar = () => {
                   </DepthFirstArea>
                 </Area>
 
-                <ContentSecond display={getItemBoolean(item.parent)}>
+                <ContentSecond show={getItemBoolean(item.parent)}>
                   {item.childList.map((child) =>
                     <Area key={child.title}>
                       <HashRouter>
@@ -210,7 +210,7 @@ const DepthFirstArea = styled.div`
 
 const ContentSecond = styled.div`
   margin-bottom: 15px;
-  display: ${props => (props.display ? 'block' : 'none')};
+  display: ${props => (props.show ? 'block' : 'none')};
 `;
 
 const DepthSecondArea = styled(NavLink)`
