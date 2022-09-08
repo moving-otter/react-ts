@@ -1,0 +1,6 @@
+# Commit convention
+1. feature
+ ex) feat(doc): Update schedule document content
+
+2. refactoring
+ ex) refactor(scss): Remove className

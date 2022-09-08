@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import React from 'react';
 
 type props = {
@@ -7,10 +8,13 @@ type props = {
 
 const RequiredProps: React.FC<props> = ({propsOne, propsTwo}) => {
   return (
-      <div className="requiredProps">
+      <Wrapper>
         {propsOne} / {propsTwo}
-      </div>
+      </Wrapper>
   )
 };
 
 export default RequiredProps;
+
+const Wrapper = styled.div`
+`

@@ -1,29 +1,58 @@
+import styled from 'styled-components'
 import React from 'react';
-import './ItemList.scoped.scss';
 
 type ItemObj = { url: string, name: string, price: string };
 
-type props = {
-  itemList: Array<ItemObj>,
-  addFunc: (item) => void
-}
-
-const ItemList: React.FC<props> = ({itemList, addFunc}) => {
+export const ItemList = (props: {
+  itemList: Array<ItemObj>;
+  addFunc: (item) => void;
+}) => {
 
   return (
-      <ul className="itemList">
-        {itemList.map((item) =>
-            <div className="item" key={item.name}>
-              <img className="img" src={item.url} alt={item.name}/>
-              <div className="name">{item.name}</div>
-              <div className="price">{item.price}</div>
-              <button className="addCartButton" onClick={() => addFunc(item)}>
+      <Wrapper>
+        {props.itemList.map((item) =>
+            <Item key={item.name}>
+              <ImgArea src={item.url} alt={item.name}/>
+              <NameArea>{item.name}</NameArea>
+              <PriceArea>{item.price}</PriceArea>
+              <AddCartButton onClick={() => props.addFunc(item)}>
                 장바구니 담기
-              </button>
-            </div>
+              </AddCartButton>
+            </Item>
         )}
-      </ul>
+      </Wrapper>
   );
 };
 
-export default ItemList;
+const Wrapper = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+const Item = styled.div`
+  width: 200px;
+  height: 400px;
+  margin-top: 100px;
+  margin-right: 100px;
+`;
+
+const ImgArea = styled.img`
+  width: 200px;
+  height: 200px;
+`;
+
+const NameArea = styled.div`
+  height: 90px;
+  text-align: center;
+`;
+
+const PriceArea = styled.div`
+  text-align: center;
+`;
+
+const AddCartButton = styled.button`
+  margin-top: 25px;
+  margin-left: 50px;
+`

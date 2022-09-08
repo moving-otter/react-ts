@@ -1,0 +1,19 @@
+ # Analyze all components of repository.txt
+
+- @assets, @common, @store, home 구조 파악
+
+- commit tag 확인하여 webpack에 적용된 항목 파악
+
+향후에) [Component] dir => Component.tsx 형식으로 변경 예정
+
+0831)
+React.FC와 안썼을 때의 차이점 알아 보기
+- export const Component = () => {...}
+- export const Component:React.FC = () => {...}
+
+0904)
+- React.FC를 쓰면 props에 children이 무조건 명시되어서 children을 안 쓰는 곳에도 쓰게 되고 defaultProps를 쓰면 오류가 남.
+
+0908)
+- @store, webpack에 적용된 항목 파악
+- |ZOL 0908-0920| 내용 이관 > Analyze store and webpack in project

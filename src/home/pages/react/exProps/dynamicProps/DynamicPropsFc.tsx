@@ -1,5 +1,5 @@
+import styled from 'styled-components'
 import React, {useState} from 'react';
-import './DynamicProps.scoped.scss';
 
 type props = {
   name: string;
@@ -7,7 +7,7 @@ type props = {
 };
 
 // Remove React.FC to apply optional props
-const DynamicPropsFc = ({name, age}: props) => {
+export const DynamicPropsFc = ({name, age}: props) => {
   const [title, setTitle] = useState<string>('Origin Title');
 
   const handleTitle = () => {
@@ -19,12 +19,12 @@ const DynamicPropsFc = ({name, age}: props) => {
   };
 
   return (
-    <div className="dynamicProps">
-      <div>{title} - fc</div>
-      <div>{name}</div>
-      <div>{age}</div>
+    <Wrapper>
+      <TextContent>{title} - fc</TextContent>
+      <TextContent>{name}</TextContent>
+      <TextContent>{age}</TextContent>
       <button onClick={handleTitle}>Change</button>
-    </div>
+    </Wrapper>
   );
 };
 
@@ -32,5 +32,14 @@ DynamicPropsFc.defaultProps = {
   age: 10
 };
 
-export default DynamicPropsFc;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  padding: 20px 0;
+`
 
+const TextContent = styled.div`
+  width: 100%;
+  text-align: center;
+`;

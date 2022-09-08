@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import React, {Component} from 'react';
 
 type props = {};
@@ -29,21 +30,32 @@ class ConditionalStatement extends Component<props, state> {
     }
 
     return (
-        <div className="conditionalStatement">
-          <div className="hwTitle">Conditional statement</div>
-          {content}
+        <Wrapper>
+          <Content>
+            <Title className="hwTitle">Conditional statement</Title>
+            {content}
 
-          {(this.state.flag) ?
-              <div>true</div>
-              :
-              <>
-                <div>false</div>
-                <div>false</div>
-              </>
-          }
-        </div>
+            {(this.state.flag) ?
+                <div>true</div>
+                :
+                <>
+                  <div>false</div>
+                  <div>false</div>
+                </>
+            }
+          </Content>
+        </Wrapper>
     );
   };
 }
 
 export default ConditionalStatement;
+
+const Wrapper = styled.div`
+`;
+
+const Content = styled.div`
+`;
+
+const Title = styled.div`
+`;

@@ -1,5 +1,5 @@
+import styled from 'styled-components'
 import React from 'react';
-import './Home.scoped.scss';
 import {
   HwHeader,
   HwSidebar,
@@ -9,34 +9,76 @@ import {
   HwMenu,
 } from './frame/Frame';
 
-const Home: React.FC = () => {
+export const Home = () => {
 
   return (
-      <div className="home">
+    <Wrapper>
+      <Content>
         <HwHeader/>
 
-        <div className="depth-1">
+        <DepthFirst>
           <HwSearch/>
 
-          <div className="depth-2">
+          <DepthSecond>
             <HwSidebar/>
 
-            <div className="depth-3">
+            <DepthThird>
               <HwMenu/>
 
               <HwRouter/>
-            </div>
-          </div>
+            </DepthThird>
+          </DepthSecond>
 
-          <div className="right">
+          <RightArea>
 
-          </div>
-        </div>
+          </RightArea>
+        </DepthFirst>
 
         <HwFooter/>
-      </div>
+      </Content>
+    </Wrapper>
   );
 };
 
-export default Home;
+const Wrapper = styled.div`
+`;
+
+const Content = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(60, 63, 65);
+`;
+
+const DepthFirst = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const DepthSecond = styled.div`
+  display: flex;
+  width: 100%;
+  margin-left: 25px;
+  margin-right: 20px;
+  border-left: 1px solid #515658;
+  border-right: 1px solid #515658;
+  overflow: auto;
+`;
+
+const DepthThird = styled.div`
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: rgb(43, 43, 43);
+`;
+
+const RightArea = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 22px;
+  height: 100%;
+  padding-top: 5px;
+  right: 0;
+`;
 
