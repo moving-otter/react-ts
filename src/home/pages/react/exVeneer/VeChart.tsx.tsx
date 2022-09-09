@@ -2,7 +2,7 @@ import React from 'react';
 import highchartsInterface from '@veneer/highcharts-interface';
 import {Chart, ChartProvider} from '@veneer/core';
 
-const VeChart: React.FC = () => {
+export const VeChart = () => {
 
   return (
       <ChartProvider
@@ -31,5 +31,3 @@ const VeChart: React.FC = () => {
       </ChartProvider>
   );
 };
-
-export default VeChart;

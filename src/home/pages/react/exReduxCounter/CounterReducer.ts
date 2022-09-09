@@ -1,5 +1,4 @@
-
-const CounterReducer = (state, action) => {
+export const CounterReducer = (state, action) => {
   if (state === undefined) {
     return {
       count: 0
@@ -21,5 +20,3 @@ const CounterReducer = (state, action) => {
       return state;
   }
 };
-
-export default CounterReducer;

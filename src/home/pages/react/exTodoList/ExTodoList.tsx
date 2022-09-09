@@ -1,9 +1,10 @@
+import styled from 'styled-components'
 import React, {useState} from 'react';
-import TodoList from './todoList/TodoList';
-import TodoEditor from './todoEditor/TodoEditor';
+import {TodoList} from './todoList/TodoList';
+import {TodoEditor} from './todoEditor/TodoEditor';
 import {Todo} from './TodoType';
 
-const ExTodoList: React.FC = () => {
+export const ExTodoList = () => {
   const [itemObjList, setItemObjList] = useState<Todo[]>([]);
 
   const addItem = (text) => {
@@ -26,8 +27,8 @@ const ExTodoList: React.FC = () => {
   };
 
   return (
-      <div className="exTodoList">
-        <div className="hwTitle">TodoList</div>
+      <Wrapper>
+        <Title className="hwTitle">TodoList</Title>
 
         <TodoEditor
             addItemFunc={addItem}
@@ -38,8 +39,12 @@ const ExTodoList: React.FC = () => {
             entries={itemObjList}
             deleteItemFunc={deleteItem}
         />
-      </div>
+      </Wrapper>
   );
 };
 
-export default ExTodoList;
+const Wrapper = styled.div`
+`;
+
+const Title = styled.div`
+`;

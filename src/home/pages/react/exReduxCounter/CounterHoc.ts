@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Counter from './Counter';
+import {Counter} from './Counter';
 
 // map redux state to component props
 const mapStateToProps = (state) => {
@@ -25,9 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 // High Order Component
-const CounterHoc = connect(
+export const CounterHoc = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(Counter);
-
-export default CounterHoc;

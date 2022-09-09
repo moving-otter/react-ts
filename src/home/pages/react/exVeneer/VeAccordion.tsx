@@ -1,7 +1,7 @@
 import React from 'react';
 import {Accordion} from '@veneer/core';
 
-const VeAccordion: React.FC = () => {
+export const VeAccordion = () => {
   const [data, setData] = React.useState([{
     content:
         <p>
@@ -36,5 +36,3 @@ const VeAccordion: React.FC = () => {
       />
   );
 };
-
-export default VeAccordion;

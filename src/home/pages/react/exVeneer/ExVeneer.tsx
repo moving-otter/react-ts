@@ -1,13 +1,13 @@
+import styled from 'styled-components'
 import React from 'react';
-import './ExVeneer.scoped.scss';
-import VeChart from './VeChart.tsx';
-import VeRadioButton from './VeRadioButton';
-import VeAccordion from './VeAccordion';
+import {VeChart} from './VeChart.tsx';
+import {VeRadioButton} from './VeRadioButton';
+import {VeAccordion} from './VeAccordion';
 
-const ExVeneer: React.FC = () => {
+export const ExVeneer = () => {
 
   return (
-      <div className="exVeneer">
+      <Wrapper>
         <div className="hwTitle">Veneer Example</div>
 
         <VeChart/>
@@ -17,8 +17,10 @@ const ExVeneer: React.FC = () => {
         <br/>
 
         <VeAccordion/>
-      </div>
+      </Wrapper>
   );
 };
 
-export default ExVeneer;
+const Wrapper = styled.div`
+  width: 70%;
+`;

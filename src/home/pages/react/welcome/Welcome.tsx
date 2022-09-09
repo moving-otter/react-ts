@@ -1,18 +1,22 @@
+import styled from 'styled-components'
 import React from 'react';
-import './Welcome.scoped.scss';
 import {Highlighter} from '@common/highlighter';
 import {WelcomeCode} from '@common/code/react/WelcomeCode';
 
-const Welcome: React.FC = () => {
+export const Welcome = () => {
   return (
-      <div className="welcome">
-        <div className="hwTitle">
+      <Wrapper>
+        <Title className="hwTitle">
           Hello hw-dev-store!
-        </div>
+        </Title>
 
         <Highlighter codeInfo={WelcomeCode}/>
-      </div>
+      </Wrapper>
   );
 };
 
-export default Welcome;
+const Wrapper = styled.div`
+`;
+
+const Title = styled.div`
+`;

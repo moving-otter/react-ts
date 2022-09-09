@@ -1,23 +1,47 @@
-import React from 'react';
-import './Counter.scoped.scss';
+import styled from 'styled-components'
 
-type props = {
+export const Counter = (props: {
   countValue: number,
   decreaseCount: () => void,
   increaseCount: () => void,
-};
-
-const Counter: React.FC<props> = ({countValue, decreaseCount, increaseCount}) => {
+}) => {
 
   return (
-    <div className="counter">
-      <button onClick={decreaseCount}>-</button>
+    <Wrapper>
+      <Button onClick={props.decreaseCount}>-</Button>
 
-      <span>{countValue}</span>
+      <span>{props.countValue}</span>
 
-      <button onClick={increaseCount}>+</button>
-    </div>
+      <Button onClick={props.increaseCount}>+</Button>
+    </Wrapper>
   );
 };
 
-export default Counter;
+const Wrapper = styled.div`
+  background-color: #FFF;
+  margin: 100px;
+  padding: 10px;
+  border-radius: 3px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+`;
+
+const Button = styled.button`
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: all .15s ease-in;
+
+  &:hover:nth-child(1) {
+    background-color: #F45B69;
+  }
+  &:hover:nth-child(3) {
+    background-color: #C0DFA1;
+  }
+`;

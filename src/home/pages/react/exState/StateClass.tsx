@@ -1,5 +1,5 @@
+import styled from 'styled-components'
 import React, {Component} from 'react';
-import './ExState.scoped.scss';
 
 type props = {};
 
@@ -33,10 +33,10 @@ class StateClass extends Component<props, state> {
 
   render() {
     return (
-        <div className="state">
-          <div className="hwTitle hwBlueMarker">Counter - class</div>
+        <Wrapper>
+          <Title className="hwTitle hwBlueMarker">Counter - class</Title>
 
-          <div className="content">
+          <Content>
             <button onClick={() => this.updateCount('-')}>Minus</button>
 
             <b>{this.state.count}</b>
@@ -44,10 +44,24 @@ class StateClass extends Component<props, state> {
             <button onClick={() => this.updateCount('+')}>Plus</button>
 
             <button onClick={this.resetCount}>Reset</button>
-          </div>
-        </div>
+          </Content>
+        </Wrapper>
     );
   };
 }
 
 export default StateClass;
+
+const Wrapper = styled.div`
+`;
+
+const Title = styled.div`
+`;
+
+const Content = styled.div`
+  padding-left: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+`;

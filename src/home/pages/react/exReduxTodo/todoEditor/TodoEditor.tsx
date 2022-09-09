@@ -1,10 +1,10 @@
+import styled from 'styled-components'
 import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
-import './TodoEditor.scoped.scss';
 import {Todo} from "@store/todo/TodoType";
 import {useDispatch} from 'react-redux';
 import {addTodo, resetTodo} from '@store/todo/TodoAction';
 
-const TodoEditor: React.FC = () => {
+export const TodoEditor = () => {
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
 
@@ -28,23 +28,34 @@ const TodoEditor: React.FC = () => {
   }, [addItem, inputText]);
 
   return (
-      <div className="todoEditor">
-        <input
+      <Wrapper>
+        <Input
             type='text'
             placeholder='Enter task'
             onChange={handleText}
             onKeyDown={handleEnter}
             value={inputText}
         />
-        <button onClick={() => addItem()}>
+        <Button onClick={() => addItem()}>
           add
-        </button>
+        </Button>
 
-        <button onClick={() => dispatch(resetTodo())}>
+        <Button onClick={() => dispatch(resetTodo())}>
           reset
-        </button>
-      </div>
+        </Button>
+      </Wrapper>
   );
 };
 
-export default TodoEditor;
+const Wrapper = styled.div`
+`;
+
+const Input = styled.input`
+  padding-left: 5px;
+  font-size: 20px;
+`;
+
+const Button = styled.button`
+  margin-left: 10px;
+  font-size: 20px;
+`;
