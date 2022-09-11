@@ -7,6 +7,8 @@ import {Provider} from "react-redux";
 import {createStore} from "redux";
 import {composeWithDevTools} from 'redux-devtools-extension';
 
+console.log('[react-ts] build by ZOL');
+
 const store = createStore(
     rootReducer,
     composeWithDevTools()
