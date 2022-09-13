@@ -1,7 +1,7 @@
+import styled from 'styled-components'
 import React, {useState} from 'react';
-import './ExState.scoped.scss';
 
-const ExState: React.FC = () => {
+export const StateFc = () => {
   const [count, setCount] = useState<number>(0);
   const updateCount = (flag) => {
     if (flag === '+') {
@@ -13,10 +13,10 @@ const ExState: React.FC = () => {
   const resetCount = () => setCount(0);
 
   return (
-      <div className="state">
-        <div className="hwTitle">Counter Example</div>
+      <Wrapper>
+        <Title className="hwTitle">Counter Example</Title>
 
-        <div className="content">
+        <Content>
           <button onClick={() => updateCount('-')}>Minus</button>
 
           <b>{count}</b>
@@ -24,17 +24,32 @@ const ExState: React.FC = () => {
           <button onClick={() => updateCount('+')}>Plus</button>
 
           <button onClick={resetCount}>Reset</button>
-        </div>
+        </Content>
 
-        <div className="hwDesc">
+        <TextContent className="hwDesc">
           Event 에 따른 state 변화를 확인할 수 있는 예제
           <ul>
             <li>1. Function Component</li>
             <li>2. Class Component</li>
           </ul>
-        </div>
-      </div>
+        </TextContent>
+      </Wrapper>
   )
 };
 
-export default ExState;
+const Wrapper = styled.div`
+`;
+
+const Title = styled.div`
+`;
+
+const Content = styled.div`
+  padding-left: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+`;
+
+const TextContent = styled.div`
+`;

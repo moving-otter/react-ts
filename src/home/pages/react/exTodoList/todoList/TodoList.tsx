@@ -1,26 +1,38 @@
+import styled from 'styled-components'
 import React from 'react';
-import './TodoList.scoped.scss';
 import {Todo} from '../TodoType';
 
-type props = {
+export const TodoList = (props: {
   entries: Array<Todo>,
   deleteItemFunc: (_key) => void
-}
-
-const TodoList: React.FC<props> = ({entries, deleteItemFunc}) => {
+}) => {
 
   return (
-      <ul className="todoList">
-        {entries.map((e: Todo) =>
-          <div key={e.key} className="item">
+      <Wrapper>
+        {props.entries.map((e: Todo) =>
+          <Item key={e.key}>
             <li>{e.text}</li>
-            <button onClick={() => deleteItemFunc(e.key)}>
+            <Button onClick={() => props.deleteItemFunc(e.key)}>
               x
-            </button>
-          </div>
+            </Button>
+          </Item>
         )}
-      </ul>
+      </Wrapper>
   );
 };
 
-export default TodoList;
+const Wrapper = styled.ul`
+  padding: 20px;
+`;
+
+const Item = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 10px;
+`;
+
+const Button = styled.button`
+  width: 40px;
+  font-size: 20px;
+`;

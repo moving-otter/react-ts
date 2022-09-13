@@ -1,12 +1,12 @@
 import React from 'react';
-import CounterHoc from './CounterHoc';
-import CounterReducer from './CounterReducer';
+import {CounterHoc} from './CounterHoc';
+import {CounterReducer} from './CounterReducer';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
 
 const CounterStore = createStore(CounterReducer);
 
-const ExReduxCounter: React.FC = () => {
+export const ExReduxCounter = () => {
 
   return (
       <Provider store={CounterStore}>
@@ -14,5 +14,3 @@ const ExReduxCounter: React.FC = () => {
       </Provider>
   )
 };
-
-export default ExReduxCounter;

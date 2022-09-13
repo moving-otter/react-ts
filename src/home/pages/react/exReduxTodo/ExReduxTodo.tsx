@@ -1,18 +1,23 @@
+import styled from 'styled-components'
 import React from 'react';
-import TodoList from './todoList/TodoList';
-import TodoEditor from './todoEditor/TodoEditor';
+import {TodoList} from './todoList/TodoList';
+import {TodoEditor} from './todoEditor/TodoEditor';
 
-const ExReduxTodo = () => {
+export const ExReduxTodo = () => {
 
   return (
-      <div className="exReduxTodo">
-        <div className="hwTitle">TodoList - Redux</div>
+      <Wrapper>
+        <Title className="hwTitle">TodoList - Redux</Title>
 
         <TodoEditor/>
 
         <TodoList/>
-      </div>
+      </Wrapper>
   );
 };
 
-export default ExReduxTodo;
+const Wrapper = styled.div`
+`
+
+const Title = styled.div`
+`;

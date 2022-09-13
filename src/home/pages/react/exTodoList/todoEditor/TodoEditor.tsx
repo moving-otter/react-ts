@@ -1,12 +1,10 @@
+import styled from 'styled-components'
 import React, {ChangeEvent, KeyboardEvent, useCallback, useState} from 'react';
-import './TodoEditor.scoped.scss';
 
-type props = {
+export const TodoEditor = (props: {
   addItemFunc: (text) => void,
   resetListFunc: () => void
-}
-
-const TodoEditor: React.FC<props> = ({addItemFunc, resetListFunc}) => {
+}) => {
   const [inputText, setInputText] = useState<string>('');
 
   const handleText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -14,34 +12,45 @@ const TodoEditor: React.FC<props> = ({addItemFunc, resetListFunc}) => {
   }, []);
   const handleEnter = useCallback((e: KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode === 13) {
-      addItemFunc(inputText);
+      props.addItemFunc(inputText);
       setInputText('');
     }
-  }, [addItemFunc, inputText]);
+  }, [props.addItemFunc, inputText]);
 
   return (
-    <div className="todoEditor">
-      <input
+    <Wrapper>
+      <Input
           type="text"
           placeholder="Enter task"
           onChange={handleText}
           onKeyDown={handleEnter}
           value={inputText}
       />
-      <button
+      <Button
           onClick={() => {
-            addItemFunc(inputText);
+            props.addItemFunc(inputText);
             setInputText('');
           }}
       >
         add
-      </button>
+      </Button>
 
-      <button onClick={() => resetListFunc()}>
+      <Button onClick={() => props.resetListFunc()}>
         reset
-      </button>
-    </div>
+      </Button>
+    </Wrapper>
   );
 };
 
-export default TodoEditor;
+const Wrapper = styled.div`
+`;
+
+const Input = styled.input`
+  padding-left: 5px;
+  font-size: 20px;
+`;
+
+const Button = styled.button`
+  margin-left: 10px;
+  font-size: 20px;
+`;
