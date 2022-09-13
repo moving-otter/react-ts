@@ -1,5 +1,5 @@
 import {Welcome} from './welcome/Welcome';
-import ExState from './exState/ExState';
+import {ExState} from './ExState';
 import {ExProps} from './exProps/ExProps';
 import {ExTodoList} from './exTodoList/ExTodoList';
 import {ExRedux} from './exRedux/ExRedux';

@@ -13,3 +13,5 @@
 - sample
 component/Component.tsx
 > Component.tsx
+
+0913) 토요일 회의에서 추가 task 진행할지 논의

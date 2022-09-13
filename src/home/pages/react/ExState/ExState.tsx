@@ -4,7 +4,7 @@ import {StateFc} from './StateFc';
 import {Highlighter} from '@common/highlighter';
 import {StateClassCode, StateFcCode} from '@common/code/react/ExStateCode';
 
-const ExState: React.FC = () => {
+export const ExState = () => {
 
   return (
       <div className="exState">
@@ -16,5 +16,3 @@ const ExState: React.FC = () => {
       </div>
   )
 };
-
-export default ExState;
