@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from 'react';
-import {Todo} from '../TodoType';
+import {Todo} from './TodoType';
 
 export const TodoList = (props: {
   entries: Array<Todo>,

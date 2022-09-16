@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from 'react';
-import {ItemList} from "./ItemList/ItemList";
+import {ItemList} from "./ItemList";
 import {useDispatch} from "react-redux";
 import {addCart} from "@store/cart/CartAction";
 import {itemList} from "./Item";

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React, {useState} from 'react';
-import {TodoList} from './todoList/TodoList';
-import {TodoEditor} from './todoEditor/TodoEditor';
+import {TodoList} from './TodoList';
+import {TodoEditor} from './TodoEditor';
 import {Todo} from './TodoType';
 
 export const ExTodoList = () => {

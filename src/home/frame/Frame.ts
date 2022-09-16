@@ -1,9 +1,9 @@
-import {HwHeader} from './hwHeader/HwHeader';
-import {HwMenu} from './hwMenu/HwMenu';
-import {HwSidebar} from './hwSidebar/HwSidebar';
-import {HwSearch} from './hwSearch/HwSearch';
-import {HwFooter} from './hwFooter/HwFooter';
-import {HwRouter} from './hwRouter/HwRouter';
+import {HwHeader} from './HwHeader';
+import {HwMenu} from './HwMenu';
+import {HwSidebar} from './HwSidebar';
+import {HwSearch} from './HwSearch';
+import {HwFooter} from './HwFooter';
+import {HwRouter} from './HwRouter';
 
 export {
   HwHeader,
