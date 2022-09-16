@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React, {Component} from 'react';
-import {Highlighter} from '@common/highlighter';
+import Highlighter from '@common/Highlighter';
 import {ExLifeCycleCode} from '@common/code/react/ExLifeCycleCode';
 
 type props = {};
