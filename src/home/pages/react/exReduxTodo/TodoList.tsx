@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import React from 'react';
 import {deleteTodo} from "@store/todo/TodoAction";
-import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {useStoreState} from '@store/useStoreState'
 
 export const TodoList = () => {
   const dispatch = useDispatch();
-  const todoState = useSelector((state: RootStateOrAny) => state.TodoReducer);
+  const {todoState} = useStoreState()
 
   let domList;
 

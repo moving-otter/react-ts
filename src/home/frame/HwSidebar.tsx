@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import React, {useState} from 'react';
-import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {useStoreState} from '@store/useStoreState'
 import {toggleSidebar} from '@store/ui/UiAction';
 import {HashRouter, NavLink} from 'react-router-dom';
 
@@ -22,7 +23,7 @@ type render = {
 
 export const HwSidebar = () => {
   const dispatch = useDispatch();
-  const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
+  const {uiState} = useStoreState()
   const [itemList] = useState<Array<Item>>([
     {
       parent: 'React',

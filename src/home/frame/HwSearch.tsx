@@ -2,12 +2,13 @@ import styled from 'styled-components'
 import React from 'react';
 import SearchIcon from '@assets/icon/search-icon.png';
 import FolderIcon from '@assets/icon/folder-icon.png';
-import {RootStateOrAny, useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {useStoreState} from '@store/useStoreState'
 import {toggleSidebar} from '@store/ui/UiAction';
 
 export const HwSearch = () => {
   const dispatch = useDispatch();
-  const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
+  const {uiState} = useStoreState()
 
   const getBackGroundColor = {
     backgroundColor: (uiState.sidebar) ? 'rgb(45, 47, 48)' : ''

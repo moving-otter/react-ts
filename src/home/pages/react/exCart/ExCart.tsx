@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import React from "react";
 import ItemList from "./ItemList";
 import {deleteCart} from "@store/cart/CartAction";
-import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+import {useStoreState} from '@store/useStoreState'
 
 export const ExCart = () => {
   const dispatch = useDispatch();
-  const cartState = useSelector((state: RootStateOrAny) => state.CartReducer);
+  const {cartState} = useStoreState()
 
   let dom;
 
