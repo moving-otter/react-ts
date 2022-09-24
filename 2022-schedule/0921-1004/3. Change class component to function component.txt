@@ -1,0 +1,21 @@
+# Change class component to function component
+
+- (FC) : Functional Component
+- 존재하는 모든 class component를 (FC)로 변경
+
+before)
+class LoopStatement extends Component<props, state> {
+
+}
+
+after)
+export const LoopStatement = (props: {
+
+}) => {
+  // (FC)에서도 type 명시가 가능
+  const [list, setList] = useState<Array<ItemObj>>([]);
+
+  return (
+    // jsx
+  );
+}
