@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from "react";
-import ItemList from "./ItemList";
+import {ItemList} from "./ItemList";
 import {deleteCart} from "@store/cart/CartAction";
 import {useDispatch} from "react-redux";
 import {useStoreState} from '@store/useStoreState'

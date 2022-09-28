@@ -3,24 +3,20 @@ import React from "react";
 
 type ItemObj = { url: string, name: string, price: string, alt: string };
 
-type props = {
+export const ItemList = (props: {
   item: ItemObj,
   deleteFunc: (item) => void
-}
-
-const ItemList: React.FC<props> = ({item, deleteFunc}) => {
+}) => {
 
   return (
-      <Wrapper key={item.name}>
-        <ImgArea src={item.url} alt={item.alt}/>
-        <NameArea>{item.name}</NameArea>
-        <PriceArea>{item.price}</PriceArea>
-        <DeleteItemButton onClick={() => deleteFunc(item)}>삭제</DeleteItemButton>
+      <Wrapper key={props.item.name}>
+        <ImgArea src={props.item.url} alt={props.item.alt}/>
+        <NameArea>{props.item.name}</NameArea>
+        <PriceArea>{props.item.price}</PriceArea>
+        <DeleteItemButton onClick={() => props.deleteFunc(props.item)}>삭제</DeleteItemButton>
       </Wrapper>
   );
 };
-
-export default ItemList;
 
 const Wrapper = styled.div`
   border: 1px solid gray;
