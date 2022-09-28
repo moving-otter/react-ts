@@ -1,0 +1,5 @@
+# Change class component to function component
+
+기능 개발을 위해
+ option-1. 직접 modal을 만들 수도 있고
+ option-2. react-modal module을 활용할 수 있음
