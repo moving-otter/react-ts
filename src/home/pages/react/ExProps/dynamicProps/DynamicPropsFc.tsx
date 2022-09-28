@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 import React, {useState} from 'react';
 
-type props = {
+// Remove React.FC to apply optional props
+export const DynamicPropsFc = (props: {
   name: string;
   age: number;
-};
-
-// Remove React.FC to apply optional props
-export const DynamicPropsFc = ({name, age}: props) => {
+}) => {
   const [title, setTitle] = useState<string>('Origin Title');
 
   console.log('Test PR conflict ');
@@ -23,8 +21,8 @@ export const DynamicPropsFc = ({name, age}: props) => {
   return (
     <Wrapper>
       <TextContent>{title} - fc</TextContent>
-      <TextContent>{name}</TextContent>
-      <TextContent>{age}</TextContent>
+      <TextContent>{props.name}</TextContent>
+      <TextContent>{props.age}</TextContent>
       <button onClick={handleTitle}>Change</button>
     </Wrapper>
   );

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React from 'react';
 import {DynamicPropsFc} from './dynamicProps/DynamicPropsFc';
 import DynamicPropsClass from './dynamicProps/DynamicPropsClass';
-import RequiredProps from './RequiredProps';
+import {RequiredProps} from './RequiredProps';
 import Highlighter from '@common/Highlighter';
 import {
     RequiredPropsCode,
