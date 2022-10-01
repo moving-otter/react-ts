@@ -3,7 +3,7 @@ import React from 'react';
 import LoopStatement from './syntax/LoopStatement';
 import ConditionalStatement from './syntax/ConditionalStatement';
 import StyleClassBinding from './syntax/StyleClassBinding';
-import Highlighter from '@common/Highlighter';
+import {Highlighter} from '@common/Highlighter';
 import {
   LoopStatementCode,
   ConditionalStatementCode,
