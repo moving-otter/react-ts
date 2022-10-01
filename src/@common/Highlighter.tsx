@@ -16,16 +16,16 @@ export const Highlighter = (props: {
   useEffect(() => {
     hljs.highlightAll();
 
+    const setNumListFunc = () => {
+      const str = props.codeInfo.code;
+      const len = str.split(/\r\n|\r|\n/).length;
+      const newNumList = Array.from(Array(len).keys());
+  
+      setNumList(newNumList);
+    }
+
     setNumListFunc();
-  }, [])
-
-  const setNumListFunc = () => {
-    const str = props.codeInfo.code;
-    const len = str.split(/\r\n|\r|\n/).length;
-    const newNumList = Array.from(Array(len).keys());
-
-    setNumList(newNumList);
-  }
+  }, [props.codeInfo.code])
 
   return (
     <Wrapper>
