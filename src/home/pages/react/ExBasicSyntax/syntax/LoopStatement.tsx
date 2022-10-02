@@ -1,56 +1,38 @@
 import styled from 'styled-components'
-import React, {Component} from 'react';
-
-type props = {};
+import React, {useState, useEffect} from 'react';
 
 type ItemObj = {
   key: number;
   item: string;
 };
 
-type state = {
-  list: Array<ItemObj>;
-};
+export const LoopStatement = () => {
+  const [list, setList] = useState<Array<ItemObj>>([
+    {key: Date.now(), item: 'Item 1'},
+  ]);
 
-class LoopStatement extends Component<props, state> {
-  constructor(props: props) {
-    super(props);
-
-    this.state = {
-      list: [
-        {key: Date.now(), item: 'Item 1'},
-      ]
-    };
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     const newItemObj: ItemObj = {
       key: Date.now(),
       item: 'Item'
     };
 
-    this.setState({
-      list: [...this.state.list, newItemObj]
-    })
-  }
+    setList([...list, newItemObj])
+  }, []) // list를 감지할 경우 무한루프 현상 일어남.
 
-  render() {
-    return (
-        <Wrapper>
-          <Content>
-            <Title className="hwTitle">Loop statement</Title>
-            <ul>
-              {this.state.list.map(e =>
-                  <li key={e.key}>{e.item}</li>
-              )}
-            </ul>
-          </Content>
-        </Wrapper>
-    );
-  };
+  return (
+    <Wrapper>
+      <Content>
+        <Title className="hwTitle">Loop statement</Title>
+        <ul>
+          {list.map(e =>
+              <li key={e.key}>{e.item}</li>
+          )}
+        </ul>
+      </Content>
+    </Wrapper>
+  )
 }
-
-export default LoopStatement;
 
 const Wrapper = styled.div`
 `;

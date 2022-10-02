@@ -1,46 +1,26 @@
 import styled from 'styled-components'
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 
-type props = {};
+export const StyleClassBinding = () => {
+  const [flag, setFlag] = useState<boolean>(false);
 
-type state = {
-  flag: boolean;
-};
-
-class StyleClassBinding extends Component<props, state> {
-  constructor(props: props) {
-    super(props);
-
-    this.state = {
-      flag: false
-    };
-
-    this.toggleHandler = this.toggleHandler.bind(this);
+  const toggleHandler = () => {
+    setFlag(!flag);
   }
 
-  toggleHandler() {
-    this.setState({
-      flag: !(this.state.flag)
-    });
-  }
+  return (
+    <Wrapper>
+      <Content>
+        <Title className="hwTitle">Style & Class binding</Title>
 
-  render() {
-    return (
-        <Wrapper>
-          <Content>
-            <Title className="hwTitle">Style & Class binding</Title>
+        <button onClick={toggleHandler}>Toggle</button>
 
-            <button onClick={this.toggleHandler}>Toggle</button>
-
-            <RenderArea flag={this.state.flag}>Sample Message Sample Message</RenderArea>
-            {this.state.flag && (<div>Sample Message Sample Message</div>)}
-          </Content>
-        </Wrapper>
-    );
-  };
+        <RenderArea flag={flag}>Sample Message Sample Message</RenderArea>
+        {flag && (<div>Sample Message Sample Message</div>)}
+      </Content>
+    </Wrapper>
+  )
 }
-
-export default StyleClassBinding;
 
 const Wrapper = styled.div`
   minHeight: 150px;
