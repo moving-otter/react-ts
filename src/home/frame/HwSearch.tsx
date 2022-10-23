@@ -1,20 +1,15 @@
 import styled from 'styled-components'
-import React, {useState, useCallback} from 'react';
 import SearchIcon from '@assets/icon/search-icon.png';
 import FolderIcon from '@assets/icon/folder-icon.png';
 import {useDispatch} from 'react-redux';
 import {useStoreState} from '@store/useStoreState'
 import {toggleSidebar} from '@store/ui/UiAction';
-import {SearchModal} from '@common/modal/SearchModal'
+import {toggleSearchModal} from '@store/ui/UiAction';
+import {SearchModalContainer} from '@common/modal/SearchModalContainer'
 
 export const HwSearch = () => {
   const dispatch = useDispatch();
-  const {uiState} = useStoreState()
-  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-
-  const onClickToggleModal = useCallback(() => {
-    setIsOpenModal(!isOpenModal);
-  }, [isOpenModal]);
+  const {uiState} = useStoreState();
 
   const getBackGroundColor = {
     backgroundColor: (uiState.sidebar) ? 'rgb(45, 47, 48)' : ''
@@ -31,12 +26,10 @@ export const HwSearch = () => {
           <ImgArea src={FolderIcon} alt="search icon"/>
         </Project>
 
-        {isOpenModal && (
-          <SearchModal onClickToggleModal={onClickToggleModal}>
-            이곳에 children이 들어갑니다.
-          </SearchModal>
+        {uiState.searchModal && (
+          <SearchModalContainer />
         )}
-        <Search onClick={onClickToggleModal}>
+        <Search onClick={() => dispatch(toggleSearchModal())}>
           Search
 
           <ImgArea src={SearchIcon} alt="search icon"/>

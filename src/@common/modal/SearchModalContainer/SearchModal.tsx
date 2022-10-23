@@ -1,23 +1,22 @@
-import React, {PropsWithChildren} from 'react'
 import styled from 'styled-components'
+import React from 'react'
+import {useStoreState} from '@store/useStoreState'
+import {toggleSearchModal} from '@store/ui/UiAction';
+import { useDispatch } from 'react-redux';
 
-interface ModalDefaultType {
-    onClickToggleModal: () => void;
-}
+export const SearchModal = () => {
+    const dispatch = useDispatch();
+    const {uiState} = useStoreState();
 
-export const SearchModal = ({
-    onClickToggleModal,
-    children
-}: PropsWithChildren<ModalDefaultType>) => {
     return (
         <Wrapper>
-            <DialogBox>{children}</DialogBox>
+            <DialogBox>룰루</DialogBox>
             <Backdrop 
                 onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
 
-                    if (onClickToggleModal) {
-                        onClickToggleModal();
+                    if (uiState.searchModal) {
+                        dispatch(toggleSearchModal())
                     }
                 }}
             />
