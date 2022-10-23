@@ -1,0 +1,4 @@
+# Display First Draft UI on the search modal
+
+- draft UI (mockup data)를 활용하여 임의로 화면에 display
+ > 1005-1025 1.guide img 참고

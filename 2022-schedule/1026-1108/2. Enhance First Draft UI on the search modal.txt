@@ -1,0 +1,4 @@
+# Enhance First Draft UI on the search modal
+
+- 1. Display First Draft UI on the search modal zol을 보완
+ > 1005-1025 1.guide img 참고
