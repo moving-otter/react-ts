@@ -3,6 +3,9 @@ import React from 'react'
 import {useStoreState} from '@store/useStoreState'
 import {toggleSearchModal} from '@store/ui/UiAction';
 import { useDispatch } from 'react-redux';
+import {SearchBox} from './SearchBox'
+import {SearchedList} from './SearchedList'
+import {SelectedContent} from './SelectedContent'
 
 export const SearchModal = () => {
     const dispatch = useDispatch();
@@ -10,7 +13,11 @@ export const SearchModal = () => {
 
     return (
         <Wrapper>
-            <DialogBox>룰루</DialogBox>
+            <DialogBox>
+              <SearchBox />
+              <SearchedList />
+              <SelectedContent />
+            </DialogBox>
             <Backdrop 
                 onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
@@ -41,11 +48,12 @@ const DialogBox = styled.dialog`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
   border: none;
   border-radius: 3px;
   box-shadow: 0 0 30px rgba(30, 30, 30, 0.185);
   box-sizing: border-box;
-  background-color: white;
+  background-color: #3b3b3b;
   z-index: 10000;
 `;
 
