@@ -1,4 +1,0 @@
-# Change scss of pages_react to styles.ts format
-
-- 이전) <div className="wrapper">{value}</div>
-- 이후) <Wrapper>{value}</Wrapper>

@@ -1,0 +1,6 @@
+# Structure search modal to three component
+
+- 3가지 컴포넌트로 구조화하기
+ > SearchBox
+ > SearchedList
+ > SelectedContent

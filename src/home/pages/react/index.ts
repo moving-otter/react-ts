@@ -1,14 +1,14 @@
-import {Welcome} from './welcome/Welcome';
-import ExState from './exState/ExState';
-import {ExProps} from './exProps/ExProps';
-import {ExTodoList} from './exTodoList/ExTodoList';
-import {ExRedux} from './exRedux/ExRedux';
-import {ExReduxTodo} from './exReduxTodo/ExReduxTodo';
-import ExLifeCycle from './exLifeCycle/ExLifeCycle';
-import {ExBasicSyntax} from './exBasicSyntax/ExBasicSyntax';
-import {ExCart} from './exCart/ExCart';
-import {ExVeneer} from './exVeneer/ExVeneer';
-import {ExReduxCounter} from './exReduxCounter/ExReduxCounter';
+import {Welcome} from './Welcome';
+import {ExState} from './ExState';
+import {ExProps} from './ExProps';
+import {ExTodoList} from './ExTodoList';
+import {ExRedux} from './ExRedux';
+import {ExReduxTodo} from './ExReduxTodo';
+import ExLifeCycle from './ExLifeCycle';
+import {ExBasicSyntax} from './ExBasicSyntax';
+import {ExCart} from './ExCart';
+import {ExVeneer} from './ExVeneer';
+import {ExReduxCounter} from './ExReduxCounter';
 
 export {
   Welcome,

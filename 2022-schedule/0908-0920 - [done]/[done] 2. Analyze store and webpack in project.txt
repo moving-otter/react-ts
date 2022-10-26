@@ -1,0 +1,15 @@
+# Analyze store and webpack in project
+
+- @store, webpack 구조&원리 파악
+
+0908)
+- 0911 회의에서 설명 이후에 진행
+
+0911)
+- webpack 내용 분석 경로 : config/ 하위
+  (preview 정도만 보기, create-react-app 할 때 만들어지는 내용이라 정확한 이해는 안해도됨)
+- npm run build => build 실행하는 명령어
+- 이후에 React-ts/home 하위 내용이 변경됨
+
+- Yoo Hyunwoo를 Reviews로 설정해서 PR 요청하기
+ > 2. guide img 참고

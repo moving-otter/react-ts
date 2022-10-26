@@ -40,3 +40,5 @@ package-lock.json
 *.js___jb_tmp___
 
 /src/@common/locale/locale.babel
+yarn.lock
+

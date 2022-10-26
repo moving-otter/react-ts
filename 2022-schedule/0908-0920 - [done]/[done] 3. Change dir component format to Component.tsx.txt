@@ -1,0 +1,17 @@
+# Change dir component format to Component.tsx
+
+- 이전)
+ [Component] - dir
+   Component.tsx
+   styles.ts
+
+- 이후) Component.tsx
+ > Component 한 파일에서 script, style 같이 존재하는 형식
+
+0908)
+- 폴더 안에 하나만 있는 경우만 해당 폴더를 삭제하고 .tsx 파일을 상단에 옮기면됨
+- sample
+component/Component.tsx
+> Component.tsx
+
+0913) 토요일 회의에서 추가 task 진행할지 논의

@@ -1,0 +1,19 @@
+# Refactoring redux store
+
+- redux store 구조화
+- useSelector를 component에서 호출하지 않고, useStoreState에서
+  명시적으로 선언해서 가져다 쓰기
+- useStoreState.tsx
+
+import { useStoreState } from '@store/useStoreState';
+
+export const HwSidebar = () => {
+  // before
+  const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
+  // after
+  const { uiState } = useStoreState();
+
+  return (
+    <></>
+  );
+}

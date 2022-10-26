@@ -1,0 +1,8 @@
+# Change dir name from lower case to upper case
+
+이전) component/Component.tsx 폴더 구조를
+
+이후) Component/Component.tsx 구조로 변경
+ - component => Component (.tsx를 가지고 있는 폴더 이름을 소문자에서 대문자로)
+ - index.ts 추가
+ - guide img 참고
