@@ -43,8 +43,8 @@ const Wrapper = styled.div`
 `;
 
 const DialogBox = styled.dialog`
-  width: 800px;
-  height: 400px;
+  width: 80vw;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
