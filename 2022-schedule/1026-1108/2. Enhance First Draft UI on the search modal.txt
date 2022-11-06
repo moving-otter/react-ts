@@ -2,3 +2,6 @@
 
 - 1. Display First Draft UI on the search modal zol을 보완
  > 1005-1025 1.guide img 참고
+- 검색어 입력 시
+ 1) 상단부 : 검색된 항목 list로 보여주기
+ 2) 하단부 : 상단부에서 선택된 항목 보이게
