@@ -1,0 +1,8 @@
+# Enhance First Draft UI on the search modal
+
+- 1. Display First Draft UI on the search modal zol을 보완
+ > 0. new search modal guide img 참고
+
+- 상단부, 하단부 styling
+ > Highlighter component 활용
+   import {Highlighter} from '@common/Highlighter'
