@@ -1,8 +1,0 @@
-# Develop the search logic in Search Modal
-
-- refer) 0. search modal
-
-- 검색어 입력 시
- 1) 상단부 : 검색된 항목 list 보여주기
- 2) 하단부 : 상단부에서 선택된 항목 보이게
-

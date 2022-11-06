@@ -1,9 +1,0 @@
-# Future tasks
-- prettier / eslint 보류
-- package.json 업데이트 필요
-
-
-
-
-
-
