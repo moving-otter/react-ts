@@ -4,7 +4,7 @@ export const SearchBox = () => {
     return (
         <Wrapper>
             <FindInFilesArea>
-                <p>Find in Files <small>10 matches in 9 files</small></p>
+                <p>Find <small>10 matches</small></p>
             </FindInFilesArea>
             <InputArea>
                 <Input></Input>

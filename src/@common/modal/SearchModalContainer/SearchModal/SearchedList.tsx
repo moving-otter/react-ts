@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 
 export const SearchedList = () => {
-    const categories = [
-        'In Project',
-        'Module',
-        'Directory',
-        'Scope'
-    ]
-
     const searchedList = [
         'const dispatch = useDispatch();',
         'const {uiState} = useStoreState();',
@@ -23,14 +16,9 @@ export const SearchedList = () => {
 
     return (
         <Wrapper>
-            <CategoryArea>
-                <ul>
-                    {categories.map(category => <li>{category}</li>)}
-                </ul>
-            </CategoryArea>
             <ListArea>
                 <ul>
-                    {searchedList.map(searchedItem => <li>{searchedItem}</li>)}
+                    {searchedList.map(searchedItem => <li key={searchedItem}>{searchedItem}</li>)}
                 </ul>
             </ListArea>
         </Wrapper>
@@ -42,15 +30,6 @@ const Wrapper = styled.div`
     height: 40%;
 `
 
-const CategoryArea = styled.div`
-    ul li {
-        list-style-type: none;
-        display: inline;
-        margin-right: 0.5vw;
-        padding: 0.5vw;
-    }
-`
-
 const ListArea = styled.div`
     height: 90%;
     background: #5c5c5c;
@@ -58,5 +37,6 @@ const ListArea = styled.div`
     
     ul li {
         padding: 0.3vw;
+        border-bottom: solid 1px #878787;
     }
 `

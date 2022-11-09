@@ -8,6 +8,7 @@ export const SelectedContent = () => {
             </PathArea>
             <ContentArea>
                 {/* 라인 수 찾는 모듈 필요 -> 추후 변경 */}
+                {/* <Highlighter codeInfo={ExLifeCycleCode}/> */}
                 {`
                     import styled from 'styled-components'
                     export const SelectedContent = () => {
@@ -37,7 +38,7 @@ const PathArea = styled.div`
 `
 
 const ContentArea = styled.div`
-    width: 90%
+    width: 90%;
     height: 90%;
     white-space: pre-wrap;
 `
