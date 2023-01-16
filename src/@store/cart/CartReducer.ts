@@ -1,9 +1,11 @@
-import {ADD_ITEMS, DELETE_ITEMS} from "./CartAction";
+import { ADD_ITEMS, DELETE_ITEMS } from "./CartAction";
 
 const CartReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_ITEMS:
-      if (state.filter(item => item.name === action.payload.name).length === 0) {
+      if (
+        state.filter(item => item.name === action.payload.name).length === 0
+      ) {
         return [...state, action.payload];
       } else {
         return state;

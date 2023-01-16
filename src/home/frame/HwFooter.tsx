@@ -1,27 +1,27 @@
-import styled from 'styled-components'
-import React from 'react';
-import contactIcon from '@assets/icon/contact-icon.png';
-import developerIcon from '@assets/icon/developer-icon.png';
+import styled from "styled-components";
+import React from "react";
+import contactIcon from "@assets/icon/contact-icon.png";
+import developerIcon from "@assets/icon/developer-icon.png";
 
 export const HwFooter = () => {
-  const contactUrl = 'https://www.youtube.com/user/youhyunwoo/discussion';
+  const contactUrl = "https://www.youtube.com/user/youhyunwoo/discussion";
 
   return (
-      <Wrapper className="hwUserSelectNone">
-        <Content>
-          <ImageArea src={contactIcon} alt="contact icon"/>
+    <Wrapper className="hwUserSelectNone">
+      <Content>
+        <ImageArea src={contactIcon} alt="contact icon" />
 
-          <AnchorArea target="_blank" href={contactUrl} rel="noreferrer">
-            현우u Youtube
-          </AnchorArea>
-        </Content>
+        <AnchorArea target="_blank" href={contactUrl} rel="noreferrer">
+          현우u Youtube
+        </AnchorArea>
+      </Content>
 
-        <Content>
-          <ImageArea src={developerIcon} alt="developer icon"/>
+      <Content>
+        <ImageArea src={developerIcon} alt="developer icon" />
 
-          <LabelArea>Hyun-woo Yoo</LabelArea>
-        </Content>
-      </Wrapper>
+        <LabelArea>Hyun-woo Yoo</LabelArea>
+      </Content>
+    </Wrapper>
   );
 };
 

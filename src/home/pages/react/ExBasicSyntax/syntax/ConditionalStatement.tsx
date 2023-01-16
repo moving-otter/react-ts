@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
+import styled from "styled-components";
+import React, { useState } from "react";
 
 export const ConditionalStatement = () => {
   const [flag, setFlag] = useState<boolean>(false);
@@ -9,11 +9,12 @@ export const ConditionalStatement = () => {
     content = <div>true</div>;
   } else {
     // <> => <React.Fragment>
-    content =
-        <>
-          <div>false</div>
-          <div>false</div>
-        </>
+    content = (
+      <>
+        <div>false</div>
+        <div>false</div>
+      </>
+    );
   }
 
   return (
@@ -22,24 +23,21 @@ export const ConditionalStatement = () => {
         <Title className="hwTitle">Conditional statement</Title>
         {content}
 
-        {(flag) ?
-            <div>true</div>
-            :
-            <>
-              <div>false</div>
-              <div>false</div>
-            </>
-        }
+        {flag ? (
+          <div>true</div>
+        ) : (
+          <>
+            <div>false</div>
+            <div>false</div>
+          </>
+        )}
       </Content>
     </Wrapper>
-  )
-}
+  );
+};
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;
 
-const Content = styled.div`
-`;
+const Content = styled.div``;
 
-const Title = styled.div`
-`;
+const Title = styled.div``;

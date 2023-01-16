@@ -1,17 +1,19 @@
-import styled from 'styled-components'
-import React from 'react';
-import {HashRouter, NavLink} from 'react-router-dom';
+import styled from "styled-components";
+import React from "react";
+import { HashRouter, NavLink } from "react-router-dom";
 import favicon from "@assets/favicon.png";
 
 export const HwHeader = () => {
   return (
-      <Wrapper className="hwUserSelectNone">
-        <ImageArea src={favicon} alt="logo"/>
+    <Wrapper className="hwUserSelectNone">
+      <ImageArea src={favicon} alt="logo" />
 
-        <HashRouter>
-          <NavLink exact to="/">hw-dev-store</NavLink>
-        </HashRouter>
-      </Wrapper>
+      <HashRouter>
+        <NavLink exact to="/">
+          hw-dev-store
+        </NavLink>
+      </HashRouter>
+    </Wrapper>
   );
 };
 

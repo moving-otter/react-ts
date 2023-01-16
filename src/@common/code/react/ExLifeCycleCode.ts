@@ -1,6 +1,6 @@
 const ExLifeCycleCode = {
-  type: 'typescript',
-  desc: 'ExLifeCycle.tsx - check console log',
+  type: "typescript",
+  desc: "ExLifeCycle.tsx - check console log",
   code: `import React, {Component} from 'react';
 
 type props = {};
@@ -85,6 +85,4 @@ class ExLifeCycle extends Component<props, state> {
 export default ExLifeCycle;`
 };
 
-export {
-  ExLifeCycleCode
-};
+export { ExLifeCycleCode };

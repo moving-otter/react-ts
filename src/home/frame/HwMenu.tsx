@@ -1,14 +1,15 @@
-import styled from 'styled-components'
-import React from 'react';
-import {HashRouter, NavLink} from 'react-router-dom';
+import styled from "styled-components";
+import React from "react";
+import { HashRouter, NavLink } from "react-router-dom";
 
 export const HwMenu = () => {
-
   return (
     <Wrapper>
       <HashRouter>
         <Content>
-          <NavLink exact to="/">Welcome</NavLink>
+          <NavLink exact to="/">
+            Welcome
+          </NavLink>
           <NavLink to="/exState">State</NavLink>
           <NavLink to="/exProps">Props</NavLink>
           <NavLink to="/exBasicSyntax">Basic Syntax</NavLink>
@@ -44,4 +45,3 @@ const Content = styled.div`
     border-bottom: 4px solid rgb(67, 158, 184) !important;
   }
 `;
-

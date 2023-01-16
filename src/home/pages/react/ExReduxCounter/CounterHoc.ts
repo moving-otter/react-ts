@@ -1,8 +1,8 @@
-import {connect} from 'react-redux';
-import {Counter} from './Counter';
+import { connect } from "react-redux";
+import { Counter } from "./Counter";
 
 // map redux state to component props
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     countValue: state.count
   };
@@ -17,15 +17,15 @@ const decreaseAction = {
 };
 
 // map redux action to component props
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     increaseCount: () => dispatch(increaseAction),
-    decreaseCount: () => dispatch(decreaseAction),
+    decreaseCount: () => dispatch(decreaseAction)
   };
 };
 
 // High Order Component
 export const CounterHoc = connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Counter);

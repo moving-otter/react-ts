@@ -1,47 +1,43 @@
-import styled from 'styled-components'
-import React from 'react';
+import styled from "styled-components";
+import React from "react";
 import {
   HwHeader,
   HwSidebar,
   HwSearch,
   HwFooter,
   HwRouter,
-  HwMenu,
-} from './frame/Frame';
+  HwMenu
+} from "./frame/Frame";
 
 export const Home = () => {
-
   return (
     <Wrapper>
       <Content>
-        <HwHeader/>
+        <HwHeader />
 
         <DepthFirst>
-          <HwSearch/>
+          <HwSearch />
 
           <DepthSecond>
-            <HwSidebar/>
+            <HwSidebar />
 
             <DepthThird>
-              <HwMenu/>
+              <HwMenu />
 
-              <HwRouter/>
+              <HwRouter />
             </DepthThird>
           </DepthSecond>
 
-          <RightArea>
-
-          </RightArea>
+          <RightArea />
         </DepthFirst>
 
-        <HwFooter/>
+        <HwFooter />
       </Content>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;
 
 const Content = styled.div`
   position: absolute;
@@ -81,4 +77,3 @@ const RightArea = styled.div`
   padding-top: 5px;
   right: 0;
 `;
-

@@ -1,15 +1,15 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
-import {TodoList} from './TodoList';
-import {TodoEditor} from './TodoEditor';
-import {Todo} from './TodoType';
+import styled from "styled-components";
+import React, { useState } from "react";
+import { TodoList } from "./TodoList";
+import { TodoEditor } from "./TodoEditor";
+import { Todo } from "./TodoType";
 
 export const ExTodoList = () => {
   const [itemObjList, setItemObjList] = useState<Todo[]>([]);
 
-  const addItem = (text) => {
+  const addItem = text => {
     if (text.length === 0) {
-      return ;
+      return;
     }
     const newTodo: Todo = {
       key: Date.now(),
@@ -18,7 +18,7 @@ export const ExTodoList = () => {
     setItemObjList([newTodo, ...itemObjList]);
   };
 
-  const deleteItem = (key) => {
+  const deleteItem = key => {
     setItemObjList(itemObjList.filter(e => e.key !== key));
   };
 
@@ -27,24 +27,16 @@ export const ExTodoList = () => {
   };
 
   return (
-      <Wrapper>
-        <Title className="hwTitle">TodoList</Title>
+    <Wrapper>
+      <Title className="hwTitle">TodoList</Title>
 
-        <TodoEditor
-            addItemFunc={addItem}
-            resetListFunc={resetList}
-        />
+      <TodoEditor addItemFunc={addItem} resetListFunc={resetList} />
 
-        <TodoList
-            entries={itemObjList}
-            deleteItemFunc={deleteItem}
-        />
-      </Wrapper>
+      <TodoList entries={itemObjList} deleteItemFunc={deleteItem} />
+    </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;
 
-const Title = styled.div`
-`;
+const Title = styled.div``;

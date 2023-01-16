@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import React, {Component} from 'react';
-import {Highlighter} from '@common/Highlighter';
-import {ExLifeCycleCode} from '@common/code/react/ExLifeCycleCode';
+import styled from "styled-components";
+import React, { Component } from "react";
+import { Highlighter } from "@common/Highlighter";
+import { ExLifeCycleCode } from "@common/code/react/ExLifeCycleCode";
 
 type props = {};
 
@@ -15,8 +15,8 @@ class ExLifeCycle extends Component<props, state> {
     super(props);
 
     this.state = {
-      msg: '',
-      count: 0,
+      msg: "",
+      count: 0
     };
 
     // register methods here
@@ -24,23 +24,23 @@ class ExLifeCycle extends Component<props, state> {
   }
 
   componentDidMount() {
-    console.log('did mount / [vue] mounted');
+    console.log("did mount / [vue] mounted");
 
-    this.setState({msg: 'Default Title'});
+    this.setState({ msg: "Default Title" });
   }
 
   shouldComponentUpdate(newProps, newState) {
-    console.log('should update?');
+    console.log("should update?");
 
     return true;
   }
 
   componentDidUpdate() {
-    console.log('did update / [vue] updated');
+    console.log("did update / [vue] updated");
   }
 
   componentWillUnmount() {
-    console.log('will unmount / [vue] destroyed');
+    console.log("will unmount / [vue] destroyed");
   }
 
   plusCount() {
@@ -55,42 +55,40 @@ class ExLifeCycle extends Component<props, state> {
 
   render() {
     return (
-        <Wrapper>
-          <Title className="hwTitle hwBlueMarker">React Life Cycle - class</Title>
+      <Wrapper>
+        <Title className="hwTitle hwBlueMarker">React Life Cycle - class</Title>
 
-          <Content>
-            <Counter>
-              {this.state.count}
+        <Content>
+          <Counter>
+            {this.state.count}
 
-              <button onClick={this.plusCount}>Plus</button>
+            <button onClick={this.plusCount}>Plus</button>
 
-              {this.state.msg}
-            </Counter>
+            {this.state.msg}
+          </Counter>
 
-            <Desc>
-              컴포넌트 생명주기 순서
-              <ul>
-                <li>componentDidMount : 컴포넌트 생성</li>
-                <li>shouldComponentUpdate</li>
-                <li>componentDidUpdate</li>
-                <li>componentWillUnmount : 컴포넌트 제거</li>
-              </ul>
-            </Desc>
-          </Content>
+          <Desc>
+            컴포넌트 생명주기 순서
+            <ul>
+              <li>componentDidMount : 컴포넌트 생성</li>
+              <li>shouldComponentUpdate</li>
+              <li>componentDidUpdate</li>
+              <li>componentWillUnmount : 컴포넌트 제거</li>
+            </ul>
+          </Desc>
+        </Content>
 
-          <Highlighter codeInfo={ExLifeCycleCode}/>
-        </Wrapper>
-    )
+        <Highlighter codeInfo={ExLifeCycleCode} />
+      </Wrapper>
+    );
   }
 }
 
 export default ExLifeCycle;
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;
 
-const Title = styled.div`
-`;
+const Title = styled.div``;
 
 const Content = styled.div`
   padding-left: 20px;

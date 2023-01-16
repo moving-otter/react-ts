@@ -1,11 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Counter = (props: {
-  countValue: number,
-  decreaseCount: () => void,
-  increaseCount: () => void,
+  countValue: number;
+  decreaseCount: () => void;
+  increaseCount: () => void;
 }) => {
-
   return (
     <Wrapper>
       <Button onClick={props.decreaseCount}>-</Button>
@@ -18,7 +17,7 @@ export const Counter = (props: {
 };
 
 const Wrapper = styled.div`
-  background-color: #FFF;
+  background-color: #fff;
   margin: 100px;
   padding: 10px;
   border-radius: 3px;
@@ -36,12 +35,12 @@ const Button = styled.button`
   font-size: 30px;
   font-weight: bold;
   border-radius: 3px;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 
   &:hover:nth-child(1) {
-    background-color: #F45B69;
+    background-color: #f45b69;
   }
   &:hover:nth-child(3) {
-    background-color: #C0DFA1;
+    background-color: #c0dfa1;
   }
 `;

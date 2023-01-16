@@ -1,3 +1,3 @@
-import { SearchModalContainer } from './SearchModalContainer'
+import { SearchModalContainer } from "./SearchModalContainer";
 
-export { SearchModalContainer }
+export { SearchModalContainer };

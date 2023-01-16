@@ -1,3 +1,3 @@
-import { ExReduxCounter } from './ExReduxCounter';
+import { ExReduxCounter } from "./ExReduxCounter";
 
 export { ExReduxCounter };

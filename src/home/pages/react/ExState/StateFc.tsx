@@ -1,47 +1,45 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
+import styled from "styled-components";
+import React, { useState } from "react";
 
 export const StateFc = () => {
   const [count, setCount] = useState<number>(0);
-  const updateCount = (flag) => {
-    if (flag === '+') {
+  const updateCount = flag => {
+    if (flag === "+") {
       setCount(count + 1);
-    } else if (flag === '-') {
+    } else if (flag === "-") {
       setCount(count - 1);
     }
   };
   const resetCount = () => setCount(0);
 
   return (
-      <Wrapper>
-        <Title className="hwTitle">Counter Example</Title>
+    <Wrapper>
+      <Title className="hwTitle">Counter Example</Title>
 
-        <Content>
-          <button onClick={() => updateCount('-')}>Minus</button>
+      <Content>
+        <button onClick={() => updateCount("-")}>Minus</button>
 
-          <b>{count}</b>
+        <b>{count}</b>
 
-          <button onClick={() => updateCount('+')}>Plus</button>
+        <button onClick={() => updateCount("+")}>Plus</button>
 
-          <button onClick={resetCount}>Reset</button>
-        </Content>
+        <button onClick={resetCount}>Reset</button>
+      </Content>
 
-        <TextContent className="hwDesc">
-          Event 에 따른 state 변화를 확인할 수 있는 예제
-          <ul>
-            <li>1. Function Component</li>
-            <li>2. Class Component</li>
-          </ul>
-        </TextContent>
-      </Wrapper>
-  )
+      <TextContent className="hwDesc">
+        Event 에 따른 state 변화를 확인할 수 있는 예제
+        <ul>
+          <li>1. Function Component</li>
+          <li>2. Class Component</li>
+        </ul>
+      </TextContent>
+    </Wrapper>
+  );
 };
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;
 
-const Title = styled.div`
-`;
+const Title = styled.div``;
 
 const Content = styled.div`
   padding-left: 10px;
@@ -51,5 +49,4 @@ const Content = styled.div`
   font-size: 24px;
 `;
 
-const TextContent = styled.div`
-`;
+const TextContent = styled.div``;

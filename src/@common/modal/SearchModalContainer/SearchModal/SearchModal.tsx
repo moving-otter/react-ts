@@ -1,35 +1,35 @@
-import styled from 'styled-components'
-import React from 'react'
-import {useStoreState} from '@store/useStoreState'
-import {toggleSearchModal} from '@store/ui/UiAction';
-import { useDispatch } from 'react-redux';
-import {SearchBox} from './SearchBox'
-import {SearchedList} from './SearchedList'
-import {SelectedContent} from './SelectedContent'
+import styled from "styled-components";
+import React from "react";
+import { useStoreState } from "@store/useStoreState";
+import { toggleSearchModal } from "@store/ui/UiAction";
+import { useDispatch } from "react-redux";
+import { SearchBox } from "./SearchBox";
+import { SearchedList } from "./SearchedList";
+import { SelectedContent } from "./SelectedContent";
 
 export const SearchModal = () => {
-    const dispatch = useDispatch();
-    const {uiState} = useStoreState();
+  const dispatch = useDispatch();
+  const { uiState } = useStoreState();
 
-    return (
-        <Wrapper>
-            <DialogBox>
-              <SearchBox />
-              <SearchedList />
-              <SelectedContent />
-            </DialogBox>
-            <Backdrop 
-                onClick={(e: React.MouseEvent) => {
-                    e.preventDefault();
+  return (
+    <Wrapper>
+      <DialogBox>
+        <SearchBox />
+        <SearchedList />
+        <SelectedContent />
+      </DialogBox>
+      <Backdrop
+        onClick={(e: React.MouseEvent) => {
+          e.preventDefault();
 
-                    if (uiState.searchModal) {
-                        dispatch(toggleSearchModal())
-                    }
-                }}
-            />
-        </Wrapper>
-    )
-}
+          if (uiState.searchModal) {
+            dispatch(toggleSearchModal());
+          }
+        }}
+      />
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.div`
   width: 100%;

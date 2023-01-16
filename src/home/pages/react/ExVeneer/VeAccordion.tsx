@@ -1,20 +1,22 @@
-import React from 'react';
-import {Accordion} from '@veneer/core';
+import React from "react";
+import { Accordion } from "@veneer/core";
 
 export const VeAccordion = () => {
-  const [data, setData] = React.useState([{
-    content:
+  const [data, setData] = React.useState([
+    {
+      content: (
         <p>
-          Lorem ipsum dolor sit amet. <br/>
-          Lorem ipsum dolor sit amet. <br/>
+          Lorem ipsum dolor sit amet. <br />
+          Lorem ipsum dolor sit amet. <br />
           Lorem ipsum dolor sit amet.
-        </p>,
-    expanded: false,
-    header: {
-      centralArea: <span>Title</span>
-    },
-    id: 'accordionItem1'
-  }
+        </p>
+      ),
+      expanded: false,
+      header: {
+        centralArea: <span>Title</span>
+      },
+      id: "accordionItem1"
+    }
   ]);
   const handleExpand = (event, index, item) => {
     const updatedData = [...data];
@@ -28,11 +30,11 @@ export const VeAccordion = () => {
     setData(updatedData);
   };
   return (
-      <Accordion
-          items={data}
-          id="accordion-one-item"
-          onExpand={handleExpand}
-          onCollapse={handleCollapse}
-      />
+    <Accordion
+      items={data}
+      id="accordion-one-item"
+      onExpand={handleExpand}
+      onCollapse={handleCollapse}
+    />
   );
 };

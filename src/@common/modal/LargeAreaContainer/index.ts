@@ -1,3 +1,3 @@
-import { LargeAreaContainer } from './LargeAreaContainer';
+import { LargeAreaContainer } from "./LargeAreaContainer";
 
-export  { LargeAreaContainer };
+export { LargeAreaContainer };

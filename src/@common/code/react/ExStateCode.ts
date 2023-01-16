@@ -1,6 +1,6 @@
 const StateClassCode = {
-  type: 'typescript',
-  desc: 'Functional Component',
+  type: "typescript",
+  desc: "Functional Component",
   code: `import React, {useState} from 'react';
 
 const ExState: React.FC = () => {
@@ -31,12 +31,12 @@ const ExState: React.FC = () => {
   )
 };
 
-export default ExState;`,
+export default ExState;`
 };
 
 const StateFcCode = {
-  type: 'typescript',
-  desc: 'Class component',
+  type: "typescript",
+  desc: "Class component",
   code: `import React, {Component} from 'react';
 
 type props = {};
@@ -88,11 +88,7 @@ class StateClass extends Component<props, state> {
   };
 }
 
-export default StateClass;`,
+export default StateClass;`
 };
 
-export {
-  StateClassCode,
-  StateFcCode,
-};
-
+export { StateClassCode, StateFcCode };

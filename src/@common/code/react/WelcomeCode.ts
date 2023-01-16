@@ -1,6 +1,6 @@
 const WelcomeCode = {
-  type: 'typescript',
-  desc: 'index.tsx : project entry code',
+  type: "typescript",
+  desc: "index.tsx : project entry code",
   code: `import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './home/Home';
@@ -20,10 +20,7 @@ ReactDOM.render(
       <Home/>
     </Provider>,
     document.getElementById('root')
-);`,
+);`
 };
 
-export {
-  WelcomeCode,
-};
-
+export { WelcomeCode };

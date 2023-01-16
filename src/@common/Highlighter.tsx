@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import React, {useState, useEffect} from 'react';
-import 'highlight.js/scss/androidstudio.scss';
-import hljs from 'highlight.js/lib';
+import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import "highlight.js/scss/androidstudio.scss";
+import hljs from "highlight.js/lib";
 
 export const Highlighter = (props: {
   codeInfo: {
@@ -20,26 +20,24 @@ export const Highlighter = (props: {
       const str = props.codeInfo.code;
       const len = str.split(/\r\n|\r|\n/).length;
       const newNumList = Array.from(Array(len).keys());
-  
+
       setNumList(newNumList);
-    }
+    };
 
     setNumListFunc();
-  }, [props.codeInfo.code])
+  }, [props.codeInfo.code]);
 
   return (
     <Wrapper>
-      <TitleArea className="hwUserSelectNone">
-        {props.codeInfo.desc}
-      </TitleArea>
+      <TitleArea className="hwUserSelectNone">{props.codeInfo.desc}</TitleArea>
 
       <Content>
         <LineNumber className="hwUserSelectNone">
-          {numList.map(num =>
+          {numList.map(num => (
             <Num key={num} tabIndex={1}>
               {num + 1}
             </Num>
-          )}
+          ))}
         </LineNumber>
 
         <CustomCode className={`${props.codeInfo.type}`}>
@@ -47,10 +45,10 @@ export const Highlighter = (props: {
         </CustomCode>
       </Content>
 
-      <BottomLine/>
+      <BottomLine />
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.pre`
   position: relative;

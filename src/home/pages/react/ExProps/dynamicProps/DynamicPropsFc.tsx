@@ -1,20 +1,17 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
+import styled from "styled-components";
+import React, { useState } from "react";
 
 // Remove React.FC to apply optional props
-export const DynamicPropsFc = (props: {
-  name: string;
-  age: number;
-}) => {
-  const [title, setTitle] = useState<string>('Origin Title');
+export const DynamicPropsFc = (props: { name: string; age: number }) => {
+  const [title, setTitle] = useState<string>("Origin Title");
 
-  console.log('Test PR conflict ');
-  
+  console.log("Test PR conflict ");
+
   const handleTitle = () => {
-    if (title === 'Origin Title') {
-      setTitle('Title Origin');
+    if (title === "Origin Title") {
+      setTitle("Title Origin");
     } else {
-      setTitle('Origin Title');
+      setTitle("Origin Title");
     }
   };
 
@@ -37,7 +34,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 600px;
   padding: 20px 0;
-`
+`;
 
 const TextContent = styled.div`
   width: 100%;

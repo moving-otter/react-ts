@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
+import styled from "styled-components";
+import React, { useState } from "react";
 
 export const StyleClassBinding = () => {
   const [flag, setFlag] = useState<boolean>(false);
 
   const toggleHandler = () => {
     setFlag(!flag);
-  }
+  };
 
   return (
     <Wrapper>
@@ -16,23 +16,21 @@ export const StyleClassBinding = () => {
         <button onClick={toggleHandler}>Toggle</button>
 
         <RenderArea flag={flag}>Sample Message Sample Message</RenderArea>
-        {flag && (<div>Sample Message Sample Message</div>)}
+        {flag && <div>Sample Message Sample Message</div>}
       </Content>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
-  minHeight: 150px;
-  fontSize: 24px;
+  minheight: 150px;
+  fontsize: 24px;
 `;
 
-const Content = styled.div`
-`;
+const Content = styled.div``;
 
-const Title = styled.div`
-`;
+const Title = styled.div``;
 
 const RenderArea = styled.div`
-  display: ${props => (props.flag ? 'block' : 'none')};
+  display: ${props => (props.flag ? "block" : "none")};
 `;

@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export const SubContentOne = () => {
-    return (
-        <div>SubContentOne</div>
-    )
-}
+  return <div>SubContentOne</div>;
+};

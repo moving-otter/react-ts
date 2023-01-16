@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
-import {useStoreState} from '@store/useStoreState'
-import {toggleSidebar} from '@store/ui/UiAction';
-import {HashRouter, NavLink} from 'react-router-dom';
+import styled from "styled-components";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useStoreState } from "@store/useStoreState";
+import { toggleSidebar } from "@store/ui/UiAction";
+import { HashRouter, NavLink } from "react-router-dom";
 
 type Child = {
   title: string;
   link: string;
-}
+};
 
 type Item = {
   parent: string;
@@ -23,57 +23,57 @@ type render = {
 
 export const HwSidebar = () => {
   const dispatch = useDispatch();
-  const {uiState} = useStoreState()
+  const { uiState } = useStoreState();
   const [itemList] = useState<Array<Item>>([
     {
-      parent: 'React',
+      parent: "React",
       childList: [
-        {title: 'Welcome', link: '/'},
-        {title: 'State', link: '/exState'},
-        {title: 'Props', link: '/exProps'},
-        {title: 'Basic Syntax', link: '/exBasicSyntax'},
-        {title: 'Life Cycle', link: '/exLifeCycle'},
-        {title: 'Veneer', link: '/exVeneer'},
-        {title: 'Todd List - props', link: '/exTodoList'},
-        {title: 'Todd List - redux', link: '/exReduxTodo'},
-        {title: 'Redux', link: '/exRedux'},
-        {title: 'Cart List', link: '/exCart'},
+        { title: "Welcome", link: "/" },
+        { title: "State", link: "/exState" },
+        { title: "Props", link: "/exProps" },
+        { title: "Basic Syntax", link: "/exBasicSyntax" },
+        { title: "Life Cycle", link: "/exLifeCycle" },
+        { title: "Veneer", link: "/exVeneer" },
+        { title: "Todd List - props", link: "/exTodoList" },
+        { title: "Todd List - redux", link: "/exReduxTodo" },
+        { title: "Redux", link: "/exRedux" },
+        { title: "Cart List", link: "/exCart" }
       ]
     },
     {
-      parent: 'Vue',
+      parent: "Vue",
       childList: [
-        {title: 'v-directive', link: '/tbd'},
-        {title: 'Life Cycle', link: '/tbd'},
-        {title: 'app.js', link: '/tbd'},
+        { title: "v-directive", link: "/tbd" },
+        { title: "Life Cycle", link: "/tbd" },
+        { title: "app.js", link: "/tbd" }
       ]
     },
     {
-      parent: 'Html',
+      parent: "Html",
       childList: [
-        {title: 'summary-0', link: '/tbd'},
-        {title: 'summary-1', link: '/tbd'},
-        {title: 'summary-2', link: '/tbd'},
+        { title: "summary-0", link: "/tbd" },
+        { title: "summary-1", link: "/tbd" },
+        { title: "summary-2", link: "/tbd" }
       ]
-    },
+    }
   ]);
   const [renderStatus, setRenderStatus] = useState<render>({
     react: true,
     vue: true,
-    html: true,
+    html: true
   });
 
-  const toggleRenderStatus = (item) => {
+  const toggleRenderStatus = item => {
     let newRenderStatus = renderStatus;
-    switch(item) {
-      case 'React':
-        newRenderStatus.react = !(renderStatus.react);
+    switch (item) {
+      case "React":
+        newRenderStatus.react = !renderStatus.react;
         break;
-      case 'Vue':
-        newRenderStatus.vue = !(renderStatus.vue);
+      case "Vue":
+        newRenderStatus.vue = !renderStatus.vue;
         break;
-      case 'Html':
-        newRenderStatus.html = !(renderStatus.html);
+      case "Html":
+        newRenderStatus.html = !renderStatus.html;
         break;
     }
     setRenderStatus({
@@ -83,58 +83,62 @@ export const HwSidebar = () => {
     });
   };
 
-
-  const getItemBoolean = (item) => {
-    switch(item) {
-      case 'React': return renderStatus.react;
-      case 'Vue': return renderStatus.vue;
-      case 'Html': return renderStatus.html;
+  const getItemBoolean = item => {
+    switch (item) {
+      case "React":
+        return renderStatus.react;
+      case "Vue":
+        return renderStatus.vue;
+      case "Html":
+        return renderStatus.html;
     }
   };
 
   return (
-      <Wrapper className={`${(uiState.sidebar) ? 'show' : 'hide'} hwUserSelectNone`}>
-        <DepthFirst>
-          <CloseArea>
-            <Motto>
-              <i>Simple is best</i>
-            </Motto>
+    <Wrapper
+      className={`${uiState.sidebar ? "show" : "hide"} hwUserSelectNone`}
+    >
+      <DepthFirst>
+        <CloseArea>
+          <Motto>
+            <i>Simple is best</i>
+          </Motto>
 
-            <Close onClick={() => dispatch(toggleSidebar())}>
-              {/*close button*/}
-              <label></label>
-            </Close>
-          </CloseArea>
+          <Close onClick={() => dispatch(toggleSidebar())}>
+            {/*close button*/}
+            <label />
+          </Close>
+        </CloseArea>
 
-          {itemList.map((item) =>
-            <ContentFirst key={item.parent}>
-              <DepthSecond>
-                <Area onClick={() => toggleRenderStatus(item.parent)}>
-                  <DepthFirstArea>
-                    {/*<label className="pointer opened">▶</label>*/}
-                    <LabelPointer opened={getItemBoolean(item.parent)}>
-                      ▶
-                    </LabelPointer>
-                    <label>{item.parent}</label>
-                  </DepthFirstArea>
-                </Area>
+        {itemList.map(item => (
+          <ContentFirst key={item.parent}>
+            <DepthSecond>
+              <Area onClick={() => toggleRenderStatus(item.parent)}>
+                <DepthFirstArea>
+                  {/*<label className="pointer opened">▶</label>*/}
+                  <LabelPointer opened={getItemBoolean(item.parent)}>
+                    ▶
+                  </LabelPointer>
+                  <label>{item.parent}</label>
+                </DepthFirstArea>
+              </Area>
 
-                <ContentSecond show={getItemBoolean(item.parent)}>
-                  {item.childList.map((child) =>
-                    <Area key={child.title}>
-                      <HashRouter>
-                        <DepthSecondArea exact to={child.link}>
-                          {child.title}
-                        </DepthSecondArea>
-                      </HashRouter>
-                    </Area>
-                  )}
-                </ContentSecond>
-              </DepthSecond>
-            </ContentFirst>
-          )}
-        </DepthFirst>
-      </Wrapper>
+              <ContentSecond show={getItemBoolean(item.parent)}>
+                {item.childList.map(child => (
+                  <Area key={child.title}>
+                    <HashRouter>
+                      <DepthSecondArea exact to={child.link}>
+                        {child.title}
+                      </DepthSecondArea>
+                    </HashRouter>
+                  </Area>
+                ))}
+              </ContentSecond>
+            </DepthSecond>
+          </ContentFirst>
+        ))}
+      </DepthFirst>
+    </Wrapper>
   );
 };
 
@@ -146,8 +150,7 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const DepthFirst = styled.div`
-`;
+const DepthFirst = styled.div``;
 
 const CloseArea = styled.div`
   display: flex;
@@ -189,11 +192,9 @@ const Close = styled.div`
   }
 `;
 
-const ContentFirst = styled.div`
-`;
+const ContentFirst = styled.div``;
 
-const DepthSecond = styled.div`
-`;
+const DepthSecond = styled.div``;
 
 const Area = styled.div`
   &:hover {
@@ -211,7 +212,7 @@ const DepthFirstArea = styled.div`
 
 const ContentSecond = styled.div`
   margin-bottom: 15px;
-  display: ${props => (props.show ? 'block' : 'none')};
+  display: ${props => (props.show ? "block" : "none")};
 `;
 
 const DepthSecondArea = styled(NavLink)`
@@ -231,5 +232,5 @@ const LabelPointer = styled.label`
   margin-right: 7px;
   font-size: 12px;
   margin-top: -2px;
-  transform: ${props => (props.opened ? 'rotate(90deg)' : '')};
+  transform: ${props => (props.opened ? "rotate(90deg)" : "")};
 `;

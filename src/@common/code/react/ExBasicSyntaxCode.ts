@@ -1,6 +1,6 @@
 const LoopStatementCode = {
-  type: 'typescript',
-  desc: 'LoopStatement.tsx',
+  type: "typescript",
+  desc: "LoopStatement.tsx",
   code: `import React, {Component} from 'react';
 
 type props = {};
@@ -52,12 +52,12 @@ class LoopStatement extends Component<props, state> {
   };
 }
 
-export default LoopStatement;`,
+export default LoopStatement;`
 };
 
 const ConditionalStatementCode = {
-  type: 'typescript',
-  desc: 'ConditionalStatement.tsx',
+  type: "typescript",
+  desc: "ConditionalStatement.tsx",
   code: `import React, {Component} from 'react';
 
 type props = {};
@@ -106,12 +106,12 @@ class ConditionalStatement extends Component<props, state> {
   };
 }
 
-export default ConditionalStatement;`,
+export default ConditionalStatement;`
 };
 
 const StyleClassBindingCode = {
-  type: 'typescript',
-  desc: 'StyleClassBinding.tsx',
+  type: "typescript",
+  desc: "StyleClassBinding.tsx",
   code: `import React, {Component} from 'react';
 
 type props = {};
@@ -160,11 +160,7 @@ class StyleClassBinding extends Component<props, state> {
   };
 }
 
-export default StyleClassBinding;`,
+export default StyleClassBinding;`
 };
 
-export {
-  LoopStatementCode,
-  ConditionalStatementCode,
-  StyleClassBindingCode
-}
+export { LoopStatementCode, ConditionalStatementCode, StyleClassBindingCode };

@@ -1,20 +1,21 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import React from "react";
 
-type ItemObj = { url: string, name: string, price: string, alt: string };
+type ItemObj = { url: string; name: string; price: string; alt: string };
 
 export const ItemList = (props: {
-  item: ItemObj,
-  deleteFunc: (item) => void
+  item: ItemObj;
+  deleteFunc: (item) => void;
 }) => {
-
   return (
-      <Wrapper key={props.item.name}>
-        <ImgArea src={props.item.url} alt={props.item.alt}/>
-        <NameArea>{props.item.name}</NameArea>
-        <PriceArea>{props.item.price}</PriceArea>
-        <DeleteItemButton onClick={() => props.deleteFunc(props.item)}>삭제</DeleteItemButton>
-      </Wrapper>
+    <Wrapper key={props.item.name}>
+      <ImgArea src={props.item.url} alt={props.item.alt} />
+      <NameArea>{props.item.name}</NameArea>
+      <PriceArea>{props.item.price}</PriceArea>
+      <DeleteItemButton onClick={() => props.deleteFunc(props.item)}>
+        삭제
+      </DeleteItemButton>
+    </Wrapper>
   );
 };
 

@@ -1,3 +1,3 @@
-import { SearchModal } from './SearchModal'
+import { SearchModal } from "./SearchModal";
 
-export { SearchModal }
+export { SearchModal };
