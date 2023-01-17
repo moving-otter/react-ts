@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-console.log("[react-ts] build by ZOL");
+console.log("[react-ts] 230117-11:10");
 
 const store = createStore(rootReducer, composeWithDevTools());
 
