@@ -14,7 +14,6 @@ export const HwMenu = () => {
           <NavLink to="/exProps">Props</NavLink>
           <NavLink to="/exBasicSyntax">Basic Syntax</NavLink>
           <NavLink to="/exLifeCycle">Life Cycle</NavLink>
-          <NavLink to="/exVeneer">Veneer</NavLink>
           <NavLink to="/exTodoList">TodoList</NavLink>
           <NavLink to="/exReduxTodo">Redux Todo</NavLink>
           <NavLink to="/exRedux">Redux</NavLink>

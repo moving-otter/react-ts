@@ -11,7 +11,6 @@ import {
   ExReduxTodo,
   ExState,
   ExTodoList,
-  ExVeneer,
   Welcome
 } from "home/pages/react";
 
@@ -24,7 +23,6 @@ export const HwRouter = () => {
         <Route path="/exProps" component={ExProps} />
         <Route path="/exBasicSyntax" component={ExBasicSyntax} />
         <Route path="/exLifeCycle" component={ExLifeCycle} />
-        <Route path="/exVeneer" component={ExVeneer} />
         <Route path="/exReduxTodo" component={ExReduxTodo} />
         <Route path="/exTodoList" component={ExTodoList} />
         <Route path="/exRedux" component={ExRedux} />

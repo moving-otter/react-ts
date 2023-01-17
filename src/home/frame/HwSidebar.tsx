@@ -33,7 +33,6 @@ export const HwSidebar = () => {
         { title: "Props", link: "/exProps" },
         { title: "Basic Syntax", link: "/exBasicSyntax" },
         { title: "Life Cycle", link: "/exLifeCycle" },
-        { title: "Veneer", link: "/exVeneer" },
         { title: "Todd List - props", link: "/exTodoList" },
         { title: "Todd List - redux", link: "/exReduxTodo" },
         { title: "Redux", link: "/exRedux" },

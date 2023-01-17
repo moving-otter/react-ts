@@ -7,7 +7,6 @@ import { ExReduxTodo } from "./ExReduxTodo";
 import ExLifeCycle from "./ExLifeCycle";
 import { ExBasicSyntax } from "./ExBasicSyntax";
 import { ExCart } from "./ExCart";
-import { ExVeneer } from "./ExVeneer";
 import { ExReduxCounter } from "./ExReduxCounter";
 
 export {
@@ -20,6 +19,5 @@ export {
   ExLifeCycle,
   ExBasicSyntax,
   ExCart,
-  ExVeneer,
   ExReduxCounter
 };
