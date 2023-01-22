@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-console.log("[react-ts] 230117 13:11");
+console.log("[react-ts] 230122 20:04");
 
 const store = createStore(rootReducer, composeWithDevTools());
 
