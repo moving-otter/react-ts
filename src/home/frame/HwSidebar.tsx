@@ -100,7 +100,7 @@ export const HwSidebar = () => {
       <DepthFirst>
         <CloseArea>
           <Motto>
-            <i>Simple is best</i>
+            <i>Simple is the best.</i>
           </Motto>
 
           <Close onClick={() => dispatch(toggleSidebar())}>
