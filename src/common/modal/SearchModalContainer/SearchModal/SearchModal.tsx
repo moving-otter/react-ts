@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
-import { useStoreState } from '@store/useStoreState';
-import { toggleSearchModal } from '@store/ui/UiAction';
+import { useStoreState } from 'src/store/useStoreState';
+import { toggleSearchModal } from 'src/store/ui/UiAction';
 import { useDispatch } from 'react-redux';
 import { SearchBox } from './SearchBox';
 import { SearchedList } from './SearchedList';

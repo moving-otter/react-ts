@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import React from 'react';
+import zol_logo from 'src/assets/zol_logo.png';
 import { HashRouter, NavLink } from 'react-router-dom';
-import favicon from '@assets/favicon.png';
 
 export const HwHeader = () => {
   return (
     <Wrapper className="hwUserSelectNone">
-      <ImageArea src={favicon} alt="logo" />
+      <ImageArea src={zol_logo} alt="logo" />
 
       <HashRouter>
         <NavLink exact to="/">
@@ -20,14 +20,16 @@ export const HwHeader = () => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgb(240, 240, 240);
   width: 100%;
-  height: 20px;
+  height: 25px;
+  //font-size: 16px;
 `;
 
 const ImageArea = styled.img`
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 22px;
+  margin-top: 3px;
   margin-left: 3px;
   margin-right: 7px;
 `;

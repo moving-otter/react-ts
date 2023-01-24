@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
-import { deleteTodo } from '@store/todo/TodoAction';
+import { deleteTodo } from 'src/store/todo/TodoAction';
 import { useDispatch } from 'react-redux';
-import { useStoreState } from '@store/useStoreState';
+import { useStoreState } from 'src/store/useStoreState';
 
 export const TodoList = () => {
   const dispatch = useDispatch();

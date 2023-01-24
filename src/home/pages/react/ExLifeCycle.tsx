@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { Component } from 'react';
-import { Highlighter } from '@common/Highlighter';
-import { ExLifeCycleCode } from '@common/code/react/ExLifeCycleCode';
+import { Highlighter } from 'src/common/Highlighter';
+import { ExLifeCycleCode } from 'src/common/code/react/ExLifeCycleCode';
 
 type props = {};
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useStoreState } from '@store/useStoreState';
-import { toggleSidebar } from '@store/ui/UiAction';
+import { useStoreState } from 'src/store/useStoreState';
+import { toggleSidebar } from 'src/store/ui/UiAction';
 import { HashRouter, NavLink } from 'react-router-dom';
 
 type Child = {

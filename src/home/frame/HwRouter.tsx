@@ -10,7 +10,7 @@ import {
   ExState,
   ExTodoList,
   Welcome,
-} from 'home/pages/react';
+} from 'src/home/pages/react';
 
 export const HwRouter = () => {
   return (

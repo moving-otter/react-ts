@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React, { ChangeEvent, KeyboardEvent, useCallback, useState } from 'react';
-import { Todo } from '@store/todo/TodoType';
+import { Todo } from 'src/store/todo/TodoType';
 import { useDispatch } from 'react-redux';
-import { addTodo, resetTodo } from '@store/todo/TodoAction';
+import { addTodo, resetTodo } from 'src/store/todo/TodoAction';
 
 export const TodoEditor = () => {
   const dispatch = useDispatch();

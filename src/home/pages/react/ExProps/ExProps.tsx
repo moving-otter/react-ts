@@ -3,12 +3,12 @@ import React from 'react';
 import { DynamicPropsFc } from './dynamicProps/DynamicPropsFc';
 import DynamicPropsClass from './dynamicProps/DynamicPropsClass';
 import { RequiredProps } from './RequiredProps';
-import { Highlighter } from '@common/Highlighter';
+import { Highlighter } from 'src/common/Highlighter';
 import {
   DynamicPropsClassCode,
   DynamicPropsFcCode,
   RequiredPropsCode,
-} from '@common/code/react/ExPropsCode';
+} from 'src/common/code/react/ExPropsCode';
 
 export const ExProps = () => {
   return (

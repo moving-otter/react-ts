@@ -5,7 +5,7 @@ const WelcomeCode = {
 import ReactDOM from 'react-dom';
 import Home from './home/Home';
 import './index.scss';
-import rootReducer from "@store";
+import rootReducer from "src/store";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import {composeWithDevTools} from 'redux-devtools-extension';

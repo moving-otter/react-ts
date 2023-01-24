@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
-import contactIcon from '@assets/icon/contact-icon.png';
-import developerIcon from '@assets/icon/developer-icon.png';
+import contactIcon from 'src/assets/icon/contact-icon.png';
+import developerIcon from 'src/assets/icon/developer-icon.png';
 
 export const HwFooter = () => {
   const contactUrl = 'https://www.youtube.com/user/youhyunwoo/discussion';

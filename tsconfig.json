@@ -1,27 +1,39 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./",
+    "rootDir": "./",
+    "declarationDir": "dist",
+    "module": "ESNext",
+    "outDir": "dist",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-//    "allowJs": true,
-    "skipLibCheck": true,
-//    "skipDefaultLibCheck": true,
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": ["src"],
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
-//    "allowSyntheticDefaultImports": true,
-//    "forceConsistentCasingInFileNames": true,
-//    "module": "esnext",
-//    "moduleResolution": "node",
-//    "resolveJsonModule": true,
-//    "isolatedModules": true,
-//    "noEmit": true,
-    "jsx": "react-jsx",
-//    "strict": true,
-    "noFallthroughCasesInSwitch": true
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "paths": {
+      "./src/*": ["./src/*"]
+    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "node"
+  ],
+  "exclude": [
+    "tests/**",
+    "node_modules/**"
+  ]
 }
+

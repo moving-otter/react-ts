@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import SearchIcon from '@assets/icon/search-icon.png';
-import FolderIcon from '@assets/icon/folder-icon.png';
+import React from 'react';
+import SearchIcon from 'src/assets/icon/search-icon.png';
+import FolderIcon from 'src/assets/icon/folder-icon.png';
 import { useDispatch } from 'react-redux';
-import { useStoreState } from '@store/useStoreState';
-import { toggleSearchModal, toggleSidebar } from '@store/ui/UiAction';
-import { SearchModalContainer } from '@common/modal/SearchModalContainer';
+import { useStoreState } from 'src/store/useStoreState';
+import { toggleSearchModal, toggleSidebar } from 'src/store/ui/UiAction';
+import { SearchModalContainer } from 'src/common/modal/SearchModalContainer';
 
 export const HwSearch = () => {
   const dispatch = useDispatch();

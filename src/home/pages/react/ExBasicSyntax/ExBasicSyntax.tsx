@@ -3,12 +3,12 @@ import React from 'react';
 import { LoopStatement } from './syntax/LoopStatement';
 import { ConditionalStatement } from './syntax/ConditionalStatement';
 import { StyleClassBinding } from './syntax/StyleClassBinding';
-import { Highlighter } from '@common/Highlighter';
+import { Highlighter } from 'src/common/Highlighter';
 import {
   ConditionalStatementCode,
   LoopStatementCode,
   StyleClassBindingCode,
-} from '@common/code/react/ExBasicSyntaxCode';
+} from 'src/common/code/react/ExBasicSyntaxCode';
 
 export const ExBasicSyntax = () => {
   return (
