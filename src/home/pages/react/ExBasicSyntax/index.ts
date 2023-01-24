@@ -1,3 +1,3 @@
-import { ExBasicSyntax } from "./ExBasicSyntax";
+import { ExBasicSyntax } from './ExBasicSyntax';
 
 export { ExBasicSyntax };

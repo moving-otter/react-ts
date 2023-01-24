@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React, { Component } from "react";
+import styled from 'styled-components';
+import React, { Component } from 'react';
 
 type props = {};
 
@@ -12,7 +12,7 @@ class StateClass extends Component<props, state> {
     super(props);
 
     this.state = {
-      count: 0
+      count: 0,
     };
 
     this.updateCount = this.updateCount.bind(this);
@@ -20,9 +20,9 @@ class StateClass extends Component<props, state> {
   }
 
   updateCount(flag) {
-    if (flag === "+") {
+    if (flag === '+') {
       this.setState({ count: this.state.count + 1 });
-    } else if (flag === "-") {
+    } else if (flag === '-') {
       this.setState({ count: this.state.count - 1 });
     }
   }
@@ -37,11 +37,11 @@ class StateClass extends Component<props, state> {
         <Title className="hwTitle hwBlueMarker">Counter - class</Title>
 
         <Content>
-          <button onClick={() => this.updateCount("-")}>Minus</button>
+          <button onClick={() => this.updateCount('-')}>Minus</button>
 
           <b>{this.state.count}</b>
 
-          <button onClick={() => this.updateCount("+")}>Plus</button>
+          <button onClick={() => this.updateCount('+')}>Plus</button>
 
           <button onClick={this.resetCount}>Reset</button>
         </Content>

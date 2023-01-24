@@ -6,4 +6,3 @@ export type Todo = {
 export type TodoKey = {
   key: number;
 };
-

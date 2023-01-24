@@ -1,20 +1,20 @@
 export const CounterReducer = (state, action) => {
   if (state === undefined) {
     return {
-      count: 0
+      count: 0,
     };
   }
 
   const count = state.count;
 
   switch (action.type) {
-    case "increase":
+    case 'increase':
       return {
-        count: count + 1
+        count: count + 1,
       };
-    case "decrease":
+    case 'decrease':
       return {
-        count: count - 1
+        count: count - 1,
       };
     default:
       return state;

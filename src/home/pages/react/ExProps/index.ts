@@ -1,3 +1,3 @@
-import { ExProps } from "./ExProps";
+import { ExProps } from './ExProps';
 
 export { ExProps };

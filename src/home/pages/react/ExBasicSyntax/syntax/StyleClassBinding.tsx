@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React, { useState } from "react";
+import styled from 'styled-components';
+import React, { useState } from 'react';
 
 export const StyleClassBinding = () => {
   const [flag, setFlag] = useState<boolean>(false);
@@ -32,5 +32,5 @@ const Content = styled.div``;
 const Title = styled.div``;
 
 const RenderArea = styled.div`
-  display: ${props => (props.flag ? "block" : "none")};
+  display: ${(props) => (props.flag ? 'block' : 'none')};
 `;

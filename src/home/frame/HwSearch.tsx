@@ -1,26 +1,22 @@
-import styled from "styled-components";
-import SearchIcon from "@assets/icon/search-icon.png";
-import FolderIcon from "@assets/icon/folder-icon.png";
-import { useDispatch } from "react-redux";
-import { useStoreState } from "@store/useStoreState";
-import { toggleSidebar } from "@store/ui/UiAction";
-import { toggleSearchModal } from "@store/ui/UiAction";
-import { SearchModalContainer } from "@common/modal/SearchModalContainer";
+import styled from 'styled-components';
+import SearchIcon from '@assets/icon/search-icon.png';
+import FolderIcon from '@assets/icon/folder-icon.png';
+import { useDispatch } from 'react-redux';
+import { useStoreState } from '@store/useStoreState';
+import { toggleSearchModal, toggleSidebar } from '@store/ui/UiAction';
+import { SearchModalContainer } from '@common/modal/SearchModalContainer';
 
 export const HwSearch = () => {
   const dispatch = useDispatch();
   const { uiState } = useStoreState();
 
   const getBackGroundColor = {
-    backgroundColor: uiState.sidebar ? "rgb(45, 47, 48)" : ""
+    backgroundColor: uiState.sidebar ? 'rgb(45, 47, 48)' : '',
   };
 
   return (
     <Wrapper className="hwUserSelectNone">
-      <Project
-        onClick={() => dispatch(toggleSidebar())}
-        style={getBackGroundColor}
-      >
+      <Project onClick={() => dispatch(toggleSidebar())} style={getBackGroundColor}>
         Project
         <ImgArea src={FolderIcon} alt="search icon" />
       </Project>

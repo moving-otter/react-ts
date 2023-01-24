@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React, { Component } from "react";
-import { Highlighter } from "@common/Highlighter";
-import { ExLifeCycleCode } from "@common/code/react/ExLifeCycleCode";
+import styled from 'styled-components';
+import React, { Component } from 'react';
+import { Highlighter } from '@common/Highlighter';
+import { ExLifeCycleCode } from '@common/code/react/ExLifeCycleCode';
 
 type props = {};
 
@@ -15,8 +15,8 @@ class ExLifeCycle extends Component<props, state> {
     super(props);
 
     this.state = {
-      msg: "",
-      count: 0
+      msg: '',
+      count: 0,
     };
 
     // register methods here
@@ -24,32 +24,32 @@ class ExLifeCycle extends Component<props, state> {
   }
 
   componentDidMount() {
-    console.log("did mount / [vue] mounted");
+    console.log('did mount / [vue] mounted');
 
-    this.setState({ msg: "Default Title" });
+    this.setState({ msg: 'Default Title' });
   }
 
   shouldComponentUpdate(newProps, newState) {
-    console.log("should update?");
+    console.log('should update?');
 
     return true;
   }
 
   componentDidUpdate() {
-    console.log("did update / [vue] updated");
+    console.log('did update / [vue] updated');
   }
 
   componentWillUnmount() {
-    console.log("will unmount / [vue] destroyed");
+    console.log('will unmount / [vue] destroyed');
   }
 
   plusCount() {
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count + 1,
     });
 
-    this.setState(prevState => ({
-      count: prevState.count + 1
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
     }));
   }
 

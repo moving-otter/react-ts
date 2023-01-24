@@ -1,17 +1,15 @@
-import styled from "styled-components";
-import React, { useState } from "react";
+import styled from 'styled-components';
+import React, { useState } from 'react';
 
 // Remove React.FC to apply optional props
 export const DynamicPropsFc = (props: { name: string; age: number }) => {
-  const [title, setTitle] = useState<string>("Origin Title");
-
-  console.log("Test PR conflict ");
+  const [title, setTitle] = useState<string>('Origin Title');
 
   const handleTitle = () => {
-    if (title === "Origin Title") {
-      setTitle("Title Origin");
+    if (title === 'Origin Title') {
+      setTitle('Title Origin');
     } else {
-      setTitle("Origin Title");
+      setTitle('Origin Title');
     }
   };
 
@@ -26,14 +24,14 @@ export const DynamicPropsFc = (props: { name: string; age: number }) => {
 };
 
 DynamicPropsFc.defaultProps = {
-  age: 10
+  age: 10,
 };
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 600px;
-  padding: 20px 0;
+  padding-top: 20px;
 `;
 
 const TextContent = styled.div`

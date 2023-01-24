@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React, { useState, useEffect } from "react";
-import "highlight.js/scss/androidstudio.scss";
-import hljs from "highlight.js/lib";
+import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import 'highlight.js/scss/androidstudio.scss';
+import hljs from 'highlight.js/lib';
 
 export const Highlighter = (props: {
   codeInfo: {
@@ -33,16 +33,14 @@ export const Highlighter = (props: {
 
       <Content>
         <LineNumber className="hwUserSelectNone">
-          {numList.map(num => (
+          {numList.map((num) => (
             <Num key={num} tabIndex={1}>
               {num + 1}
             </Num>
           ))}
         </LineNumber>
 
-        <CustomCode className={`${props.codeInfo.type}`}>
-          {props.codeInfo.code}
-        </CustomCode>
+        <CustomCode className={`${props.codeInfo.type}`}>{props.codeInfo.code}</CustomCode>
       </Content>
 
       <BottomLine />
@@ -52,7 +50,7 @@ export const Highlighter = (props: {
 
 const Wrapper = styled.pre`
   position: relative;
-  padding: 20px 0;
+  padding-top: 20px;
 `;
 
 const TitleArea = styled.div`
@@ -84,7 +82,7 @@ const LineNumber = styled.div`
   color: rgb(96, 99, 102);
   margin-left: -30px;
   padding: 20px 0 40px 0;
-  margin-right: 30px;
+  margin-right: 5px;
 `;
 
 const Num = styled.div`
@@ -102,7 +100,6 @@ const Num = styled.div`
 
 const CustomCode = styled.code`
   background: none;
-  padding: 20px 0 40px 0;
 `;
 
 const BottomLine = styled.div`

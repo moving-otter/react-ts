@@ -1,18 +1,16 @@
-import styled from "styled-components";
-import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import styled from 'styled-components';
+import React from 'react';
+import { HashRouter, Route } from 'react-router-dom';
 import {
   ExBasicSyntax,
-  ExCart,
   ExLifeCycle,
   ExProps,
-  ExRedux,
   ExReduxCounter,
   ExReduxTodo,
   ExState,
   ExTodoList,
-  Welcome
-} from "home/pages/react";
+  Welcome,
+} from 'home/pages/react';
 
 export const HwRouter = () => {
   return (
@@ -25,8 +23,6 @@ export const HwRouter = () => {
         <Route path="/exLifeCycle" component={ExLifeCycle} />
         <Route path="/exReduxTodo" component={ExReduxTodo} />
         <Route path="/exTodoList" component={ExTodoList} />
-        <Route path="/exRedux" component={ExRedux} />
-        <Route path="/exCart" component={ExCart} />
         <Route path="/exReduxCounter" component={ExReduxCounter} />
       </HashRouter>
     </Wrapper>

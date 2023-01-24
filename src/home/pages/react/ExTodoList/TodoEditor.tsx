@@ -1,16 +1,8 @@
-import styled from "styled-components";
-import React, {
-  ChangeEvent,
-  KeyboardEvent,
-  useCallback,
-  useState
-} from "react";
+import styled from 'styled-components';
+import React, { ChangeEvent, KeyboardEvent, useCallback, useState } from 'react';
 
-export const TodoEditor = (props: {
-  addItemFunc: (text) => void;
-  resetListFunc: () => void;
-}) => {
-  const [inputText, setInputText] = useState<string>("");
+export const TodoEditor = (props: { addItemFunc: (text) => void; resetListFunc: () => void }) => {
+  const [inputText, setInputText] = useState<string>('');
 
   const handleText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
@@ -19,10 +11,10 @@ export const TodoEditor = (props: {
     (e: KeyboardEvent<HTMLInputElement>) => {
       if (e.keyCode === 13) {
         props.addItemFunc(inputText);
-        setInputText("");
+        setInputText('');
       }
     },
-    [props.addItemFunc, inputText]
+    [props.addItemFunc, inputText],
   );
 
   return (
@@ -37,7 +29,7 @@ export const TodoEditor = (props: {
       <Button
         onClick={() => {
           props.addItemFunc(inputText);
-          setInputText("");
+          setInputText('');
         }}
       >
         add

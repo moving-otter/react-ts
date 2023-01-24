@@ -1,41 +1,28 @@
-import styled from "styled-components";
-import React, { useEffect } from "react";
-import {
-  HwHeader,
-  HwSidebar,
-  HwSearch,
-  HwFooter,
-  HwRouter,
-  HwMenu
-} from "./frame/Frame";
+import styled from 'styled-components';
+import React, { useEffect } from 'react';
+import { HwHeader, HwMenu, HwRouter, HwSearch, HwSidebar } from './frame';
 
 export const Home = () => {
-  useEffect(() => {
-
-  }, [])
+  useEffect(() => {}, []);
 
   return (
-    <Wrapper>
-      <Content>
+    <Wrapper data-testid="home">
+      <Content data-testid="home-content">
         <HwHeader />
 
-        <DepthFirst>
+        <DepthFirst data-testid="depth-first">
           <HwSearch />
 
-          <DepthSecond>
+          <DepthSecond data-testid="depth-second">
             <HwSidebar />
 
-            <DepthThird>
+            <DepthThird data-testid="depth-third">
               <HwMenu />
 
               <HwRouter />
             </DepthThird>
           </DepthSecond>
-
-          <RightArea />
         </DepthFirst>
-
-        <HwFooter />
       </Content>
     </Wrapper>
   );
@@ -46,7 +33,8 @@ const Wrapper = styled.div``;
 const Content = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  //height: 100%;
+  height: calc(100vh);
   background-color: rgb(60, 63, 65);
 `;
 
@@ -60,24 +48,13 @@ const DepthSecond = styled.div`
   display: flex;
   width: 100%;
   margin-left: 25px;
-  margin-right: 20px;
   border-left: 1px solid #515658;
   border-right: 1px solid #515658;
-  overflow: auto;
+  overflow: hidden;
 `;
 
 const DepthThird = styled.div`
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 50px);
   background-color: rgb(43, 43, 43);
-`;
-
-const RightArea = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 22px;
-  height: 100%;
-  padding-top: 5px;
-  right: 0;
 `;

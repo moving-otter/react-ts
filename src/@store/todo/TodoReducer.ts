@@ -1,12 +1,12 @@
-import { Todo } from "./TodoType";
-import { ADD_TODO, DELETE_TODO, RESET_TODO } from "./TodoAction";
+import { Todo } from './TodoType';
+import { ADD_TODO, DELETE_TODO, RESET_TODO } from './TodoAction';
 
 // type TodoList = Todo[];
 // const initialState: TodoList = [];
 
 const initialState = {
   list: [],
-  name: ""
+  name: '',
 };
 
 const TodoReducer = (state = initialState, action) => {
@@ -14,12 +14,12 @@ const TodoReducer = (state = initialState, action) => {
     case ADD_TODO:
       return {
         list: [...state.list, action.payload],
-        name: "add"
+        name: 'add',
       };
     case DELETE_TODO:
       return {
         list: [...state.list.filter((e: Todo) => e.key !== action.payload.key)],
-        name: "delete"
+        name: 'delete',
       };
     case RESET_TODO:
       return initialState;

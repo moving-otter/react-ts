@@ -1,25 +1,25 @@
-import styled from "styled-components";
-import React, { useState } from "react";
-import { TodoList } from "./TodoList";
-import { TodoEditor } from "./TodoEditor";
-import { Todo } from "./TodoType";
+import styled from 'styled-components';
+import React, { useState } from 'react';
+import { TodoList } from './TodoList';
+import { TodoEditor } from './TodoEditor';
+import { Todo } from './TodoType';
 
 export const ExTodoList = () => {
   const [itemObjList, setItemObjList] = useState<Todo[]>([]);
 
-  const addItem = text => {
+  const addItem = (text) => {
     if (text.length === 0) {
       return;
     }
     const newTodo: Todo = {
       key: Date.now(),
-      text: text
+      text: text,
     };
     setItemObjList([newTodo, ...itemObjList]);
   };
 
-  const deleteItem = key => {
-    setItemObjList(itemObjList.filter(e => e.key !== key));
+  const deleteItem = (key) => {
+    setItemObjList(itemObjList.filter((e) => e.key !== key));
   };
 
   const resetList = () => {

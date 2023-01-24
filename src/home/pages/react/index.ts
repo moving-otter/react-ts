@@ -1,23 +1,19 @@
-import { Welcome } from "./Welcome";
-import { ExState } from "./ExState";
-import { ExProps } from "./ExProps";
-import { ExTodoList } from "./ExTodoList";
-import { ExRedux } from "./ExRedux";
-import { ExReduxTodo } from "./ExReduxTodo";
-import ExLifeCycle from "./ExLifeCycle";
-import { ExBasicSyntax } from "./ExBasicSyntax";
-import { ExCart } from "./ExCart";
-import { ExReduxCounter } from "./ExReduxCounter";
+import ExLifeCycle from './ExLifeCycle';
+import { Welcome } from './Welcome';
+import { ExState } from './ExState';
+import { ExProps } from './ExProps';
+import { ExTodoList } from './ExTodoList';
+import { ExReduxTodo } from './ExReduxTodo';
+import { ExBasicSyntax } from './ExBasicSyntax';
+import { ExReduxCounter } from './ExReduxCounter';
 
 export {
+  ExLifeCycle,
   Welcome,
   ExState,
   ExProps,
   ExTodoList,
   ExReduxTodo,
-  ExRedux,
-  ExLifeCycle,
   ExBasicSyntax,
-  ExCart,
-  ExReduxCounter
+  ExReduxCounter,
 };

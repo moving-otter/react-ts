@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React from "react";
-import { HashRouter, NavLink } from "react-router-dom";
-import favicon from "@assets/favicon.png";
+import styled from 'styled-components';
+import React from 'react';
+import { HashRouter, NavLink } from 'react-router-dom';
+import favicon from '@assets/favicon.png';
 
 export const HwHeader = () => {
   return (
@@ -10,7 +10,7 @@ export const HwHeader = () => {
 
       <HashRouter>
         <NavLink exact to="/">
-          hw-dev-store
+          hw-site
         </NavLink>
       </HashRouter>
     </Wrapper>

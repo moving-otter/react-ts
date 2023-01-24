@@ -1,24 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchedList = () => {
   const searchedList = [
-    "const dispatch = useDispatch();",
-    "const {uiState} = useStoreState();",
-    "export const toggleSidebar = () => {",
-    "const initialState = {",
-    "const UiReducer = (state = initialState, action) => {",
-    "const categories = [",
-    "const Wrapper = styled.div`",
-    "export const Component = () => {...}",
-    "export const Component = (props: {",
-    "const addItem = (text) => {"
+    'const dispatch = useDispatch();',
+    'const {uiState} = useStoreState();',
+    'export const toggleSidebar = () => {',
+    'const initialState = {',
+    'const UiReducer = (state = initialState, action) => {',
+    'const categories = [',
+    'const Wrapper = styled.div`',
+    'export const Component = () => {...}',
+    'export const Component = (props: {',
+    'const addItem = (text) => {',
   ];
 
   return (
     <Wrapper>
       <ListArea>
         <ul>
-          {searchedList.map(searchedItem => (
+          {searchedList.map((searchedItem) => (
             <li key={searchedItem}>{searchedItem}</li>
           ))}
         </ul>

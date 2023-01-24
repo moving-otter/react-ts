@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import React, { useState } from "react";
+import styled from 'styled-components';
+import React, { useState } from 'react';
 
 export const StateFc = () => {
   const [count, setCount] = useState<number>(0);
-  const updateCount = flag => {
-    if (flag === "+") {
+  const updateCount = (flag) => {
+    if (flag === '+') {
       setCount(count + 1);
-    } else if (flag === "-") {
+    } else if (flag === '-') {
       setCount(count - 1);
     }
   };
@@ -17,11 +17,11 @@ export const StateFc = () => {
       <Title className="hwTitle">Counter Example</Title>
 
       <Content>
-        <button onClick={() => updateCount("-")}>Minus</button>
+        <button onClick={() => updateCount('-')}>Minus</button>
 
         <b>{count}</b>
 
-        <button onClick={() => updateCount("+")}>Plus</button>
+        <button onClick={() => updateCount('+')}>Plus</button>
 
         <button onClick={resetCount}>Reset</button>
       </Content>

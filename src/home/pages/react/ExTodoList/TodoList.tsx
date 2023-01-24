@@ -1,11 +1,8 @@
-import styled from "styled-components";
-import React from "react";
-import { Todo } from "./TodoType";
+import styled from 'styled-components';
+import React from 'react';
+import { Todo } from './TodoType';
 
-export const TodoList = (props: {
-  entries: Array<Todo>;
-  deleteItemFunc: (_key) => void;
-}) => {
+export const TodoList = (props: { entries: Array<Todo>; deleteItemFunc: (_key) => void }) => {
   return (
     <Wrapper>
       {props.entries.map((e: Todo) => (

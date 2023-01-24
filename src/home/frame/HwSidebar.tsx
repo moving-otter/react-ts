@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useStoreState } from "@store/useStoreState";
-import { toggleSidebar } from "@store/ui/UiAction";
-import { HashRouter, NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useStoreState } from '@store/useStoreState';
+import { toggleSidebar } from '@store/ui/UiAction';
+import { HashRouter, NavLink } from 'react-router-dom';
 
 type Child = {
   title: string;
@@ -26,76 +26,63 @@ export const HwSidebar = () => {
   const { uiState } = useStoreState();
   const [itemList] = useState<Array<Item>>([
     {
-      parent: "React",
+      parent: 'React',
       childList: [
-        { title: "Welcome", link: "/" },
-        { title: "State", link: "/exState" },
-        { title: "Props", link: "/exProps" },
-        { title: "Basic Syntax", link: "/exBasicSyntax" },
-        { title: "Life Cycle", link: "/exLifeCycle" },
-        { title: "Todd List - props", link: "/exTodoList" },
-        { title: "Todd List - redux", link: "/exReduxTodo" },
-        { title: "Redux", link: "/exRedux" },
-        { title: "Cart List", link: "/exCart" }
-      ]
+        { title: 'Welcome', link: '/' },
+        { title: 'State', link: '/exState' },
+        { title: 'Props', link: '/exProps' },
+        { title: 'Basic Syntax', link: '/exBasicSyntax' },
+        { title: 'Life Cycle', link: '/exLifeCycle' },
+        { title: 'Todd List - props', link: '/exTodoList' },
+        { title: 'Todd List - redux', link: '/exReduxTodo' },
+      ],
     },
     {
-      parent: "Vue",
-      childList: [
-        { title: "v-directive", link: "/tbd" },
-        { title: "Life Cycle", link: "/tbd" },
-        { title: "app.js", link: "/tbd" }
-      ]
+      parent: 'Vue',
+      childList: [],
     },
-    {
-      parent: "Html",
-      childList: [
-        { title: "summary-0", link: "/tbd" },
-        { title: "summary-1", link: "/tbd" },
-        { title: "summary-2", link: "/tbd" }
-      ]
-    }
   ]);
   const [renderStatus, setRenderStatus] = useState<render>({
     react: true,
     vue: true,
-    html: true
+    html: true,
   });
 
-  const toggleRenderStatus = item => {
+  const toggleRenderStatus = (item) => {
     let newRenderStatus = renderStatus;
     switch (item) {
-      case "React":
+      case 'React':
         newRenderStatus.react = !renderStatus.react;
         break;
-      case "Vue":
+      case 'Vue':
         newRenderStatus.vue = !renderStatus.vue;
         break;
-      case "Html":
+      case 'Html':
         newRenderStatus.html = !renderStatus.html;
         break;
     }
     setRenderStatus({
       react: newRenderStatus.react,
       vue: newRenderStatus.vue,
-      html: newRenderStatus.html
+      html: newRenderStatus.html,
     });
   };
 
-  const getItemBoolean = item => {
+  const getItemBoolean = (item) => {
     switch (item) {
-      case "React":
+      case 'React':
         return renderStatus.react;
-      case "Vue":
+      case 'Vue':
         return renderStatus.vue;
-      case "Html":
+      case 'Html':
         return renderStatus.html;
     }
   };
 
   return (
     <Wrapper
-      className={`${uiState.sidebar ? "show" : "hide"} hwUserSelectNone`}
+      className={`${uiState.sidebar ? 'show' : 'hide'} hwUserSelectNone`}
+      data-testid="hw-sidebar"
     >
       <DepthFirst>
         <CloseArea>
@@ -109,21 +96,19 @@ export const HwSidebar = () => {
           </Close>
         </CloseArea>
 
-        {itemList.map(item => (
+        {itemList.map((item) => (
           <ContentFirst key={item.parent}>
             <DepthSecond>
               <Area onClick={() => toggleRenderStatus(item.parent)}>
                 <DepthFirstArea>
                   {/*<label className="pointer opened">▶</label>*/}
-                  <LabelPointer opened={getItemBoolean(item.parent)}>
-                    ▶
-                  </LabelPointer>
+                  <LabelPointer opened={getItemBoolean(item.parent)}>▶</LabelPointer>
                   <label>{item.parent}</label>
                 </DepthFirstArea>
               </Area>
 
               <ContentSecond show={getItemBoolean(item.parent)}>
-                {item.childList.map(child => (
+                {item.childList.map((child) => (
                   <Area key={child.title}>
                     <HashRouter>
                       <DepthSecondArea exact to={child.link}>
@@ -142,10 +127,9 @@ export const HwSidebar = () => {
 };
 
 const Wrapper = styled.div`
-  width: 450px;
-  height: calc(100% - 45px);
+  min-width: 220px;
+  height: calc(100% - 20px);
   border-right: 1px solid #515658;
-  resize: horizontal;
   overflow: auto;
 `;
 
@@ -211,7 +195,7 @@ const DepthFirstArea = styled.div`
 
 const ContentSecond = styled.div`
   margin-bottom: 15px;
-  display: ${props => (props.show ? "block" : "none")};
+  display: ${(props) => (props.show ? 'block' : 'none')};
 `;
 
 const DepthSecondArea = styled(NavLink)`
@@ -231,5 +215,5 @@ const LabelPointer = styled.label`
   margin-right: 7px;
   font-size: 12px;
   margin-top: -2px;
-  transform: ${props => (props.opened ? "rotate(90deg)" : "")};
+  transform: ${(props) => (props.opened ? 'rotate(90deg)' : '')};
 `;

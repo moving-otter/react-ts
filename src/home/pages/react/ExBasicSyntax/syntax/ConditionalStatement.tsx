@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React, { useState } from "react";
+import styled from 'styled-components';
+import React, { useState } from 'react';
 
 export const ConditionalStatement = () => {
   const [flag, setFlag] = useState<boolean>(false);

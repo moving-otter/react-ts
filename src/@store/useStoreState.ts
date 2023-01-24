@@ -1,4 +1,4 @@
-import { useSelector, RootStateOrAny } from "react-redux";
+import { RootStateOrAny, useSelector } from 'react-redux';
 
 export const useStoreState = () => {
   const uiState = useSelector((state: RootStateOrAny) => state.UiReducer);
@@ -8,6 +8,6 @@ export const useStoreState = () => {
   return {
     uiState,
     cartState,
-    todoState
+    todoState,
   };
 };

@@ -1,19 +1,19 @@
-import { TOGGLE_SIDEBAR, TOGGLE_SEARCH_MODAL } from "./UiAction";
+import { TOGGLE_SEARCH_MODAL, TOGGLE_SIDEBAR } from './UiAction';
 
 const initialState = {
   sidebar: true,
-  searchModal: false
+  searchModal: false,
 };
 
 const UiReducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_SIDEBAR:
       return {
-        sidebar: !state.sidebar
+        sidebar: !state.sidebar,
       };
     case TOGGLE_SEARCH_MODAL:
       return {
-        searchModal: !state.searchModal
+        searchModal: !state.searchModal,
       };
     default:
       return state;

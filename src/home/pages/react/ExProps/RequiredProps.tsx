@@ -1,10 +1,7 @@
-import styled from "styled-components";
-import React from "react";
+import styled from 'styled-components';
+import React from 'react';
 
-export const RequiredProps = (props: {
-  propsOne: string;
-  propsTwo: string;
-}) => {
+export const RequiredProps = (props: { propsOne: string; propsTwo: string }) => {
   return (
     <Wrapper>
       {props.propsOne} / {props.propsTwo}

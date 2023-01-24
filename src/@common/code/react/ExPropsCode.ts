@@ -1,6 +1,6 @@
 const RequiredPropsCode = {
-  type: "typescript",
-  desc: "Required Props with TypeScript",
+  type: 'typescript',
+  desc: 'Required Props with TypeScript',
   code: `import React from 'react';
 
 type props = {
@@ -16,12 +16,12 @@ const RequiredProps: React.FC<props> = ({propsOne, propsTwo}) => {
   )
 };
 
-export default RequiredProps;`
+export default RequiredProps;`,
 };
 
 const DynamicPropsClassCode = {
-  type: "typescript",
-  desc: "DynamicPropsClass.tsx",
+  type: 'typescript',
+  desc: 'DynamicPropsClass.tsx',
   code: `import React, {Component} from 'react';
 
 type props = {
@@ -68,12 +68,12 @@ class DynamicPropsClass extends Component<props, state> {
   };
 }
 
-export default DynamicPropsClass;`
+export default DynamicPropsClass;`,
 };
 
 const DynamicPropsFcCode = {
-  type: "typescript",
-  desc: "DynamicPropsFc.tsx",
+  type: 'typescript',
+  desc: 'DynamicPropsFc.tsx',
   code: `import React, {useState} from 'react';
 
 type props = {
@@ -107,7 +107,7 @@ DynamicPropsFc.defaultProps = {
   age: 10
 };
 
-export default DynamicPropsFc;`
+export default DynamicPropsFc;`,
 };
 
 export { RequiredPropsCode, DynamicPropsClassCode, DynamicPropsFcCode };

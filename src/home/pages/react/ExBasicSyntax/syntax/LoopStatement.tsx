@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
 
 type ItemObj = {
   key: number;
@@ -7,14 +7,12 @@ type ItemObj = {
 };
 
 export const LoopStatement = () => {
-  const [list, setList] = useState<Array<ItemObj>>([
-    { key: Date.now(), item: "Item 1" }
-  ]);
+  const [list, setList] = useState<Array<ItemObj>>([{ key: Date.now(), item: 'Item 1' }]);
 
   useEffect(() => {
     const newItemObj: ItemObj = {
       key: Date.now(),
-      item: "Item"
+      item: 'Item',
     };
 
     setList([...list, newItemObj]);
@@ -25,7 +23,7 @@ export const LoopStatement = () => {
       <Content>
         <Title className="hwTitle">Loop statement</Title>
         <ul>
-          {list.map(e => (
+          {list.map((e) => (
             <li key={e.key}>{e.item}</li>
           ))}
         </ul>

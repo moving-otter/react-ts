@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React from "react";
-import { Highlighter } from "@common/Highlighter";
-import { WelcomeCode } from "@common/code/react/WelcomeCode";
+import styled from 'styled-components';
+import React from 'react';
+import { Highlighter } from '@common/Highlighter';
+import { WelcomeCode } from '@common/code/react/WelcomeCode';
 
 export const Welcome = () => {
   return (

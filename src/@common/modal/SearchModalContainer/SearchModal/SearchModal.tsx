@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import React from "react";
-import { useStoreState } from "@store/useStoreState";
-import { toggleSearchModal } from "@store/ui/UiAction";
-import { useDispatch } from "react-redux";
-import { SearchBox } from "./SearchBox";
-import { SearchedList } from "./SearchedList";
-import { SelectedContent } from "./SelectedContent";
+import styled from 'styled-components';
+import React from 'react';
+import { useStoreState } from '@store/useStoreState';
+import { toggleSearchModal } from '@store/ui/UiAction';
+import { useDispatch } from 'react-redux';
+import { SearchBox } from './SearchBox';
+import { SearchedList } from './SearchedList';
+import { SelectedContent } from './SelectedContent';
 
 export const SearchModal = () => {
   const dispatch = useDispatch();

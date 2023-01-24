@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import React from "react";
-import contactIcon from "@assets/icon/contact-icon.png";
-import developerIcon from "@assets/icon/developer-icon.png";
+import styled from 'styled-components';
+import React from 'react';
+import contactIcon from '@assets/icon/contact-icon.png';
+import developerIcon from '@assets/icon/developer-icon.png';
 
 export const HwFooter = () => {
-  const contactUrl = "https://www.youtube.com/user/youhyunwoo/discussion";
+  const contactUrl = 'https://www.youtube.com/user/youhyunwoo/discussion';
 
   return (
     <Wrapper className="hwUserSelectNone">
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   background-color: rgb(60, 63, 65);
   border-top: 1px solid #515658;
   bottom: 0;
-  width: 100%;
+  //width: 100%;
   padding: 0 10px 3px 10px;
   font-size: 13px;
 `;

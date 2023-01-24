@@ -1,25 +1,20 @@
-import styled from "styled-components";
-import React, {
-  ChangeEvent,
-  KeyboardEvent,
-  useCallback,
-  useState
-} from "react";
-import { Todo } from "@store/todo/TodoType";
-import { useDispatch } from "react-redux";
-import { addTodo, resetTodo } from "@store/todo/TodoAction";
+import styled from 'styled-components';
+import React, { ChangeEvent, KeyboardEvent, useCallback, useState } from 'react';
+import { Todo } from '@store/todo/TodoType';
+import { useDispatch } from 'react-redux';
+import { addTodo, resetTodo } from '@store/todo/TodoAction';
 
 export const TodoEditor = () => {
   const dispatch = useDispatch();
-  const [inputText, setInputText] = useState<string>("");
+  const [inputText, setInputText] = useState<string>('');
 
   const addItem = useCallback(() => {
     const newTodo: Todo = {
       key: Date.now(),
-      text: inputText
+      text: inputText,
     };
     dispatch(addTodo(newTodo));
-    setInputText("");
+    setInputText('');
   }, [inputText, dispatch]);
 
   const handleText = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -32,7 +27,7 @@ export const TodoEditor = () => {
         addItem();
       }
     },
-    [addItem, inputText]
+    [addItem, inputText],
   );
 
   return (
