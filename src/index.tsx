@@ -9,7 +9,7 @@ import { initializeApp } from "firebase/app";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
-console.log("[react-ts] 230124 4:00");
+console.log("[react-ts] 230124 3:55");
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5NnEXy55OCkX0rY46TK-Nz2suCV201W4",
@@ -25,15 +25,16 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Get a list of cities from your database
-async function getTest(db) {
+const getTest = async (db) => {
   const testCol = collection(db, 'test');
   const testSnapshot = await getDocs(testCol);
   const testList = testSnapshot.docs.map(doc => doc.data());
-  console.log(testList);
-  return testList;
+  const targetData = testList[0] ?? '...';
+  console.log(JSON.stringify(targetData, null, 2));
+  return targetData;
 }
 
-
+getTest(db)
 
 const store = createStore(rootReducer, composeWithDevTools());
 
