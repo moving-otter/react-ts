@@ -33,6 +33,7 @@ package-lock.json
 /node_modules/
 /static/dist/
 /home/
+/.firebase/
 
 ### VS CODE ###
 /.history/

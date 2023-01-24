@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   HwHeader,
   HwSidebar,
@@ -10,6 +10,10 @@ import {
 } from "./frame/Frame";
 
 export const Home = () => {
+  useEffect(() => {
+
+  }, [])
+
   return (
     <Wrapper>
       <Content>
