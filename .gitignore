@@ -34,6 +34,7 @@ package-lock.json
 /static/dist/
 /home/
 /.firebase/
+firebase-debug.log
 
 ### VS CODE ###
 /.history/
